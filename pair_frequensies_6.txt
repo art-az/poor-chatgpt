@@ -1,0 +1,3100 @@
+Call: {'years': 1}
+me: {'the': 8, 'and': 6, ',': 6, 'a': 3, 'my': 3, 'was': 3, 'me': 2, '.': 2, 'of': 2, 'that': 2, 'harpooneer': 2, 'to': 2, 'ago—never': 1, 'thought': 1, 'your': 1, 'virtue': 1, 'make': 1, 'spar': 1, 'then': 1, 'whereas': 1, 'in': 1, 'can': 1, 'part': 1, 'induced': 1, 'it': 1, 'With': 1, 'with': 1, 'two': 1, 'Bedford': 1, 'ere': 1, 'from': 1, 'since': 1, 'entrance': 1, 'tell': 1, 'not': 1, 'looking': 1, 'no': 1, 'exasperating': 1, 'bed': 1, 'one': 1, 'story': 1, 'I': 1, 'be': 1, 'but': 1, '“': 1, '!': 1, 'dam-me': 1, 'linen': 1, 'man': 1, 'dangerous': 1, 'over': 1, 'strange': 1, '—my': 1, 'though': 1, 'an': 1, 'all': 1, 'naught': 1, 'eyes': 1, 'him': 1, 'if': 1, 'first': 1, 'leaving': 1}
+Ishmael: {'mind': 1, 'myself': 1, 'inquire': 1, 'last': 1, 'backing': 1}
+.: {',': 31, 'the': 16, 'a': 13, 'of': 12, 'I': 8, 'it': 8, 'to': 8, '.': 8, 'this': 6, 'in': 5, 'that': 5, 'he': 5, 'said': 5, '?': 4, 'you': 4, 'was': 4, 'these': 4, 'on': 4, 'very': 4, 'one': 3, 'and': 3, 's': 3, 'is': 3, 'or': 3, 'into': 3, 'harpooneer': 3, 'all': 3, 'be': 3, '!': 3, 'for': 2, 'as': 2, 'much': 2, 'go': 2, 'off': 2, 'my': 2, 'stuffed': 2, 'has': 2, 'followed': 2, 'sort': 2, 'are': 2, ';': 2, 'with': 2, '”': 2, 'now': 2, 'from': 2, 'at': 2, 'his': 2, '’': 2, 'most': 2, 'not': 2, 'light': 2, 'how': 1, 'growing': 1, 'Cato': 1, 'insular': 1, 'spiles': 1, 'landsmen': 1, 'content': 1, 'get': 1, 'come': 1, 'unite': 1, 'athirst': 1, 'artist': 1, 'element': 1, 'winds': 1, 'lies': 1, 'meaning': 1, 'say': 1, 'sea-sick—grow': 1, 'order': 1, 'keen': 1, 'if': 1, 'however': 1, 'passengers': 1, '—what': 1, 'we': 1, 'world': 1, 'way': 1, 'ONE': 1, 'AFFGHANISTAN.': 1, 'mysterious': 1, 'distant': 1, 'perhaps': 1, 'forbidden': 1, 'good': 1, 'things': 1, 'Carpet-Bag': 1, 'night': 1, 'upon': 1, 'made': 1, 'Nantucket': 1, 'dubious-looking': 1, 'had': 1, 'paced': 1, 'Ishmael': 1, 'blocks': 1, 'look': 1, 'Black': 1, 'turned': 1, 'church': 1, 'muttered': 1, 'common': 1, 'so': 1, 'sharp': 1, 'didn': 1, 'too': 1, 'chattering': 1, 'Dives': 1, 'ice': 1, 'Spouter-Inn': 1, 'shades': 1, 'bright': 1, 'Cape-Horner': 1, 'gazed': 1, 'rusty': 1, 'lance': 1, 'nigh': 1, 'angle': 1, 'may': 1, 'supper': 1, 'ruminating': 1, 'hand': 1, 'Iceland—no': 1, 'tallow': 1, 'button': 1, 'company': 1, 'landlord': 1, 'watch': 1, 'bad': 1, 'feet': 1, 'such': 1, 'brown': 1, 'announced': 1, 'nine': 1, 'sleep': 1, 'would': 1, 'know': 1, 'earthly': 1, 'over': 1, 'presume': 1, 'getting': 1, 'should': 1, 'bit': 1, 'spraining': 1, 'shavings': 1, 'measure': 1, 'foot': 1, 'first': 1, 'but': 1, 'boarders': 1, 'out': 1, 'broke': 1, '“': 1, 'understand': 1, 'house': 1, 'place': 1, 'last': 1, 'give': 1, 'dreaming': 1, 'belonging': 1, 'possible': 1, 'thinks': 1, 'still': 1, 'some': 1, 'never': 1, 'difficulty': 1, 'old': 1, 'stood': 1, 'plain': 1, 'too—perhaps': 1, 'fancy': 1, 'grego': 1, 'goes': 1, 'eyes': 1, 'hasty': 1, 'did': 1, 'were': 1, 'fire': 1, 'increased': 1, 'spent': 1, 'satisfied': 1, 'God': 1, 'sabbee': 1, 'him': 1, 'sober': 1, 't': 1, 'Counterpane': 1, 'waking': 1, 'about': 1, 'patchwork': 1, 'explain': 1, 'child': 1, 'up': 1, 'But': 1, 'help': 1, 'calculating': 1, 'worse—at': 1, 'best': 1, 'lay': 1, 'have': 1, 'shock': 1, 'piled': 1, 'rouse': 1, 'truly': 1, 'quietly': 1, 'compliment': 1, 'like': 1, 'top': 1, 'civilized': 1, 'yet': 1, 'been': 1, 'emerged': 1, 'then': 1, 'waistcoat': 1, 'see': 1, 'less': 1, 'toilet': 1, 'towards': 1, 'laugh': 1, 'full': 1, 'whalemen': 1, 'tell': 1, 'looks': 1, 'who': 1, ':': 1, 'crossing': 1, 'can': 1, 'breakfast': 1}
+Some: {'long': 1, ';': 1, 'glittering': 1, 'With': 1}
+years: {'precisely—having': 1, 'there': 1, 'kill': 1, 'Cape': 1, 'a': 1}
+ago—never: {'little': 1}
+mind: {'or': 1, 'sail': 1, 'turned': 1, ',': 1, '’': 1, 'the': 1}
+how: {'no': 1, 'to': 1, 'northern': 1, 'stands': 1, 'whether': 1, 'people': 1, 'the': 1, 'glided': 1, 'there': 1, '.': 1, 'straight': 1, 'been': 1, 'hot': 1}
+long: {'the': 2, 'money': 1, 'came': 1, ',': 1, 'elbowed': 1, 'table': 1, 'answer': 1, 'caught': 1, 'have': 1, '’': 1, 'that': 1, 'I': 1, 'kept': 1, 'ashore': 1, 'empty': 1}
+precisely—having: {'in': 1}
+little: {'my': 3, 'of': 2, 'to': 2, 'and': 2, 'part': 1, 'wherefore': 1, 'motives': 1, 'already': 1, 'partly': 1, 'as': 1, '.': 1, 'who': 1, 'officiating': 1, 'He': 1, 'But': 1, 'the': 1, 'this': 1, 'sleeves': 1, 'hunch': 1, 'a': 1, 'his': 1, 'polite': 1, 'little': 1, ';': 1, 'days': 1, 'floor': 1}
+or: {'a': 3, 'the': 3, ',': 3, 'of': 2, 'purse': 1, 'nearly': 1, 'to': 1, 'abandon': 1, '.': 1, 'than': 1, 'carpet-bag': 1, 'from': 1, 'summoned': 1, 'coast': 1, 'case': 1, 'in': 1, 'is': 1, 'I': 1, 'had': 1, 'idol': 1, 'psalmody': 1, 'his': 1, 'light': 1, '!': 1, 'you': 1, ';': 1, 'never': 1, 'trying': 1, 'supperless': 1, 'cheeks': 1, 'solitary': 1}
+no: {',': 4, 'a': 4, '.': 3, 'the': 2, 'to': 2, 'I': 2, 'more': 1, 'man': 1, 'place': 1, 'craft': 1, 'now': 1, 'harpooneer': 1, 'he': 1, 'then': 1, 'upon': 1, 'at': 1, 'jumped': 1, 'rolled': 1, 'for': 1, 'were': 1, 'so': 1, 'and': 1, 'though': 1, 'every': 1}
+money: {'and': 1, 'to': 1, 'considering': 1, 'of': 1, 'sailors': 1}
+in: {',': 14, 'I': 9, 'and': 9, '.': 8, 'the': 7, 'But': 4, 'this': 4, 'of': 4, 'in': 3, 'was': 3, ';': 3, 's': 3, 'a': 3, 'It': 3, 'room': 3, 'but': 2, 'time': 2, 'if': 2, 'man': 2, 'to': 2, 'The': 2, 'New': 2, 'better': 2, 'Nantucket': 2, 'which': 2, 'his': 2, 'you': 2, '’': 2, 'then': 2, 'perhaps': 2, 'nothing': 1, 'leaning': 1, 'counters': 1, 'stand—miles': 1, 'some': 1, 'lakes': 1, 'leaves': 1, 'is': 1, 'most': 1, 'Should': 1, 'scores': 1, 'Rockaway': 1, 'into': 1, 'passengers': 1, 'being': 1, 'pyramids': 1, 'And': 1, 'Van': 1, 'it': 1, 'Who': 1, 'point': 1, 'winds': 1, 'at': 1, 'brief': 1, 'short': 1, 'jolly': 1, 'tell': 1, 'these': 1, 'swayed': 1, '2': 1, 'they': 1, 'anxious': 1, 'dreary': 1, 'conclude': 1, 'pavement': 1, 'hear': 1, '!': 1, 'black': 1, 'looking': 1, 'thought': 1, '(': 1, 'Would': 1, 'picture': 1, 'A': 1, 'midst': 1, 'impaling': 1, 'run': 1, 'been': 1, 'destruction': 1, 'We': 1, 'door': 1, 'bedarned': 1, 'shoulders': 1, 'face': 1, 'revelry': 1, 'fact': 1, 'than': 1, 'could': 1, 'say': 1, 'eider': 1, 'four': 1, 'found': 1, 'ready': 1, '“': 1, 'mystifying': 1, 'towards': 1, 'spend': 1, 'as': 1, 'night': 1, 'exclaimed': 1, 'trunk': 1, 'mat': 1, '?': 1, 'tore': 1, 'sat': 1, 'saw': 1, 'that': 1, 'stranger': 1, 'dreadfully': 1, 'distant': 1, 'pulled': 1, 'he': 1, 'War': 1, 'produced': 1, 'singing': 1, 'carelessly': 1, 'long': 1, 'Landlord': 1, 'from': 1, 'gettee': 1, 'will': 1, '4': 1, 'affectionate': 1, '21st': 1, 'hemisphere': 1, 'felt': 1, 'undressed': 1, 'sought': 1, 'hung': 1, 'shudderingly': 1, 'those': 1, 'suddenly': 1, 'with': 1, 'style': 1, 'on—under': 1, 'nor': 1, 'would': 1, 'jacket': 1, 'bedfellow': 1, 'seem': 1, 'complexion': 1, 'climates': 1, 'dogs': 1, 'Africa': 1, 'estimation': 1}
+my: {'a': 5, 'of': 3, 'it': 2, 'to': 2, 'the': 2, '.': 2, ',': 2, 'particular': 1, 'find': 1, 'upper': 1, 'ball': 1, 'not': 1, 'all': 1, 'never': 1, 'voyage': 1, 'discriminating': 1, 'wild': 1, 'men': 1, 'two': 1, 'processions': 1, 'for': 1, 'became': 1, 'brought': 1, 'sure': 1, 'projections': 1, 'most': 1, 'reasonest': 1, 'own': 1, 'what': 1, 'upon': 1, 'so': 1, 'be': 1, 'shan': 1, 'grinning': 1, 'in': 1, '!': 1, 'myself': 1, 'then': 1, 'beginning': 1, 'and': 1, 'me': 1, 'half': 1, 'him': 1, 'debel': 1, 'fire': 1, 'or': 1, 'third': 1, 'out': 1, 'threw': 1, 'but': 1, 'hours': 1, 'before': 1, 'seemed': 1, 'thinking': 1, 'supernatural': 1, 'with': 1, 'nearly': 1}
+purse: {'to': 1, 'is': 1, 'unless': 1}
+,: {',': 66, 'of': 43, 'a': 38, 'and': 34, 'the': 33, 'to': 22, '.': 17, 'in': 13, '’': 12, 'it': 12, '“': 11, 'be': 10, 'his': 10, 'I': 9, 'with': 9, 'as': 8, 'not': 8, 'for': 8, 'by': 7, 'was': 7, ';': 7, 'me': 7, 'is': 6, 'him': 6, 'over': 6, 'more': 6, 'this': 6, 'bed': 6, 's': 5, 'all': 5, 'about': 5, 'that': 5, 'an': 5, 'into': 5, 'harpooneer': 5, 'you': 4, 'from': 4, 'down': 4, 'have': 4, 'out': 4, 'were': 4, 'he': 4, '”': 4, 'good': 4, 'landlord': 4, 'up': 4, 'same': 3, 'here': 3, 'if': 3, 'but': 3, 'or': 3, 'sea': 3, 'so': 3, 'on': 3, 'little': 3, 'at': 3, 'almost': 3, 'made': 3, 'away': 3, 'going': 3, 'my': 3, 'now': 3, 'like': 3, 'their': 2, 'get': 2, 'such': 2, 'who': 2, 'than': 2, 'old': 2, 'some': 2, 'whale': 2, 'would': 2, 'arm': 2, 'New': 2, 'no': 2, 'fine': 2, 'great': 2, 'first': 2, 'towards': 2, 'The': 2, 'sign': 2, 'straight': 2, 'wooden': 2, 'way': 2, 'enough': 2, 'cannibal': 2, '(': 2, 'better': 2, 't': 2, 'mind': 2, 'long': 2, 'upon': 2, 'own': 2, 'between': 2, 'settle': 2, 'standing': 2, 'must': 2, 'room': 2, 'round': 2, 'went': 2, 'ease': 2, 'before': 2, 'somewhat': 2, 'being': 2, 'interest': 1, 'sail': 1, 'soul': 1, 'rear': 1, 'strong': 1, 'time': 1, 'waterward': 1, 'previous': 1, 'clinched': 1, 'How': 1, 'water': 1, 'east': 1, 'lead': 1, 'wedded': 1, 'most': 1, 'bit': 1, 'romantic': 1, 'trunk': 1, 'cattle': 1, 'shakes': 1, 'scores': 1, 'thousand': 1, 'handfuls': 1, 'other': 1, 'Jove': 1, 'respectable': 1, 'kind': 1, 'ships': 1, 'schooners': 1, 'And': 1, 'sort': 1, 'fancied': 1, 'fowls': 1, 'judgmatically': 1, 'peppered': 1, 'mummies': 1, 'simple': 1, 'forecastle': 1, 'royal': 1, 'Hardicanutes': 1, 'putting': 1, 'stand': 1, 'decoction': 1, 'respectfully': 1, 'may': 1, 'rub': 1, 'Again': 1, 'point': 1, 'passengers': 1, 'earnestly': 1, 'account': 1, 'exercise': 1, 'part': 1, 'surveillance': 1, 'whaling': 1, 'grand': 1, 'parts': 1, 'farces—though': 1, 'see': 1, 'marvels': 1, 'coasts': 1, 'perceive': 1, 'social': 1, 'voyage': 1, 'welcome': 1, 'conceits': 1, 'floated': 1, 'Horn': 1, 'connected': 1, 'matter': 1, 'sally': 1, 'canoes': 1, 'cobblestones—so': 1, 'when': 1, 'still': 1, 'following': 1, 'dark': 1, 'dismal': 1, 'go': 1, 'Ishmael': 1, 'windows': 1, 'fervent': 1, 'congealed': 1, 'weary': 1, 'foot': 1, 'remorseless': 1, 'pausing': 1, 'watch': 1, 'cheapest': 1, 'inns': 1, 'either': 1, 'town': 1, 'door': 1, 'stood': 1, 'meant': 1, 'thing': 1, 'did': 1, 'flying': 1, 'Sword-Fish': 1, 'seemed': 1, 'Doom': 1, 'wailing': 1, 'entertainment': 1, 'creaking': 1, 'Peter': 1, 'looked': 1, 'pea': 1, 'Euroclydon': 1, 'mighty': 1, 'zephyr': 1, 'writer—of': 1, 'wight': 1, 'Yes': 1, 'mine': 1, 'carted': 1, 'tatters': 1, 'both': 1, 'wrapper—': 1, 'stranded': 1, 'tepid': 1, 'wainscots': 1, 'bulwarks': 1, 'crosslights': 1, 'diligent': 1, 'chaos': 1, 'open': 1, 'unwarranted': 1, 'black': 1, 'hovering': 1, 'floating': 1, 'truly': 1, 'nervous': 1, 'deceptive': 1, 'design': 1, 'aggregated': 1, 'act': 1, 'sweeping': 1, 'fifty': 1, 'Nathan': 1, 'restless': 1, 'sojourning': 1, 'found': 1, 'low-arched': 1, 'beams': 1, 'planks': 1, 'fancy': 1, 'howling': 1, 'ark': 1, 'covered': 1, 'cracked': 1, 'gathered': 1, 'arched': 1, 'coach': 1, 'drive': 1, 'decanters': 1, 'those': 1, 'money': 1, 'dearly': 1, 'deliriums': 1, 'glasses': 1, 'goblets': 1, 'light': 1, 'desired': 1, 'tapping': 1, 'objections': 1, 'further': 1, 'working': 1, 'last': 1, 'sheet': 1, 'lips': 1, 'heavens': 1, 'dumplings': 1, 'looking': 1, 'diabolically': 1, 'eats': 1, 'em': 1, 'feel': 1, 'what': 1, 'wild': 1, 'muffled': 1, 'poured': 1, 'brimmers': 1, 'side': 1, 'even': 1, 'held': 1, 'desirous': 1, 'narrative': 1, 'dazzling': 1, 'stature': 1, 'unobserved': 1, 'missed': 1, 'seems': 1, 'huge': 1, 'myself': 1, 'deal': 1, 'multiply': 1, 'ashore': 1, 'your': 1, 'finest': 1, 'ought': 1, 've': 1, 'make': 1, 'know': 1, 'business': 1, 'never': 1, 'stop': 1, 'steal': 1, 'popped': 1, 'chance': 1, 'awhile': 1, 'become': 1, 'mightily': 1, 'bird': 1, 'can': 1, 'sell': 1, 'actually': 1, 'around': 1, 'overstocked.': 1, 'calmly': 1, 'stick': 1, 'guess': 1, 'passion': 1, 'broke': 1, 'Landlord': 1, 'delay': 1, 'yet': 1, 'take': 1, 'mean': 1, 'sir': 1, 'liable': 1, 'sold': 1, 'Sunday': 1, 'do': 1, 'just': 1, 'had': 1, 'dangerous': 1, 'dreadful': 1, 'turning': 1, 'our': 1, 'got': 1, 'ye': 1, 'vum': 1, 'we': 1, 'ye.': 1, 'scrutiny': 1, 'furniture': 1, 'representing': 1, 'lashed': 1, 'floor': 1, 'possible': 1, 'thick': 1, 'took': 1, 'late': 1, 'ado': 1, 'heavy': 1, 'But': 1, 'say': 1, 'Zealand': 1, 'averted': 1, 'round—when': 1, 'terrible': 1, 'they': 1, 'them': 1, 'opened': 1, 'slipping': 1, 'second': 1, 'answer': 1, 'marked': 1, 'dreadnaught': 1, 'hung': 1, 'pockets': 1, 'thought': 1, 'fire-board': 1, 'hunch-backed': 1, 'offer': 1, 'praying': 1, 'twitched': 1, 'exhibiting': 1, 'high': 1, 'put': 1, 'clouds': 1, 'might': 1, 'sake': 1, 'shouted': 1, 'kill-e': 1, 'again': 1, 'grinning': 1, 'Queequeg': 1, 'sleepe': 1, 'pipe': 1, 'motioning': 1, 'What': 1, 'man': 1, 'stash': 1, 'whatever': 1, 'insured.': 1, 'parti-coloured': 1, 'which': 1, 'rolled': 1, 'world': 1, 'hues': 1, 'whipping': 1, 'two': 1, 'sigh': 1, 'gay': 1, 'particular': 1, 'worse': 1, 'subsequent': 1, 'unimaginable': 1, 'belonged': 1, 'frozen': 1, 'awful': 1, 'weeks': 1, 'fear': 1, 'feeling': 1, 'experienced': 1, 'only': 1, 'tightly': 1, 'death': 1, 'sleeping': 1, 'length': 1, 'wriggling': 1, 'expostulations': 1, 'observing': 1, 'reconciled': 1, 'circumstances': 1, 'civilized': 1, 'these': 1, 'innate': 1, 'toilette': 1, 'trowsers—he': 1, 'hard': 1, 'been': 1, 'dreamt': 1, 'hat': 1, 'limping': 1, 'curtains': 1, 'else': 1, 'wash': 1, 'contented': 1, 'then': 1, 'piece': 1, 'whets': 1, 'using': 1, 'bar-room': 1, 'skylarking': 1, 'person': 1, 'backward': 1, 'allow': 1, 'ship': 1, 'wearing': 1, 'smell': 1, 'one': 1, 'cried': 1, 'traveller': 1, 'assurance': 1, 'very': 1, '!': 1, 'them—at': 1, 'chanced': 1, 'without': 1, 'attention': 1, 'quietly': 1}
+and: {',': 19, 'the': 19, 'a': 17, 'to': 9, 'of': 8, 'and': 8, 'that': 7, 'in': 7, 'I': 6, '.': 6, 'you': 5, 'with': 5, ';': 4, 'my': 4, 'house': 4, 'his': 4, 'at': 3, 'was': 3, 'he': 3, 'sea': 3, 'me': 2, 's': 2, '?': 2, 'as': 2, 'no': 2, 'is': 2, '“': 2, 'like': 2, '”': 2, 'had': 2, 'first': 2, 'long': 2, 'brown': 2, 'see': 2, 'very': 2, 'arm': 2, 'light': 2, 'bed': 2, 'good': 2, 'Queequeg': 2, 'Whenever': 1, 'get': 1, 'philosophical': 1, 'take': 1, 'which': 1, 'Whitehall': 1, 'nailed': 1, 'dive': 1, 'avenues—north': 1, 'south': 1, 'they': 1, 'carries': 1, 'ever': 1, 'goes': 1, 'down': 1, 'out': 1, 'conscious': 1, 'whatsoever': 1, 'spar': 1, 'even': 1, 'hunks': 1, 'each': 1, 'act': 1, 'can': 1, 'fore-castle': 1, 'unaccountable': 1, 'performances': 1, 'comedies': 1, 'presented': 1, 'among': 1, 'rolled': 1, 'sway': 1, 'them': 1, 'reaching': 1, 'poor': 1, 'before': 1, 'cold': 1, 'few': 1, 'too': 1, 'on': 1, 'candle': 1, 'within': 1, 'interior': 1, 'Angel': 1, 'text': 1, 'The': 1, 'here': 1, 'coffee': 1, 'It': 1, 'Death': 1, 'lint': 1, '’': 1, 'off': 1, 'keep': 1, 'visits': 1, 'neighbors': 1, 'oft': 1, 'but': 1, 'plain': 1, 'purposing': 1, 'thickly': 1, 'gone': 1, 'deformed': 1, 'storied': 1, 'needle': 1, 'imbedded': 1, 'way—cut': 1, 'beneath': 1, 'swift': 1, 'full': 1, 'decidedly': 1, 'cups': 1, 'rare.': 1, 'Hurrah': 1, 'set': 1, 'beards': 1, 'icicles': 1, 'swore': 1, 'mind': 1, 'most': 1, 'not': 1, 'ordained': 1, 'coffer-dam': 1, 'white': 1, 'supernaturally': 1, 'own': 1, 'skin': 1, 'now': 1, 'plaguy': 1, 'wait': 1, 'ye': 1, 'handkerchief': 1, 'last': 1, 'heaven': 1, 'how': 1, 'great': 1, 'series': 1, 'jolly': 1, 'yet': 1, 'tickled': 1, 'couldn': 1, 'another': 1, 'beget': 1, 'highest': 1, 'what': 1, 'idea': 1, 'easy': 1, 'all': 1, 'ere': 1, 'foot': 1, 'pitched': 1, 'went': 1, 'there': 1, 'centre': 1, 'smelt': 1, 'tried': 1, 'any': 1, 'thought': 1, 'damp': 1, 'head-peddling': 1, 'After': 1, 'jacket': 1, 'middle': 1, 'said': 1, 'blowing': 1, 'care': 1, 'head': 1, 'large': 1, 'just': 1, 'squares': 1, 'produced': 1, 'sort': 1, 'would': 1, 'confounded': 1, 'concerning': 1, 'chest': 1, 'live': 1, 'Christian': 1, 'must': 1, 'curious': 1, 'were': 1, 'strong': 1, 'tomahawk': 1, 'whoever': 1, 'one': 1, 'stood': 1, 'tattooed': 1, 'sleeves': 1, 'tell': 1, 'somehow': 1, 'got': 1, 'coaches': 1, 'voices': 1, 'up': 1, 'her': 1, 'go': 1, 'steeped': 1, 'heard': 1, 'myself': 1, 'pagan': 1, 'alive': 1, 'scratch': 1, 'upon': 1, 'unbecomingness': 1, 'back': 1, 'if': 1, 'so': 1, 'it': 1, 'sounds': 1, 'understand': 1, 'dress': 1, 'motions': 1, 'worth': 1, 'hunted': 1, 'eyes': 1, 'about': 1, 'begged': 1, 'himself': 1, 'donned': 1, 'bit': 1, 'accosted': 1, 'way': 1, 'third': 1, 'harpooneers': 1, 'keepers': 1, 'bosky': 1, 'almost': 1, 'breakfast': 1, 'Scotch': 1, 'hear': 1, 'sat': 1, 'ceremony': 1, 'him': 1, 'applied': 1, 'digesting': 1, 'hat': 1}
+nothing: {',': 2, 'on': 1, 'If': 1, 'he': 1, 'mat': 1, 'of': 1, ';': 1}
+particular: {'shore': 1, '’': 1, 'I': 1, '.': 1, 'a': 1, 'because': 1}
+to: {',': 24, '.': 11, 'I': 9, 'a': 7, 'the': 7, 'and': 6, 'in': 6, 'that': 6, 'to': 4, 'But': 4, ';': 4, 'bed': 4, 'but': 4, 'is': 3, 'as': 3, 'with': 3, '“': 3, 'his': 3, '’': 3, 'from': 2, 'your': 2, '?': 2, 's': 2, 'most': 2, 'little': 2, 'And': 2, 'was': 2, 'it': 2, 'of': 2, 'on': 2, 'stepping': 1, 'soon': 1, 'seaward': 1, 'benches': 1, 'desks': 1, 'down': 1, 'there': 1, 'metaphysical': 1, 'bathed': 1, 'did': 1, 'Why': 1, 'eyes': 1, 'my': 1, 'you': 1, 'True': 1, 'grasshopper': 1, 'requires': 1, 'sweep': 1, 'mean': 1, 'all': 1, 'voyage': 1, 'part': 1, 'wish': 1, 'other': 1, 'than': 1, 'Leviathan': 1, 'where': 1, 'nigh': 1, 'stood': 1, 'snow': 1, 'light': 1, 'thou': 1, 'scrape': 1, 'inquiry': 1, 'an': 1, 'distracted': 1, 'involuntarily': 1, 'marvellous': 1, 'even': 1, 'craft': 1, 'Parallel': 1, 'Horn': 1, 'room': 1, '”': 1, 'adjoining': 1, 'jackets': 1, 'scalding': 1, 'man': 1, 'seamen': 1, 'are': 1, 'stranger': 1, 'harpooneer': 1, 'Besides': 1, 'bedwards': 1, 'enough': 1, 'The': 1, 'Still': 1, 'sign': 1, 'something': 1, 'rise—yes': 1, 'green.': 1, 'Mt': 1, 'uncomfortable': 1, 'me': 1, 'him': 1, 'selling': 1, 'this': 1, 'so': 1, 'would': 1, 'to-morrow': 1, 'heads': 1, 'There': 1, 'round': 1, 'felt': 1, 'conclusion': 1, 'door': 1, 'stuck': 1, 'spoken': 1, 'towards': 1, 'complexion': 1, 'purple': 1, 'demand': 1, 'Thirty': 1, 'A': 1, 'or': 1, 'takes': 1, ')': 1, 'sing-song': 1, 'which': 1, 'fatal': 1, 'let': 1, 'look': 1, 'really': 1, 'short': 1, 'once': 1, 'at': 1, 'mother': 1, 'slippering': 1, 'unendurable': 1, 'several': 1, 'nothing': 1, 'Nay': 1, 'For': 1, 'bridegroom': 1, '!': 1, 'jumped': 1, 'treated': 1, 'At': 1, 'tormented': 1, 'himself': 1, 'against': 1, 'steel': 1, 'not': 1, 'array': 1, 'These': 1, 'about': 1, 'without': 1, 'many': 1, 'We': 1}
+interest: {'I': 1}
+on: {',': 9, 'I': 3, 'the': 3, 'came': 2, 'of': 2, 'were': 2, 'Queequeg': 2, 'his': 1, 'wade': 1, 'monied': 1, 'atmosphere': 1, 'thinks': 1, 'this': 1, 'formed': 1, 'ignoring': 1, 'may': 1, 'red': 1, 'now': 1, 'here': 1, 'for': 1, 'whether': 1, 'door': 1, 'through': 1, 'Cape': 1, 'one': 1, 'noise': 1, 'an': 1, 'a': 1, 'late': 1, 'all': 1, 'chest': 1, 'fire-place': 1, 'took': 1, 'bed': 1, 'got': 1, 'corner': 1, 'bald': 1, 'fumbled': 1, 'exactly': 1, 'flame': 1, 'heaven': 1, 'did': 1, 'there': 1, 'he': 1, 'as': 1, 'striding': 1, 'in': 1, 'to': 1, 'out': 1}
+shore: {'would': 1}
+I: {',': 19, 'the': 15, 'a': 14, 'to': 9, 'of': 8, 'and': 7, 'as': 6, 'that': 5, '.': 5, 'him': 5, 'about': 4, 'I': 4, 'it': 4, '’': 4, 'is': 4, 'my': 3, 'in': 3, 'with': 3, 'some': 3, 'room': 3, 'what': 3, 'you': 3, ';': 2, 'out': 2, 'into': 2, 'this': 2, 'two': 2, 'had': 2, 'sleep': 2, 'light': 2, 'over': 2, 'never': 2, 'one': 2, 'bench': 2, 'all': 2, 'who': 2, 'for': 2, 's': 2, 'but': 2, 'just': 2, 'be': 2, 'could': 2, 'was': 2, 'his': 2, 'little': 1, 'before': 1, 'whenever': 1, 'ship': 1, 'have': 1, 'passenger': 1, 'salt': 1, 'distinction': 1, 'toils': 1, 'care': 1, 'glory': 1, 'sailor': 1, 'scales': 1, 'knowing': 1, 'On': 1, 'part': 1, 'me': 1, 'everlasting': 1, 'seas': 1, 'Bedford': 1, 'destined': 1, 'by': 1, 'hearing': 1, 'Wretched': 1, 'extant—': 1, 'occurred': 1, 'young': 1, 'are': 1, 'right': 1, 'old': 1, 'aint': 1, 'rest': 1, 'brawn': 1, 'upon': 1, 'how': 1, 'sleeping': 1, 'hole': 1, 'mind': 1, 'can': 1, 'ye': 1, 'carpenter': 1, 'snug': 1, 'came': 1, 'couldn': 1, 'him—bolt': 1, 'after': 1, 'prejudices': 1, 'wait': 1, 'good': 1, 'll': 1, 'respects': 1, 'evidence': 1, 'he': 1, 'sprawling': 1, 'looking': 1, 'Sunday—you': 1, 'moment': 1, 'small': 1, 'nothing': 1, 'sight': 1, 'side': 1, 'off': 1, 'coat': 1, 'deal': 1, 'being': 1, 'see': 1, 'not': 1, 'make': 1, 'It': 1, 'hot': 1, 'Even': 1, 'afraid': 1, 'parts': 1, 'black': 1, 'hard': 1, 'time': 1, 'bound': 1, 'now': 1, 'against': 1, 'saying': 1, 'Watch': 1, 'growled': 1, 'get': 1, 'didn': 1, 'd': 1, 'you—you': 1, 'having': 1, '”': 1, 'go.': 1, 'arm': 1, 'from': 1, 'similar': 1, 'sweep': 1, 'there': 1, 'resurrection': 1, 'last': 1, 'through': 1, 'consciousness': 1, 'attempts': 1, 'arm—unlock': 1, 'him—': 1, 'grunt': 1, 'rudeness': 1, 'at': 1, 'where': 1, 'stroll': 1}
+thought: {',': 3, 'a': 2, 'as': 2, 'very': 2, 'of': 2, '.': 2, 'moment': 1, 'is': 1, 'passage': 1, ';': 1, 'four': 1, 'my': 1, '!': 1, 'was': 1, 'on': 1, 'it': 1, '’': 1, 'wife': 1, 'in': 1}
+would: {';': 2, 'and': 1, 'miles': 1, 'following': 1, 'tempestuous': 1, 's': 1, 'some': 1, 'harpooneer': 1, 'half': 1, 'not': 1, 'tidiest': 1, ',': 1, 'to': 1, 'sellin': 1, 'mat': 1, 'it': 1, 'But': 1, 'knew': 1, 'leave': 1, 'with': 1, 'under': 1, 'as': 1}
+sail: {'see': 1, 'land': 1, 'a': 1, '’': 1}
+about: {'the': 2, 'it': 2, ',': 2, 'and': 2, 'my': 2, 'begin': 1, 'me': 1, 'satisfaction': 1, 'did': 1, 'famous': 1, 'At': 1, 'tossed': 1, 'you': 1, 'by': 1, 'so': 1, 'observed': 1, 't': 1, 'left': 1, 'I': 1, 'which': 1, 'is': 1, 'somehow': 1, 'not': 1, 'of': 1, 'confess': 1, 'shavings': 1, 'manner': 1, '.': 1, 'myself—the': 1, 'Queequeg': 1, 'over': 1, 'if': 1, 'his': 1, 'there': 1, 'no': 1}
+a: {',': 37, 'the': 18, '.': 17, 'and': 12, 'a': 11, 'in': 8, 'I': 7, 'of': 6, 'to': 4, '!': 4, 'that': 4, 'not': 4, '”': 4, 'me': 4, 'you': 3, 'own': 3, 'there': 3, 'was': 3, 'his': 3, 'some': 3, 'on': 3, 'out': 2, 'if': 2, 'were': 2, 'into': 2, 'would': 2, 'something': 2, 'though': 2, 'ever': 2, 'at': 2, 'for': 2, 'air': 2, 'my': 2, 'about': 2, 'bag': 2, 'door': 2, 'it': 2, 'head': 2, 'so': 2, '“': 2, 'Landlord': 2, 'He': 2, 'or': 2, '’': 2, 'but': 2, ';': 2, 'up': 2, 'as': 2, 'could': 2, 'tanning': 2, 'more': 2, 'with': 2, 'he': 2, 'watery': 1, 'driving': 1, 'prevent': 1, 'himself': 1, 'Go': 1, 'Nothing': 1, 'sadly': 1, 'Beach': 1, 'him': 1, 'yourself': 1, 'first': 1, 'go': 1, 'have': 1, 'purse': 1, 'rag': 1, 'Captain': 1, 'Cook': 1, 'ship-board—yet': 1, 'will': 1, 'before': 1, 'meadow': 1, 'assure': 1, 'get': 1, 'make': 1, 'really': 1, 'should': 1, 'It': 1, 'others': 1, 'roused': 1, 'sounds': 1, 'still': 1, '?': 1, 'another': 1, 'night': 1, 'Too': 1, 'candle': 1, 'hour': 1, 'pushed': 1, 'misty': 1, 'gable-ended': 1, 'where': 1, 'any': 1, 'thou': 1, 'frost': 1, 't': 1, 'Poor': 1, 'pooh': 1, 'how': 1, 'palace': 1, 'society': 1, 'only': 1, 'straggling': 1, 'thoroughly': 1, 'portentous': 1, 'boggy': 1, 'Yet': 1, 'half-attained': 1, 'alas': 1, 's': 1, 'gigantic': 1, 'hurricane': 1, 'half-foundered': 1, 'clubs': 1, 'like': 1, 'shuddered': 1, 'hacking': 1, 'harpoon—so': 1, 'Javan': 1, 'slain': 1, 'forty': 1, 'fireplaces': 1, 'this': 1, 'shelf-like': 1, 'attempt': 1, 'beneath': 1, 'meridians': 1, 'gathered': 1, 'answer': 1, 'But': 1, 'bitter': 1, 'put': 1, '—you': 1, 'further': 1, 'addressed': 1, 'without': 1, 'enough': 1, 'whale': 1, 'colds': 1, 'far': 1, 'seldom': 1, 'occurred': 1, 'sleep': 1, 'objections': 1, 'anybody': 1, 'than': 1, 'gathering': 1, 'now': 1, 'over': 1, 'then': 1, 'always': 1, 'Do': 1, 'toothpick': 1, 'unaccountable': 1, 'said': 1, 'stop': 1, 'other': 1, 'Wall': 1, 'little': 1, 'New': 1, 'This': 1, 'one': 1, 'towards': 1, 'big': 1, 'four': 1, 'man': 1, 'fish': 1, 'ornamented': 1, 'parade': 1, 'shaggy': 1, 'went': 1, 'against': 1, 'myself': 1, 'shirt': 1, 'last': 1, 'had': 1, 'land': 1, 'passage': 1, 'face': 1, 'yellow': 1, 'cut': 1, 'man—a': 1, 'what': 1, 'purplish': 1, 'However': 1, 'hair': 1, 'seemed': 1, 'frogs': 1, 'Seas': 1, 'look': 1, 'Congo': 1, 'ebony': 1, 'indeed': 1, 'andirons': 1, 'woodcock': 1, 'these': 1, 'town': 1, 'kind': 1, 'way': 1, 'cannibal': 1, 'drunken': 1, 'parts': 1, 'patchwork': 1, 'remember': 1, 'befell': 1, 'few': 1, 'misbehaviour': 1, 'doze': 1, 'waking': 1, 'rolled': 1, 'felt': 1, 'aside': 1, 'pretty': 1, 'broad': 1, 'matrimonial': 1, 'don': 1, 'by': 1, 'stage—neither': 1, 'Seeing': 1, 'room': 1, 'rather': 1, 'wondered': 1, 'mighty': 1, 'They': 1, 'is': 1, 'tropic': 1, 'slightly': 1, 'which': 1, 'we': 1, 'an': 1, 'Still': 1, 'many': 1}
+see: {'the': 2, 'he': 2, 'sentinels': 1, 'oceans': 1, 'creatures': 1, 'springs': 1, 'place': 1, '’': 1, 'him': 1, 'to': 1, 'American': 1, 'follow': 1, 'and': 1, 'in': 1, 'razor': 1}
+the: {',': 41, '.': 30, 'the': 29, 'a': 17, 'of': 12, 'to': 11, 'and': 11, 'I': 10, 'in': 10, 'he': 6, 'it': 6, 'had': 6, 'was': 6, ';': 5, 'that': 5, 'me': 5, 'were': 4, 'when': 4, 'out': 4, '’': 4, 'from': 4, 'But': 4, 'up': 4, 'room': 4, 'all': 4, 'is': 3, 'upon': 3, 'over': 3, 'old': 3, 'you': 3, 'on': 3, 'down': 3, 'great': 3, 'with': 3, '”': 3, 'thought': 3, 'him': 3, '“': 3, 'his': 3, 'an': 3, 'by': 2, '?': 2, 'sea': 2, 'being': 2, 'as': 2, 'so': 2, 'at': 2, 'one': 2, 'most': 2, 'street': 2, 'inches': 2, 'last': 2, 'enough': 2, 'pity': 2, 'though': 2, 'himself': 2, 'could': 2, 'In': 2, 'still': 2, 'no': 2, 'not': 2, 'or': 2, 'middle': 2, 'about': 2, 'little': 2, 'for': 2, 'now': 2, 'candle': 2, 'thinking': 2, 'took': 2, 'have': 2, 'first': 2, 'off': 2, 'At': 2, 'world': 1, 'circulation': 1, 'find': 1, 'knocking': 1, 'nothing': 1, 'ocean': 1, 'There': 1, 'noble': 1, 'Sabbath': 1, 'China': 1, 'striving': 1, 'What': 1, 'bound': 1, 'land': 1, 'warehouses': 1, 'can': 1, 'needles': 1, 'ships': 1, 'high': 1, 'magic': 1, 'be': 1, 'try': 1, 'quietest': 1, '—Water—there': 1, 'did': 1, 'separate': 1, 'phantom': 1, 'such': 1, 'ibis': 1, 'into': 1, 'Rensselaers': 1, 'Randolphs': 1, 'been': 1, 'awe': 1, 'Testament': 1, 'because': 1, 'physical': 1, 'round': 1, 'must': 1, 'between': 1, 'ills': 1, 'air': 1, 'gets': 1, 'commonalty': 1, 'leaders': 1, 'sailor': 1, 'something': 1, 'States': 1, 'WHALING': 1, 'besides': 1, 'Such': 1, 'where': 1, 'thousand': 1, 'wonder-world': 1, 'mid': 1, 'good': 1, 'Manhatto': 1, 'whaling': 1, 'but': 1, 'whales': 1, 'grapnels': 1, 'towards': 1, 'Ishmael': 1, 'Crossed': 1, 'else': 1, 'glasses': 1, 'boots': 1, 'waterward': 1, 'dreary': 1, 'week': 1, 'deserted': 1, 'invitingly': 1, 'entering': 1, 'Trap.': 1, 'teeth-gnashing': 1, 'Trap': 1, 'painting': 1, 'time': 1, 'itself': 1, 'district': 1, 'poverty-stricken': 1, 'lodgings': 1, 'bed': 1, 'thou': 1, 'sides': 1, 'only': 1, 'thrust': 1, '!': 1, 'own': 1, 'Would': 1, 'ye': 1, 'this': 1, 'feet': 1, 'England': 1, 'back': 1, 'idea': 1, 'midnight': 1, 'four': 1, 's': 1, 'stream': 1, 'seemed': 1, 'aged': 1, 'represents': 1, 'opposite': 1, 'new-mown': 1, 'long-armed': 1, 'The': 1, 'like': 1, 'dusky': 1, 'den—the': 1, 'pours': 1, 'deceitfully': 1, 'footpads': 1, 'measure': 1, 'number': 1, 'objectionable': 1, 'man': 1, 'end': 1, 'meat': 1, 'sartainty.': 1, 'complexioned': 1, 'knowing': 1, 'That': 1, 'Feegees.': 1, 'bar—when': 1, 'ice-island': 1, 'making': 1, 'interested': 1, 'eyes': 1, 'few': 1, 'quiet': 1, 'prefers': 1, 'would': 1, 'Just': 1, 'ape': 1, 'plan': 1, 'together': 1, 'spot': 1, 'fetch': 1, 'It': 1, 'soon': 1, 'might': 1, 'worm': 1, 'stories': 1, 'And': 1, 'will': 1, 'long': 1, 'goin': 1, 'strung': 1, 'come': 1, 'near': 1, 'stood': 1, 'yet': 1, 'rude': 1, 'tall': 1, 'tags': 1, 'ponchos': 1, 'town': 1, 'never': 1, 'then': 1, 'harpooneer': 1, 'coming': 1, 'Whether': 1, 'door': 1, 'head-peddler': 1, 'entered': 1, 'looking': 1, 'large': 1, 'spoke': 1, 'plainly': 1, 'tattooed': 1, 'voyages': 1, 'To': 1, 'perhaps': 1, 'extraordinary': 1, 'while': 1, 'these': 1, 'thing': 1, 'skull': 1, 'thus': 1, 'face': 1, 'brothers': 1, 'days': 1, 'removing': 1, 'jambs': 1, 'sooty': 1, 'feeling': 1, 'blaze': 1, 'hastier': 1, 'seem': 1, 'deliberating': 1, 'mouth': 1, 'conjured': 1, 'horrid': 1, 'tobacco': 1, 'comely': 1, 'manner': 1, 'blended': 1, 'pressure': 1, 'chimney': 1, 'June': 1, 'longest': 1, 'year': 1, 'myself': 1, 'there': 1, 'ached': 1, 'sound': 1, 'worse': 1, 'nameless': 1, 'silent': 1, 'closely': 1, 'broken': 1, 'remembered': 1, 'my': 1, 'events': 1, 'savage': 1, 'Queequeg': 1, 'certain': 1, 'savages': 1, 'minus': 1, 'butterfly': 1, 'His': 1, 'plain': 1, 'more': 1, 'made': 1, 'dipped': 1, 'corner': 1, 'unsheathes': 1, 'vigorous': 1, 'always': 1, 'landlord': 1, 'if': 1, 'bountifully': 1, 'dropping': 1, 'whom': 1, 'quite': 1, 'parlor': 1, 'walk': 1, 'attaining': 1, 'sort': 1, 'them—and': 1, 'curious': 1, 'heads': 1}
+watery: {'.': 1}
+part: {'It': 1, 'honorable': 1, 'quarter-deck': 1, 'of': 1, 'have': 1, ',': 1, 'cajoling': 1, 'mean': 1, 'now': 1, 'thing': 1}
+of: {',': 32, 'the': 18, '.': 15, 'I': 11, 'and': 8, 'in': 7, 'to': 6, 'he': 6, 'is': 5, 'was': 5, 'you': 4, 'of': 4, 'me': 4, ';': 3, 'this': 3, 'all': 3, 'my': 3, 'a': 3, 'with': 3, 'that': 3, 'it': 3, 'his': 2, 'among': 2, 'It': 2, 'old': 2, 'up': 2, 'same': 2, '”': 2, '’': 2, 'more': 2, 'at': 2, 'last': 2, 'whom': 2, 'full': 2, 'him': 2, 's': 2, 'which': 2, 'had': 2, 'heads': 2, 'heard': 2, 'room': 2, 'requires': 1, 'round': 1, 'Look': 1, 'ocean': 1, 'some': 1, 'under': 1, 'suffice': 1, 'compasses': 1, 'those': 1, 'them': 1, 'any': 1, 'hill-side': 1, 'Niagara': 1, 'travel': 1, 'receiving': 1, 'Why': 1, 'life': 1, 'do': 1, 'much': 1, 'who': 1, 'care': 1, 'brigs': 1, 'somehow': 1, 'broiled': 1, 'huge': 1, 'Do': 1, 'promptly': 1, 'trouble': 1, 'most': 1, 'pure': 1, 'For': 1, 'has': 1, 'dogs': 1, 'Providence': 1, 'between': 1, 'run': 1, '“': 1, 'when': 1, 'grand': 1, 'duly': 1, 'offer': 1, 'place': 1, 'wherever': 1, 'quarter': 1, 'but': 1, 'However': 1, 'book': 1, 'weeping': 1, 'these': 1, 'Euroclydon': 1, 'Dives': 1, 'being': 1, 'we': 1, 'Spouter': 1, 'condemned': 1, 'unaccountable': 1, 'centre': 1, 'blue': 1, 'unimaginable': 1, 'Time': 1, 'based': 1, 'three': 1, 'one': 1, 'iron': 1, 'dark-looking': 1, 'jaw': 1, 'another': 1, 'our': 1, 'half': 1, 'only': 1, 'looker': 1, 'They': 1, 'or': 1, 'liquor': 1, 'own': 1, 'reminiscences': 1, '!': 1, 'now': 1, 'man': 1, 'none': 1, 'began': 1, 'So': 1, 'went': 1, 'found': 1, 'from': 1, 'immediate': 1, 'harpooneer': 1, 'unless': 1, 'Landlord': 1, 'cleared': 1, 'out': 1, 'into': 1, 'Depend': 1, 'kick': 1, 'got': 1, 'Likewise': 1, 'on': 1, 'what': 1, 'wall': 1, 'hurry': 1, 'commenced': 1, 'mattress': 1, 'before': 1, 'an': 1, 'too—who': 1, 'must': 1, 'sure': 1, 'seal-skin': 1, 'then': 1, 'small': 1, 'window': 1, 'altogether': 1, 'completely': 1, 'not': 1, 'running': 1, 'South': 1, 'He': 1, 'grego': 1, 'negro': 1, 'next': 1, 'hot': 1, 'Stop': 1, 'night': 1, 'odd': 1, 'two': 1, 'precise': 1, 'suppose': 1, 'think': 1, 'slowly': 1, 'wake': 1, 'loud': 1, 'male': 1, 'seemed': 1, 'required': 1, 'ones—probably': 1, 'wash-stand': 1, 'head': 1, 'achieved': 1, 'been': 1, 'possessed': 1, 'drawn': 1, 'performances—this': 1, 'polish': 1, 'bashfulness': 1, 'sheepishly': 1, 'Green': 1, 'grappling': 1, 'peculiarities': 1}
+world: {'.': 2, 'way': 1, 'paid': 1, 'far': 1, 'of': 1, 'tell': 1, 'that': 1, 'at': 1}
+It: {',': 3, ';': 2, 'that': 2, 'have': 1, 'the': 1, 'as': 1, 'idolatrous': 1, 'sense': 1, 'sort': 1, 'in': 1, 'Parliament': 1, 'of': 1, 'bleak': 1, 'fire': 1, 'o': 1, 'twelve': 1, '’': 1, 'outside': 1, 'Besides': 1}
+is: {'.': 6, ',': 6, 'I': 4, 'to': 4, 'and': 3, 'the': 3, 'of': 2, 'that': 2, '?': 2, 'all': 2, 'an': 2, 'November': 1, 'green': 1, 'Let': 1, 'desires': 1, 'employs': 1, 'water': 1, 'boy': 1, 'And': 1, 'ungraspable': 1, 'you': 1, 'speak': 1, 'dotings': 1, 'touches': 1, 'everybody': 1, 'served': 1, 'universal': 1, 'infliction': 1, 'violate': 1, 'quick': 1, 'on': 1, 'Nantucket': 1, 'True': 1, 'a': 1, 'is': 1, 'chips': 1, 'low': 1, 'Oh': 1, 'he': 1, 'will': 1, 'such': 1, 'me': 1, 'Saturday': 1, 'said': 1, 'one': 1, 'shall': 1, '“': 1, 'surgeon': 1, ';': 1, 'they': 1, 'be': 1, 'best': 1, 'exceedingly': 1, 'than': 1, 'in': 1}
+way: {'the': 2, 'off': 1, 'spurs': 1, 'much': 1, 'their': 1, 'would': 1, 'went': 1, 'of': 1, 'irresolute': 1, 'some': 1, 'at': 1, 'that': 1}
+have: {'the': 3, 'a': 2, 'and': 2, 'him': 2, 'spleen': 1, 'ever': 1, 'Besides': 1, 'that': 1, ':': 1, 'as': 1, 'such': 1, 'chimney': 1, '’': 1, 'dead': 1, 'in': 1, 'you': 1, 'of': 1, 'adventure': 1, 'quicker': 1, 'Years': 1, 'thought': 1, 'even': 1, 'nightmare': 1, 'delicacy': 1, 'at': 1, 'but': 1, 'from': 1, 'thereby': 1, 'his': 1}
+driving: {'regulating': 1}
+off: {'.': 2, ',': 2, 'the': 1, 'of': 1, 'shiverings': 1, 'and': 1, 'thought': 1, 'floor': 1, 'hat—when': 1, 'a': 1, 'it': 1, 'strangest': 1, 'morning': 1}
+spleen: {'.': 1}
+regulating: {'I': 1}
+circulation: {'myself': 1}
+Whenever: {'grim': 1}
+find: {'the': 1, 'coffin': 1, 'painting': 1}
+myself: {'mouth': 1, 'warehouses': 1, 'of': 1, 'in': 1, 'loud': 1, 'spend': 1, 'that': 1, 'such': 1, 'neck': 1, 'heaven': 1, 'so': 1, 'beseeching': 1, 'explain': 1, ',': 1, 'Queequeg': 1}
+growing: {';': 1}
+grim: {'whenever': 1}
+mouth: {'a': 1, 'would': 1, 'however': 1, 'he': 1}
+;: {'the': 9, 'of': 7, ',': 7, 'I': 3, 'in': 3, 'a': 2, 'there': 2, 'he': 2, '’': 2, 'and': 2, 'been': 2, 'they': 2, 'damp': 1, 'involuntarily': 1, 'hypos': 1, 'pier-heads': 1, 'bulwarks': 1, 'up': 1, 'lee': 1, 'meadow': 1, 'cottage': 1, 'key': 1, 'go': 1, 'am': 1, 'judiciously': 1, 'one': 1, 'thump': 1, 'In': 1, 'officer': 1, 'perils': 1, 'first': 1, 'hear': 1, 'stopping': 1, 'black': 1, 's': 1, 'saw': 1, 'what': 1, 'Let': 1, '!': 1, 'knots': 1, 'more': 1, 'ever': 1, 'Supper': 1, 'for': 1, 'voyage': 1, 'have': 1, 'open': 1, 'had': 1, 'shadows': 1, 'sleep': 1, 'silk': 1, 'plane-iron': 1, 'mended': 1, 'too': 1, 'can': 1, 'belongs': 1, 'almighty': 1, 'clock': 1, 'to': 1, 'come': 1, 'yourself': 1, 'honest': 1, 'heat': 1, 'lips': 1, 'grunt': 1, 'tell': 1, 'smoking': 1, 'his': 1, 'by': 1, 'reality': 1, 'at': 1, 'me': 1, 'it—half': 1, 'seen': 1, 'seemed': 1, 'if': 1, 'morning': 1, 'slight': 1, 'strange': 1, 'drew': 1, 'is': 1, 'essentially': 1, 'curiosity': 1, 'violent': 1, 'well': 1, 'my': 1, 'second': 1, 'company': 1, 'set': 1, 'touch': 1, 'whole': 1, 'surprise': 1, 'these': 1, 'icicle': 1, 'with': 1}
+whenever: {',': 1, 'pausing': 1, 'an': 1, 'hazy': 1}
+it: {'a': 7, ',': 7, 'the': 7, 'to': 6, '.': 6, 'and': 4, '’': 4, 'it': 3, 'I': 3, 'in': 2, 'when': 2, 'go': 2, 'that': 2, 'with': 2, 'so': 2, 'be': 2, 'here': 2, 'like': 2, ';': 2, 'not': 2, 'drizzly': 1, 'principle': 1, 'Right': 1, 'absent-minded': 1, 'poor': 1, 'But': 1, 'get': 1, 'wears': 1, 'hunks': 1, 'was': 1, 'repeatedly': 1, 'stage': 1, 'from': 1, 'related': 1, 'concernment': 1, 'jolly': 1, 'uses': 1, 'tall': 1, 'over': 1, 'where': 1, 'by': 1, 'study': 1, 'of': 1, 'took': 1, 'resemblance': 1, 'shelves': 1, 'stooping': 1, 'dismal': 1, 'we': 1, 'reason': 1, 'an': 1, 'rough': 1, 'short': 1, 'narrow': 1, 'tell': 1, 'landlord': 1, '”': 1, 'said': 1, '“': 1, 'harpooneer': 1, 'late': 1, 'big': 1, 'tolerably': 1, 'way': 1, 'large': 1, 'sober': 1, 'me': 1, 'glass': 1, 'while': 1, 'after': 1, 'lying': 1, 'out': 1, 'bolted': 1, 'something': 1, 'back': 1, 'who': 1, 'heads': 1, 'limber': 1, 'For': 1, 'pocket': 1, 'now': 1, 'stop': 1, 'they': 1, 'sense': 1, 'up': 1, 'days': 1, 'away': 1, 'would': 1, 'polite': 1, 'lathering': 1, 'boot': 1, 'cool': 1, 'reaching': 1, 'jeopardy': 1}
+damp: {'my': 1, 'mysterious': 1, 'not': 1}
+drizzly: {';': 1}
+November: {'whenever': 1}
+soul: {'myself': 1, 'some': 1, 'the': 1}
+involuntarily: {',': 1, 'yourself': 1}
+pausing: {'and': 1, 'the': 1}
+before: {',': 2, 'bringing': 1, 'the': 1, 'down': 1, 'everywhere': 1, 'patched': 1, 'over': 1, 'll': 1, 'in': 1, 'laying': 1, 'out': 1, 'a': 1, 'wrapped': 1}
+coffin: {'up': 1}
+warehouses: {'the': 1, 'No': 1}
+bringing: {'every': 1, 'with': 1}
+up: {',': 5, 'and': 2, 'as': 2, 'monkey': 2, 'funeral': 1, 'to': 1, 'a': 1, '.': 1, 'other': 1, 'silver': 1, 'voice': 1, 'sign': 1, 'ever': 1, 'crannies': 1, 'lights': 1, 'any': 1, 'it': 1, 'grin': 1, 'balmed': 1, 'put': 1, 'the': 1, 'close': 1, 'bit': 1, 'His': 1, 'palms': 1, 'bagged': 1, 'table': 1, 'again': 1, 'Don': 1, 'You': 1, 'arm': 1, 'think': 1, 'I': 1, 'my': 1, 'softly': 1, 's': 1, 'his': 1, 'under': 1, 'soap': 1, 'mirror': 1}
+rear: {'meet': 1}
+every: {'and': 2, 'a': 1, 'is': 1, 'in': 1, 'at': 1, 'his': 1, 'silence': 1, 'most': 1}
+funeral: {'especially': 1}
+meet: {'my': 1}
+especially: {'such': 1, 'little': 1, 'night': 1, 'the': 1}
+hypos: {'hand': 1}
+get: {'of': 2, 'as': 1, 'peep': 1, 'water': 1, 'sleep': 1, 'down': 1, 'door': 1, 'did': 1, ',': 1, 'lamp': 1, 'thank': 1, 'one': 1, 'soon': 1}
+such: {'when': 2, ',': 2, 'me': 1, 'like': 1, 'been': 1, 'it': 1, 'wild': 1, 'implement': 1, '.': 1, 'air': 1, 'It': 1, 'selling': 1, 'life': 1, 'gave': 1, 'at': 1, 'time': 1}
+an: {',': 4, '.': 4, 'to': 3, 'the': 2, 'was': 2, 'a': 2, 'remote': 1, 'As': 1, 'I': 1, 'frozen': 1, 'find': 1, 'carved': 1, 'Labrador': 1, 'soon': 1, 'flew': 1, 'landlord': 1, 'and': 1, 'man': 1, 'in': 1, 'occurred': 1, 'holding': 1, 'had': 1, 'sure': 1}
+upper: {'that': 1}
+hand: {'the': 3, 'it': 1, 'you': 1, 'there': 1, 'full': 1, 'New': 1, '.': 1, 'seated': 1, 'that': 1, 'similar': 1}
+that: {',': 11, 'a': 9, 'the': 8, 'I': 5, 'it': 4, 'to': 3, 'by': 2, '.': 2, 'long': 2, 'there': 2, 'sleep': 2, 'do': 2, 'my': 2, 'all': 2, 'we': 2, 's': 2, 'about': 2, 'moral': 1, 'ever': 1, 'were': 1, 'who': 1, 'ourselves': 1, 'habit': 1, 'sea': 1, 'of': 1, 'weighed': 1, 'particular': 1, 'ain': 1, ';': 1, 'way': 1, 'entailed': 1, 'money': 1, 'never': 1, 'bill': 1, 'circumstances': 1, 'resulting': 1, 'purpose': 1, 'Nantucket': 1, 'that': 1, 'till': 1, 'which': 1, 'put': 1, 'melted': 1, 'for': 1, 'proved': 1, '?': 1, 'spot': 1, 'up': 1, 'moored': 1, 'Let': 1, 'found': 1, 'arrive': 1, 'thought': 1, 'however': 1, 'Ever': 1, 'now—was': 1, 'you': 1, 'landlord': 1, 'here': 1, 'out': 1, 'wake': 1, 'somewhat': 1, 'give': 1, 'just': 1, 'then': 1, 'his': 1, 'too': 1, 'draught': 1, 'be': 1, 'engaged': 1, 'm': 1, 'reason': 1, 'head': 1, 'mad': 1, 'and': 1, 'trying': 1, 'man.': 1, 'wouldn': 1, '’': 1, 'get': 1, 'kink': 1, 'so': 1, 'corn-cobs': 1, 'in': 1, 'turn': 1, 'could': 1, 'enough': 1, 'abominable': 1, 'was': 1, 'deal': 1, 'but': 1, 'made': 1, 'into': 1, 'cannibal': 1, 'Indeed': 1, 'Queequeg': 1, 'elapse': 1, 'stir': 1, 'me': 1, 'narrow': 1, 'any': 1, 'man': 1, 'think': 1, 'seated': 1, 'embarrassed': 1, 'done': 1, 'he': 1}
+requires: {'to': 1, 'Seneca': 1}
+strong: {'me': 1, 'the': 1, 'business': 1}
+moral: {'from': 1}
+principle: {'deliberately': 1}
+prevent: {'into': 1}
+from: {'the': 5, ',': 3, 'and': 2, 'where': 2, 'in': 2, 'street': 1, 'Slip': 1, 'aloft': 1, 'streets': 1, 'sleepy': 1, 'like': 1, 'sailor': 1, 'forecastle': 1, 'whalemen': 1, 'did': 1, 'having': 1, 'of': 1, 'for': 1, 'your': 1, 'building': 1, 'Gomorrah': 1, 'heard': 1, 'light': 1, 'burnt': 1, 's': 1, 'tramping': 1, 'just': 1, 'this': 1, 'began': 1, 'as': 1, 'I': 1, 'Virginia': 1, 'had': 1, 'both': 1, 'but': 1, 'Lord': 1, 'at': 1, 'shirt': 1, 'kindled': 1, 'seemed': 1, 'examined': 1, 'up': 1, 'so': 1, '.': 1, 'opened': 1, 'sat': 1, 'watching': 1, 'strainings': 1, 'slips': 1, 'That': 1}
+deliberately: {',': 1}
+stepping: {'and': 1}
+into: {'.': 3, 'and': 3, 'the': 2, 'I': 2, 'methodically': 1, 'mazy': 1, 'there': 1, 'have': 1, 'on': 1, 'which': 1, 'was': 1, 'endless': 1, 'tucked': 1, 'yet': 1, 'poison': 1, 'these': 1, 'it': 1, 'to': 1, '“': 1, 'this': 1, 'engaged': 1, 'cold': 1, 'myself': 1, 'now': 1, 'dead': 1, 'Presently': 1, 'still': 1, 'hand': 1, 'side': 1, 'a': 1, 'observing': 1, 'as': 1, 'his': 1, 'grinning': 1, 'lighted': 1}
+street: {'people': 1, 'and': 1, 'sounds': 1, 'the': 1}
+methodically: {'hats': 1}
+knocking: {'off—then': 1}
+people: {',': 1, 'when': 1, 'to': 1}
+’: {',': 9, '’': 7, 'I': 5, 'the': 5, 'of': 5, '”': 4, 'that': 3, 'to': 3, 'he': 3, ';': 3, '.': 2, 'at': 2, 'and': 2, 'bed': 2, 'if': 2, 'to-night': 2, 'man': 2, 'all': 1, 'upon': 1, 'not': 1, 'Tell': 1, 'be': 1, 'get': 1, 'Euroclydon': 1, 'chinks': 1, 'make': 1, 'in': 1, 'scene.—It': 1, 'once': 1, ':': 1, 'Projecting': 1, 'wide': 1, 'this': 1, 'ye': 1, 'you': 1, 'd': 1, 'Nothing': 1, 'steaks': 1, 'The': 1, 'long': 1, 's': 1, 'seed': 1, 'full': 1, 'news': 1, 'wrinkled': 1, 'room': 1, 'is': 1, 'about': 1, 'here.': 1, 'tablecloth': 1, 'board': 1, 'enough.': 1, 'march': 1, 'began': 1, 'look': 1, 'But': 1, 'chuckled': 1, 'catches': 1, 'airth': 1, '?': 1, 'With': 1, 'heads': 1, '“': 1, 'him': 1, 'ready': 1, 'sleeping': 1, 'sarmon': 1, 'arrived': 1, '(': 1, 'it': 1, 'streets': 1, 'wanted': 1, 'with': 1, 'for': 1, 'along': 1, 'glim': 1, 't': 1, 'somewhere—come': 1, 'doubt': 1, 'accomplished': 1, 'thought': 1, 'fight': 1, 'escaped': 1, 'Remembering': 1, 'Coffin': 1, '—but': 1, 'just': 1, 'being': 1, 'me': 1, 'round': 1, 'a': 1, '5': 1, 'So': 1, 'like': 1, 'show': 1, 'travel': 1, 'do': 1, 'how': 1}
+s: {',': 9, 'a': 4, 'the': 3, 's': 2, 'in': 2, 'he': 2, 'account': 1, 'were': 1, 'particularly': 1, 'content': 1, 'blackness': 1, 'any': 1, '’': 1, 'icebound': 1, 'found': 1, 'such': 1, 'from': 1, 'how': 1, '?': 1, 'goin': 1, 'thought': 1, 'crew': 1, 'her': 1, 'little': 1, 'darted': 1, 'here': 1, 'bar—wait': 1, 'was': 1, 'to': 1, 'though': 1, 'bed': 1, 'said': 1, 'what': 1, 'can': 1, 'for': 1, 'em': 1, 'would': 1, 'you': 1, 'Sal': 1, 'two': 1, 'that': 1, 'see': 1, 'along': 1, 'harpooneer': 1, 'all': 1, 'into': 1, '!': 1, 'have': 1, 'as': 1, 'I': 1, 'me': 1, 'one': 1, 'it': 1, 'vengeance': 1, '.': 1, 'anything': 1}
+hats: {'it': 1}
+off—then: {'high': 1}
+account: {'get': 1, 'enter': 1, 'unaccountable': 1}
+high: {',': 2, 'sea': 1, 'Take': 1, 'and': 1, 'never': 1, 'duelled': 1}
+time: {',': 3, 'the': 2, 'as': 1, 'very': 1, 'go': 1, 'suspect': 1, 'in': 1, 'hags': 1, 'of': 1, 'I': 1, 'slid': 1, 'now': 1, 'sending': 1, 'bitter': 1, 'better': 1, 'Christian': 1}
+sea: {'the': 2, 'because': 2, ',': 2, 'can': 1, 'first': 1, 'grow': 1, 'For': 1, 'or': 1, 'a': 1, 'capering': 1, 'minutes': 1, 'do': 1, 'duty': 1, 'shade': 1, 'coopers': 1, 'blacksmiths': 1}
+as: {'a': 6, ',': 5, '.': 3, 'I': 3, 'as': 3, 'they': 2, 'to': 2, 'been': 2, '’': 2, 'the': 2, 'is': 1, 'reefs—commerce': 1, 'falling': 1, 'meditation': 1, 'you': 1, 'needs': 1, '—no': 1, 'do': 1, 'take': 1, 'confess': 1, 'right': 1, 'making': 1, 'of': 1, 'head': 1, 'interlude': 1, 'am': 1, 'middle': 1, 'for': 1, 'choked': 1, 'leaning': 1, 'my': 1, 'wondered': 1, 'landlord': 1, 'Presently': 1, 'with': 1, 'rest': 1, 'man': 1, ')': 1, 'two': 1, 'rickety': 1, 'Hecla': 1, 'about': 1, 'out': 1, 'dead': 1, 'furnished': 1, 'table': 1, 'in': 1, 'had': 1, 'remembering': 1, 'thought': 1, 'devil': 1, 'back': 1, 'dark': 1, 'were': 1, 'sportsman': 1, 'has': 1, 'me': 1, 'afraid': 1, '“': 1, 'won': 1, 'little': 1, 'kill': 1, 'and': 1, 'give': 1, 'still': 1, 'should': 1, 'hatchet-faced': 1, 'at': 1, 'altogether': 1, 'much': 1, 'accelerate': 1, 'He': 1, 'look': 1, 'not': 1, 'sat': 1, 'be': 1}
+soon: {'This': 1, 'all': 1, ',': 1, 'though': 1, 'such': 1, 'of': 1, 'truth': 1, 'complied': 1, 'proudly': 1}
+can: {'was': 2, 'a': 2, 'his': 2, 'substitute': 1, 'And': 1, 'of': 1, 'heaven': 1, 'one': 1, 'the': 1, 'head.': 1, ',': 1, 'but': 1, 'sort': 1, 'days': 1}
+This: {'pistol': 1, 'once': 1, 'otherwise': 1, 'he': 1, ',': 1, 'healthy': 1}
+substitute: {'.': 1}
+for: {'a': 5, ',': 2, 'it': 2, 'the': 2, 'I': 2, 'in': 2, 'With': 1, 'seemingly': 1, '!': 1, 'is': 1, 'miles': 1, '—though': 1, 'they': 1, 'Commodore': 1, 'United': 1, 'tragedies': 1, 'tormented': 1, 'love': 1, 'Pacific': 1, 'of': 1, 'idea': 1, 'dear': 1, 'frost': 1, 'struck': 1, 'were': 1, 'public': 1, 'quiet': 1, 'judging': 1, 'shaking': 1, 'sells': 1, 'entering': 1, 'was': 1, 'harpooneer': 1, 'fellow': 1, 'mouth—the': 1, 'whatsoever': 1, 'favourite': 1, 'two': 1, 'to': 1, 'down': 1, 'connexion': 1, 'sleep': 1, 'At': 1, 'about': 1, 'then': 1, 'stairs': 1, 'hours': 1, 'indeed': 1, 'months': 1, 'getting': 1, 'tell': 1, 'anybody': 1, 'now': 1, 'could': 1, 'that': 1, 'there': 1, 'greatest': 1}
+pistol: {'a': 1}
+ball: {'flourish': 1}
+With: {',': 2, 'throws': 1, 'sounded': 1, 'the': 1, 'I': 1, ';': 1}
+philosophical: {'upon': 1}
+flourish: {'his': 1}
+Cato: {'sword': 1}
+throws: {';': 1}
+himself: {'I': 1, 'and': 1, 'like': 1, 'the': 1, '.': 1, 'a': 1, 'into': 1, 'Newfoundland': 1, 'law': 1, ';': 1, 'in': 1, 'to': 1, 'spent': 1}
+upon: {'a': 4, 'him': 2, 'quietly': 1, 'fixed': 1, 'looking': 1, 'head': 1, 'of': 1, 'river': 1, 'paid': 1, 'packet': 1, 'many': 1, 'picture': 1, 'The': 1, 'be': 1, 'from': 1, 'had': 1, 'I': 1, 'it': 1, '.': 1, 'that': 1, 'corner': 1, ',': 1, 'hugging': 1, 'by': 1}
+his: {',': 15, 'the': 6, 'and': 4, 'as': 3, '’': 3, 'in': 3, 'up': 3, 'he': 2, 'from': 2, 'off': 2, 'that': 2, 'bed': 2, 'seemed': 2, 'at': 2, 'was': 2, 'possible': 2, 'take': 1, 'on': 1, 'feet': 1, 'a': 1, 'sleep': 1, 'trip': 1, 'undeliverable': 1, 'quietly': 1, 'for': 1, 'plug': 1, 'them': 1, 'cylinders': 1, 'haint': 1, 'trying': 1, 'under': 1, 'Jonah': 1, 'sober': 1, 'yet': 1, 'thought': 1, 'its': 1, 'dusting': 1, 'told': 1, 'me': 1, 'jump': 1, 'be': 1, 'of': 1, '?': 1, 'true': 1, 'thinking': 1, 'kept': 1, 'light': 1, 'stains': 1, 'have': 1, 'can': 1, 'part': 1, 'fumbling': 1, 'I': 1, 'purplish': 1, 'As': 1, 'might': 1, 'wrapall': 1, 'now': 1, 'places': 1, 'strange': 1, 'jumping': 1, 'tomahawk': 1, 'pipe': 1, 'an': 1, 'sea': 1, 'looked': 1, 'snore': 1, 'all': 1, 'did': 1, 'touching': 1, 'became': 1, 'unusual': 1, 'very': 1, 'boots': 1, 'crush': 1, 'creaking': 1, 'wrinkled': 1, ';': 1, 'particularly': 1, 'watching': 1, 'afford': 1, 'man': 1, 'admirer': 1, 'breakfast': 1, 'him': 1, 'sitting': 1, 'when': 1}
+sword: {'to': 1}
+quietly: {'.': 1, '“': 1, 'no': 1, 'his': 1}
+take: {'There': 1, 'extreme': 1, 'without': 1, 'to': 1, 'of': 1, '?': 1, 'that': 1, '!': 1, ',': 1}
+ship: {'surprising': 1, 'sight': 1, 'three': 1, 'but': 1, ';': 1, 'applying': 1, 'and': 1}
+There: {'this': 1, 'city': 1, '.': 1, 'each': 1, 'room': 1, 'landlord': 1, 'slit': 1, 'his': 1}
+surprising: {'they': 1}
+this: {',': 7, 'I': 3, '.': 2, 'are': 2, 'of': 2, 'that': 2, 'at': 2, '?': 2, 'knew': 1, 'fields': 1, 'caravan': 1, 'sighs': 1, 'it': 1, 'unpleasant': 1, 'part': 1, 'must': 1, 'Election': 1, 'whaling': 1, 'thence': 1, 'is': 1, 'where': 1, 'emigrant': 1, 'mind—old': 1, 'the': 1, 'be': 1, 'over': 1, 'now': 1, 'on': 1, 'ponderous': 1, 'so': 1, 'remotest': 1, 'charge': 1, 'and': 1, 'harpooneer': 1, 'years': 1, 'they': 1, 'this': 1, 'or': 1, 'That': 1, 'landlord': 1, 'have': 1, 'whether': 1, 'been': 1, 'see': 1, 'wearing': 1, 'his': 1, 'inkling': 1, 'course': 1, 'passed': 1, 'quaked': 1, 'real': 1, 'like': 1, 'appropriate': 1, 'between': 1, 'civil': 1, 'making': 1, 'all': 1, 'cutting': 1, 'away': 1, 'often': 1, 'overture': 1, 's': 1, 'to': 1}
+If: {',': 1, 'a': 1}
+they: {'in': 2, 'me': 2, ',': 2, 'almost': 1, '!': 1, 'Inlanders': 1, 'alleys': 1, 'some': 1, 'paying': 1, 'single': 1, 'but': 1, 'risk': 1, 'suppose': 1, 'up': 1, 'bustles': 1, 'bears': 1, 'for': 1, 'obstreperously': 1, '“': 1, 'when': 1, 'one': 1, 'at': 1, 'together': 1, 'this': 1, 'breakfast': 1, 'of': 1}
+but: {',': 7, 'the': 3, 'I': 2, 'this': 2, 'all': 1, 'have': 1, 'much': 1, 'friendly': 1, 'aboriginal': 1, 'idea': 1, 'make': 1, '!': 1, 'likes': 1, 'suspicious': 1, 'so': 1, 'private': 1, 'hammock': 1, 'with': 1, 't': 1, 'dismissed': 1, '’': 1, 'one': 1, 'as': 1, 'Folding': 1, 'pantaloons': 1, 'good': 1, 'for': 1, 'tropical': 1, 'a': 1, 'up': 1, 'floor': 1, 'which': 1, 'see': 1, '.': 1, 'charitable': 1, 'abed': 1, 'placed': 1, 'inch': 1, 'twain': 1, 'to': 1, 'had': 1, 'on': 1, 'amazement': 1, 'himself': 1, 'he': 1, 'Yes': 1}
+knew: {'men': 1, 'place': 1, 'of': 1, 'rolled': 1, 'at': 1}
+almost: {'degree': 1, ',': 1, 'with': 1, 'these': 1, 'artist': 1, 'old': 1, 'Within': 1, 'orgies': 1, 'any': 1, 'manikin': 1, 'his': 1, 'can': 1}
+all: {',': 6, 'the': 4, 'on': 3, 'I': 2, 'world': 2, 'that': 2, 'and': 2, 'it': 2, 'stand': 1, 'days': 1, 'lanes': 1, 'thither': 1, 'you': 1, 'Saco': 1, 'meaning': 1, 'It': 1, 'trials': 1, 'to': 1, 'else': 1, 'other': 1, 'think': 1, 'a': 1, 'place': 1, 'phantom': 1, 'presently': 1, 'or': 1, '.': 1, 'array': 1, 'Some': 1, 'room': 1, 'of': 1, 'apartment': 1, 'current': 1, 'down': 1, 'unwarrantable': 1, 'one': 1, 'string': 1, 'idea': 1, 'being': 1, 'face': 1, 'only': 1, 'through': 1, 'some': 1, 'mildewed': 1, 'squares': 1, 'very': 1, 'his': 1, 'been': 1, 'Cretan': 1, 'strip': 1, 'was': 1, 's': 1, 'dog': 1, 'for': 1, 'if': 1, 'morning': 1, 'as': 1, 'here': 1}
+men: {'some': 1, '.': 1, 'deepest': 1, 'things': 1, 'world': 1, 'least': 1}
+their: {'and': 2, 'or': 1, 'though': 1, '.': 1, 'things': 1, 'as': 1, 'everlasting': 1, 'the': 1, 'comforters': 1, ',': 1, 'was': 1, 'generally': 1, 'it': 1, 'which': 1}
+degree: {'other': 1, 'of': 1, 'probably': 1}
+some: {';': 2, '.': 2, ',': 2, 'cherish': 1, 'of': 1, 'rigging': 1, 'to': 1, 'jump': 1, 'sea-captain': 1, 'answer': 1, 'as': 1, 'On': 1, 'in': 1, 'cockpits': 1, 'us': 1, 'seem': 1, 'with': 1, 'bed': 1, 'unlacing': 1, 'At': 1, 'bag': 1, 'shipped': 1, 'seeing': 1, 'it': 1, 'Mountains': 1}
+other: {'the': 2, 'same': 2, 'and': 2, ',': 2, 'sea': 1, 'such': 1, 'was': 1, 'by': 1, 'certain': 1, 'place': 1, 'knew': 1, 'whaleman': 1, 'face': 1, 'time': 1, 'never': 1}
+cherish: {'feelings': 1}
+very: {',': 4, 'a': 2, 'no': 2, 'towards': 1, 'besmoked': 1, 't': 1, 'undressed': 1, 'as': 1, 'I': 1, 'chapel': 1, 'it': 1, 'puzzle': 1, 'strangeness': 1, 'the': 1, 'troubled': 1, 'down': 1, 'opposite': 1}
+nearly: {'the': 1, 'towards': 1, 'mates': 1, 'profound': 1}
+same: {'with': 1, 'see': 1, 'or': 1, 'lead': 1, 'little': 1, 'to': 1, 'think': 1, '.': 1, ';': 1, 'seemed': 1, 'I': 1, ',': 1, 'kindred': 1}
+feelings: {'me': 1}
+towards: {',': 2, '.': 1, 'darkness': 1, 'wisdom': 1, 'entry': 1, 'design': 1, 'lead': 1, 'his': 1, 'I': 1, 'had': 1, 'was': 1}
+ocean: {'now': 1, 'against': 1}
+with: {'it': 5, ',': 5, 'a': 5, 'the': 4, 'and': 3, 'in': 3, 'of': 2, '.': 2, 'I': 2, 'throwing': 2, 'like': 2, 'his': 2, 'is': 1, 'Yes': 1, 'as': 1, 'activity': 1, 'money': 1, 'things': 1, 'story—to': 1, 'south—wherever': 1, 'hob': 1, 'might': 1, 'But': 1, 'one': 1, 'what': 1, 'alone': 1, 'monstrous': 1, 'saws': 1, ';': 1, 'round': 1, 'horrifying': 1, 'whaling': 1, 'years': 1, 'above': 1, 'filled': 1, 'this': 1, 'for': 1, 'decent': 1, 'over': 1, 'to': 1, 'woollen': 1, 'an': 1, 'landed': 1, 'fair': 1, 'll': 1, 'first': 1, 'you': 1, 'almost': 1, 'And': 1, 'Placing': 1, 'was': 1, 'Still': 1, 'back': 1, 'handle': 1, 'out': 1, 'don': 1, 's': 1, 'between': 1, 'take': 1, 'tomahawk': 1, 'consideration': 1, 'but': 1, 'dented': 1, 'hat': 1, 'unshorn': 1, 'imminent': 1}
+now: {'the': 4, 'to': 2, 'of': 1, 'land': 1, 'head': 1, 'yet': 1, 'streets': 1, 'finished': 1, 'a-whaling': 1, 'years': 1, 'clock': 1, 'in': 1, '’': 1, 'again': 1, 'speak': 1, 'be': 1, 'I': 1, 'new': 1, 'world': 1, 'him': 1, 'must': 1, 'something': 1, 'towards': 1, 'concluding': 1, 'sudden': 1, ',': 1, '.': 1, '“': 1, 'narrowly': 1, 'no': 1, 'who': 1, 'flinging': 1}
+your: {'Manhattoes': 1, 'supplied': 1, 'it': 1, 'passenger': 1, 'of': 1, ',': 1, 'to': 1, 'the': 1, 'penny': 1, 'don': 1, 'Nor': 1, 'cover': 1, 'sleep': 1, 'more': 1, 'bed': 1, 'your': 1, 'I': 1}
+insular: {',': 1}
+city: {'belted': 1, 'afternoon': 1, 'I': 1, '“': 1}
+Manhattoes: {'wharves': 1}
+belted: {'Indian': 1}
+round: {'isles': 1, 'should': 1, 'peer': 1, 'in': 1, 'bottles': 1, 'a': 1, 'seeing': 1, ',': 1, 'besides': 1, 'There': 1, 'independent': 1, 'length': 1, 'other': 1}
+by: {',': 6, 'that': 3, 'by': 2, 'the': 2, 'and': 2, 'with': 1, 'few': 1, 'What': 1, 'stream': 1, 'series': 1, 'earnest': 1, 'window': 1, 'You': 1, 'afterwards': 1, 'called': 1, 'specimens': 1, 'in': 1, 'being': 1, '?': 1, 'to': 1, 'from': 1, 'what': 1, 'reality': 1, 'side': 1, 'gave': 1, 'then—still': 1, 'his': 1, 'we': 1, 'one': 1}
+wharves: {'coral': 1}
+Indian: {'surrounds': 1, 'a': 1, 'next': 1}
+isles: {'it': 1}
+coral: {'her': 1}
+reefs—commerce: {'surf': 1}
+surrounds: {'.': 1}
+her: {'this': 2, 'left': 1, 'her': 1, 'as': 1, 'to': 1}
+surf: {',': 1}
+Right: {'streets': 1}
+left: {'you': 1, 'the': 1, 'study': 1}
+streets: {',': 3, 'Its': 1, 'sign': 1, '’': 1, 'in': 1, 'of': 1}
+you: {',': 5, 'to': 3, 'the': 3, 'as': 2, 'a': 2, 'from': 2, '’': 2, 'landlord': 2, 'downtown': 1, 'silent': 1, ';': 1, 'in': 1, 'water': 1, 'is': 1, 'mystical': 1, 'now': 1, 'purse': 1, '.': 1, 'those': 1, 'established': 1, 'it': 1, 'thinks': 1, 'maxim': 1, 'said': 1, 'for': 1, 'wide': 1, 'was': 1, 'at': 1, 'young': 1, 'limber': 1, 'you': 1, 'with': 1, 'Black': 1, 'what': 1, 'trod': 1, 'sharing': 1, 'used': 1, 'nightmare': 1, 'rather': 1, 'm': 1, 'don': 1, '”': 1, 'spinning': 1, 'brown': 1, 'head.': 1, 'Sartain': 1, 'only': 1, 'half': 1, 'sort': 1, 'tell': 1, 'I': 1, 'trying': 1, 'he': 1, 'flukes—it': 1, 'South': 1, 'last': 1, 'infernal': 1, 'him': 1, 'turned': 1, 'marvellous': 1, 'every': 1, 'creature': 1, 'The': 1, 'of': 1}
+waterward: {'is': 1, 'doubtless': 1}
+Its: {'battery': 1}
+extreme: {',': 1}
+downtown: {'where': 1}
+battery: {'mole': 1}
+where: {'washed': 1, 'bulk': 1, 'whale': 1, 'too': 1, 'and': 1, 'kept': 1, 'on': 1, 'both': 1, '”': 1, 'spend': 1, 'lot': 1, ',': 1}
+noble: {'waves': 1, 'chest': 1}
+mole: {',': 1}
+washed: {'cooled': 1, 'Queequeg': 1}
+waves: {'breezes': 1}
+cooled: {'a': 1}
+breezes: {'hours': 1}
+which: {'were': 1, 'or': 1, 'is': 1, 'me': 1, 'Besides': 1, 'It': 1, 'the': 1, 'it': 1, 'him': 1, '.': 1, 'for': 1, 'pitch-like': 1, 'sovereign': 1, 'confidential': 1, 'to': 1, 'on': 1, 'be': 1, 'in': 1, 'been': 1, 'shade—owing': 1, 'seemed': 1, 'up': 1, 'tints': 1, 'poor': 1}
+few: {'of': 1, '—So': 1, 'he': 1, 'my': 1, 'might': 1}
+hours: {'sight': 1, 'now': 1, 'could': 1, 'small': 1, 'awake': 1}
+previous: {'of': 1, 'into': 1, 'the': 1, 'who': 1, 'had': 1}
+were: {'of': 3, 'a': 2, 'and': 2, 'land': 1, 'sleeps': 1, 'shepherd': 1, 'stream': 1, 'parts': 1, 'plight': 1, 'not': 1, 'sadly': 1, 'years': 1, ';': 1, 'teeth': 1, 'human': 1, 'this': 1, 'in': 1, 'our': 1, 's': 1, 'or': 1, 'lightning': 1, 'squares': 1, 'that': 1, 'guttural': 1, 'dead': 1, 'I': 1, 'try': 1, 'their': 1, 'A': 1, 'fact': 1, '.': 1, 'window': 1, 'chief': 1, 'table': 1, ',': 1}
+out: {',': 4, 'the': 2, 'a': 2, 'and': 2, '.': 1, '?': 1, 'of': 1, 'chase': 1, 'glass': 1, 'Euroclydon': 1, 'meant': 1, 'rest': 1, 'together': 1, 'One': 1, 'pursuit': 1, 'see': 1, 'four': 1, 'clean': 1, 'boots': 1, 'bed': 1, 'There': 1, 'ever': 1, 'but': 1, 'blowing': 1, 'spell': 1, 'smoke': 1, 'help': 1, 'not': 1, 'packed': 1, 'suddenly': 1, 'wrapped': 1, 'sheepfold': 1}
+sight: {'at': 1, 'did': 1, 'I': 1, '!': 1, 'the': 1, ',': 1}
+land: {'crowds': 1, 'shady': 1, 'almost': 1, 'old': 1, ',': 1, 'Not': 1, 'there': 1, 'I': 1}
+Look: {'water-gazers': 1}
+at: {'of': 4, 'the': 4, ',': 3, 'there': 2, 'in': 2, 'was': 2, '.': 2, 'it': 2, 'and': 2, 'that': 2, 'came': 2, 'crazy': 1, 'sailors': 1, 'order': 1, 't': 1, 'The': 1, 'dim': 1, 'window': 1, 'purpose': 1, 'some': 1, 'conclusion': 1, 'yielded': 1, 's': 1, 'legs': 1, 'sail': 1, 'couldn': 1, 'Kings': 1, 'from': 1, 'while': 1, 'bump': 1, 'another': 1, 'perhaps': 1, 'could': 1, 'corner': 1, 'bed': 1, 'tinkling': 1, 'to': 1, 'squares': 1, 'after': 1, 'scalp-knot': 1, 'deformed': 1, 'out': 1, 'moved': 1, 'puffed': 1, 'ill': 1, 'no': 1, 'up': 1, 'For': 1, 'again': 1, 'a': 1, 'her': 1, 'me': 1, 'night': 1, 'his': 1, 'seemed': 1, 'beaver': 1, 'though': 1, 'all': 1, 'quite': 1, 'I': 1, 'they': 1}
+crowds: {'Circumambulate': 1, 'the': 1}
+water-gazers: {'city': 1}
+there: {'the': 5, 'of': 3, '.': 3, 'a': 3, ',': 3, 'I': 2, 'region': 1, 'and': 1, 'that': 1, 'will': 1, 'in': 1, 'soul': 1, 'boisterous': 1, 'from': 1, 'looked': 1, 's': 1, 'against': 1, 'yet': 1, 'masts': 1, 'bone': 1, 'them': 1, 'now': 1, 'up': 1, 'outlandish': 1, 'but': 1, 'blackish': 1, 'upon': 1, 'shuddering': 1, 'or': 1, 'it': 1, 'entire': 1, 'most': 1, 'by': 1, 'consciousness': 1, 'man': 1, 'over': 1, 'with': 1}
+Circumambulate: {'dreamy': 1}
+dreamy: {'from': 1}
+Sabbath: {'Corlears': 1, 'a': 1}
+afternoon: {'Hook': 1, ',': 1}
+Go: {'Coenties': 1, 'June': 1}
+Corlears: {',': 1}
+Hook: {'and': 1}
+Coenties: {'thence': 1}
+Slip: {',': 1}
+thence: {'northward': 1, 'voyage': 1}
+Whitehall: {'do': 1}
+northward: {'see': 1}
+What: {'—Posted': 1, 'But': 1, 'he': 1, 'some': 1, 'to': 1, '’': 1, ';': 1, 'fuss': 1, 'did': 1}
+do: {'like': 1, 'look': 1, 'it': 1, 'sea': 1, 'myself': 1, 'leaders': 1, 'depend': 1, 'resolved': 1, 'sure': 1, 'as': 1, '“': 1, 'thereby': 1, 'human': 1, ',': 1, 't': 1, ';': 1, 'a': 1, 'do': 1, 'will': 1}
+?: {',': 5, 'you': 3, 'and': 2, 'all': 1, 'gone': 1, '?': 1, 'come': 1, 'drop': 1, 'poet': 1, 'robust': 1, 'voyage': 1, 'Persians': 1, 'give': 1, 'not': 1, 'amount': 1, 'archangel': 1, 'a': 1, 'Well': 1, 'which': 1, 'Nantucket': 1, 'the': 1, 'Harpoons': 1, 'must': 1, 'in': 1, 'particular': 1, 'blue': 1, 'be': 1, 'rather': 1, 'should': 1, 'himself': 1, 'artist': 1, 'Supper': 1, 'ready': 1, 'no': 1, '”': 1, 'll': 1, 'of': 1, '’': 1, 'idea': 1, 'hard': 1, 'bamboozingly': 1, 'towering': 1, 's': 1, '“': 1, 'matter': 1, 'said—': 1, 'ye': 1, 'plenty': 1, 'various': 1}
+—Posted: {'around': 1}
+like: {'the': 4, 'in': 3, '’': 1, 'part': 1, 'May': 1, 'Contested': 1, 'ice': 1, 'by': 1, 'Battery': 1, 'have': 1, 'they': 1, 'shavings': 1, '”': 1, 'round': 1, 'uncommonly': 1, 'never': 1, 'Had': 1, 'concluded': 1, 'same': 1, 'from': 1, 't': 1, 'baton': 1, 'hue': 1, 'barred': 1, 'slope': 1, 'public': 1}
+silent: {'town': 1, 'to': 1}
+sentinels: {',': 1}
+around: {'thousands': 1, '“': 1, 'flukes': 1}
+town: {'thousands': 1, '.': 1, 'night': 1, 'a': 1, '’': 1, 'guise': 1, 'again': 1}
+stand: {'mortal': 1, 'with': 1, '.': 1}
+thousands: {'men': 1, 'in': 1}
+mortal: {'reveries': 1}
+fixed: {'Some': 1, 'before': 1, 'I': 1}
+reveries: {'the': 1}
+leaning: {'some': 1, 'stood': 1}
+against: {'a': 2, 'seated': 1, 'because': 1, 'pillow': 1, 'The': 1, 'Thinks': 1, 'I': 1, 'then': 1}
+spiles: {'the': 1}
+seated: {'some': 1, 'For': 1, 'and': 1}
+pier-heads: {'the': 1}
+looking: {'ships': 1, 'swinging': 1, 'funny': 1, 'and': 1, 'the': 1, 'placed': 1, 'it': 1, '.': 1, 's': 1, 'rubbing': 1}
+over: {',': 3, 'the': 2, 'from': 1, 'porch': 1, 'white': 1, 'on': 1, 'in': 1, 'of': 1, 'at': 1, 'back': 1, 'more': 1, 'was': 1, 'sill': 1, 'none': 1, 'a': 1, 'squares': 1, ';': 1, 'much': 1, 'loving': 1, 'labyrinth': 1, 'felt': 1, 'as': 1, 'just': 1, 'I': 1, 'began': 1, 'rest': 1}
+bulwarks: {';': 1, 'craft': 1}
+ships: {'high': 1, 'Once': 1, ',': 1}
+China: {'in': 1}
+aloft: {'as': 1, 'mast-head': 1}
+rigging: {'to': 1}
+if: {'still': 2, 'be': 2, 'all': 1, 'crucifix': 1, 'old': 1, 'your': 1, 'a': 1, 'Pythagorean': 1, '.': 1, 'the': 1, 'carted': 1, 'so': 1, ')': 1, 'that': 1, 'you': 1, 'himself': 1, 'green': 1, 'bagging': 1, 'it': 1, 'horse-collar': 1, 'baby': 1, 'remember': 1, 'he': 1, 'accustomed': 1, 'in': 1}
+striving: {'better': 1}
+still: {',': 2, 'But': 1, 'that': 1, 'they': 1, 'me': 1, 'his': 1, 'to': 1, 'fingers': 1, 'the': 1, 'as': 1, 'never': 1}
+better: {'these': 1, 'else': 1, 'sort': 1, 'to': 1, 's': 1, 'CHAPTER': 1, 'Nevertheless': 1}
+seaward: {'are': 1}
+peep: {'all': 1}
+But: {',': 3, 'and': 3, 'not': 3, 'in': 2, 'a': 2, 'the': 2, 'that': 2, 'for': 2, ';': 1, 'more': 1, '.': 1, 'thus': 1, 'we': 1, 'will': 1, 'after': 1, 'name': 1, 'late': 1, 'Can': 1, 'blubbering': 1, 'confounded': 1, 'fancies': 1, 'added': 1, 'Skrimshander': 1, 'too': 1, 'there': 1, 'kept': 1, 'easy': 1, 's': 1, 'when': 1, 'cold': 1, 'chanced': 1, 'make': 1, 'having': 1, 'me': 1, 'fancy': 1, 'past': 1, 'see': 1, 'cheek': 1, 'of': 1, 'Queequeg': 1, 'coolly': 1}
+these: {'of': 1, 'idea': 1, 'attending': 1, 'the': 1, 'city': 1, 'Spouter': 1, 'and': 1, 'one': 1, 'lances': 1, 'Fill': 1, 'direful': 1, 'to': 1, 'skin': 1, 'me': 1, 'in': 1, 'were': 1, 'by': 1, 'uncomfortableness': 1, 'sense': 1, 'timid': 1, 'But': 1}
+are: {'week': 1, 'in': 1, 'But': 1, 'winds': 1, 'So': 1, 'destroyed': 1, 'body': 1, 'there': 1, 'round': 1, 'he': 1, ',': 1, 'it': 1, 'getting': 1, 'particular': 1, 'rest': 1, 'that': 1}
+landsmen: {'pent': 1}
+week: {'lath': 1, 'the': 1}
+days: {'and': 1, '.': 1, 'stepmother': 1, 'afterwards': 1, 'voyage': 1}
+pent: {'plaster—tied': 1}
+lath: {',': 1}
+plaster—tied: {'to': 1}
+counters: {',': 1}
+nailed: {'to': 1}
+benches: {'.': 1}
+clinched: {'then': 1}
+desks: {'this': 1}
+How: {'Are': 1}
+then: {',': 3, 'and': 3, 'the': 2, '.': 2, 'of': 2, 'sea-captains': 1, 'was': 1, 'sign': 1, 'a': 1, 'lengthwise': 1, 'may': 1, 'won': 1, ';': 1, 'tumbled': 1, 'head—a': 1, 'ship': 1, 'light': 1, 'or': 1, 'to': 1, 'neck': 1, 'afterwards': 1, 'not': 1}
+Are: {'?': 1}
+green: {'do': 1, 'downwards': 1, 'himself': 1, 'the': 1}
+fields: {'they': 1}
+gone: {'here': 1, 'a': 1}
+here: {'here': 1, 'pacing': 1, 'Tell': 1, 'He': 1, 'and': 1, ',': 1, 'there': 1, 'some': 1, 'for': 1, 'it': 1, 'far': 1, '’': 1, 'was': 1, 'description': 1, 'knots': 1, 's': 1, 'tellin': 1, 'give': 1, 'with': 1, 'from': 1, 'a': 1, 'in': 1, 'circumstance': 1, 'sea-dogs': 1, 'social': 1, 'coffee': 1}
+look: {'crowds': 1, 'were': 1, 'and': 1, 'But': 1, 'I': 1, 'nearly': 1}
+!: {',': 4, '“': 3, '!': 2, 'but': 1, 'cataract': 1, 'ourselves': 1, 'go': 1, 'not': 1, 'I': 1, 'in': 1, 'night': 1, 'their': 1, 'fiery': 1, 'One': 1, 'a': 1, 's': 1, '?': 1, 'my': 1, 'me': 1, 'Such': 1, 'It': 1, 'dark': 1, 'his': 1, 'time': 1, 'Angels': 1, 'save': 1, 'tell-ee': 1, 'cannibal': 1, 'back': 1, 'answer': 1, 'the': 1, 'goodness': 1, 'by': 1, 'landlord': 1}
+come: {'the': 2, 'straight': 1, ',': 1, 'family': 1, 'such': 1, 'want': 1, 'getting': 1, 'then': 1, 'ye': 1, 'under': 1}
+more: {'for': 2, '.': 2, 'in': 1, 'say': 1, 'just': 1, 'astern': 1, 'take': 1, 'iceberg': 1, ',': 1, 'to': 1, 'became': 1, 'bed': 1, 'harpooneer': 1, 'of': 1, 'out': 1, 'were': 1, 'figure': 1, 'Queequeg': 1, 'you': 1}
+pacing: {',': 1}
+straight: {'and': 1, ',': 1, '’': 1, '.': 1}
+water: {'for': 1, 'without': 1, 'be': 1, 'that': 1, '.': 1, 'but': 1, 'in': 1, 'face': 1}
+seemingly: {'.': 1}
+bound: {'Strange': 1, 'I': 1}
+dive: {'will': 1}
+Strange: {'them': 1}
+Nothing: {'the': 1, 'candles': 1}
+will: {'.': 2, 'extremest': 1, 'water': 1, 'not': 1, 'of': 1, 'The': 1, 'little': 1, 'to': 1, 'how': 1, 'Queequeg': 1}
+content: {'limit': 1, 'always': 1}
+them: {'.': 2, ',': 2, 'and': 2, 'of': 1, 'hooded': 1, 'summer': 1, 'northern': 1, 'cry': 1, 'in': 1, 'the': 1, 'this': 1, ';': 1, 'at': 1, 'a': 1}
+extremest: {';': 1}
+limit: {'loitering': 1}
+loitering: {'of': 1}
+under: {'yonder': 1, 'me': 1, 'started': 1, 'he': 1, 'window': 1, 'save': 1, 'is': 1, 'it': 1, 'them': 1}
+shady: {'will': 1}
+lee: {'not': 1}
+yonder: {'.': 1, 'smoke': 1}
+not: {',': 4, 'of': 2, 'the': 2, 'exactly': 2, 'to': 2, 'a': 2, '’': 2, 'and': 2, 'boots': 2, 'They': 1, 'there': 1, 'still': 1, 'mild': 1, 'inferred': 1, 'as': 1, 'going': 1, 'but': 1, 'Such': 1, 'hand': 1, 'Euroclydon': 1, 'Sumatra': 1, 'down': 1, 'But': 1, 'rather': 1, 'I': 1, 'with': 1, 'much': 1, 'brother': 1, 'planing': 1, 'be': 1, 'persist': 1, 'room': 1, 'that': 1, 'time': 1, 'till': 1, 'this': 1, 'me': 1, 'dry': 1, 'away': 1, 'my': 1, 'last': 1, 'came': 1, 'next': 1, 'was': 1, 'civilized': 1, 'pinched': 1, 'matter': 1, 'let': 1, 'good': 1, 'landed': 1, 'mode': 1, 'they': 1, 'breeding': 1, 'bringing': 1}
+suffice: {'must': 1}
+No: {'just': 1, 'to': 1, 'that': 1, 'two': 1, ',': 1}
+They: {'nigh': 1, 'their': 1, 'sort': 1, ';': 1, 'have': 1}
+must: {'the': 2, ',': 1, 'is': 1, 'this': 1, 'of': 1, 'central': 1, 'bed': 1, 'tall': 1, 'long': 1, 'and': 1, 'similar': 1, 'or': 1, '.': 1, 'wooden': 1, 'hope': 1, 'troubled': 1}
+just: {',': 2, 'he': 2, 'as': 1, 'hand': 1, 'of': 1, 'seas': 1, '’': 1, 'But': 1, 'a': 1, 'fear': 1, 'and': 1, 'off': 1, 'the': 1}
+nigh: {'possibly': 1, 'harpoon': 1, ',': 1, 'surprise': 1}
+possibly: {'.': 1}
+without: {',': 3, 'the': 2, 'there': 1, 'deeper': 1, 'to': 1, 'boarded': 1}
+falling: {'they': 1, 'had': 1}
+And: {',': 2, 'them—leagues': 1, 'of': 1, 'cook': 1, 'sort': 1, 'if': 1, 'difference': 1, 'going': 1, 'corkscrew': 1, 'sleeping': 1, 'whom': 1, 'thought': 1, 'tomahawk': 1, 'too': 1, 'anything': 1, 'but': 1}
+stand—miles: {'all': 1}
+them—leagues: {'they': 1}
+Inlanders: {'from': 1}
+lanes: {'and': 1}
+alleys: {',': 1}
+avenues—north: {',': 1}
+east: {'west': 1}
+south: {'Yet': 1, 'bought': 1}
+west: {'all': 1}
+Yet: {'.': 1, 'too': 1, 'of': 1}
+unite: {'does': 1}
+Tell: {'magnetic': 1, ',': 1}
+does: {'the': 1, ',': 1, 'faint': 1, '.': 1, 'topers': 1}
+magnetic: {'of': 1}
+virtue: {'the': 1}
+needles: {'all': 1}
+compasses: {'attract': 1}
+those: {'?': 1, 'For': 1, 'bake-houses': 1, 'Fates': 1, 'Red-Men': 1, ',': 1, 'Alleghanian': 1, 'cheeks': 1, 'waking': 1}
+attract: {'more': 1}
+thither: {'Say': 1}
+Once: {'are': 1}
+Say: {'country': 1}
+country: {'land': 1, 'tallest': 1, 'think': 1}
+lakes: {'path': 1}
+Take: {'please': 1}
+any: {'his': 3, 'and': 1, ',': 1, 'universe': 1, 'understanding': 1, 'blanket': 1, 'up': 1, 'as': 1, 'abreast': 1, 'into': 1, 'sort': 1, 'But': 1, 'private': 1}
+path: {'ten': 1}
+please: {'one': 1, 'sorry': 1}
+ten: {'you': 1, 'hard': 1}
+one: {',': 7, 'to': 3, 'in': 2, 'large': 2, 'water': 1, 'is': 1, 'respectfully': 1, 'honor': 1, 'doubtless': 1, 'reason': 1, 'like': 1, 'of': 1, 'With': 1, 'broad': 1, 'were': 1, 'feet': 1, 'pooh': 1, 'Yet': 1, 'some': 1, 'picture': 1, 'a': 1, 'was': 1, 'aloof': 1, 'this': 1, 'from': 1, 'have': 1, 'and': 1, 'too': 1, 'half': 1, '.': 1, 'he': 1, 'identical': 1, 'began': 1, 'had': 1, 'tomahawk': 1, 'did': 1, 'horrid': 1, 'fixed': 1, 'own': 1, 'This': 1, 'people': 1}
+carries: {'dale': 1}
+down: {'and': 2, 'of': 2, 'upon': 1, 'aloft': 1, 'does': 1, 'high': 1, 'itself': 1, 'Upon': 1, 'settle': 1, '.': 1, 'soon': 1, 'round': 1, 'being': 1, 'the': 1, 'He': 1, ',': 1}
+dale: {'there': 1}
+leaves: {'pool': 1, 's': 1}
+pool: {'There': 1}
+stream: {'in': 1, 'visit': 1, 'at': 1}
+magic: {'the': 1, 'Go': 1}
+Let: {'men': 1, 'oriental': 1, 'from': 1, 'them': 1}
+most: {'and': 2, ',': 2, 'plunged': 1, 'landscape': 1, 'two': 1, 'the': 1, 'one': 1, 'pains': 1, 'expensive': 1, 'was': 1, 'My': 1, 'seemed': 1, 'tending': 1, 'stood': 1, 'last': 1, '.': 1, 'daring': 1, 'of': 1}
+absent-minded: {'in': 1}
+be: {'.': 5, ',': 5, 'of': 3, 'harpooneer': 3, 'I': 2, 'The': 2, 't': 2, 'to': 2, 'reveries—stand': 1, 'American': 1, 'professor': 1, 'lungs': 1, 'earthly': 1, 'let': 1, 'all': 1, 'for': 1, 'price': 1, 'halting': 1, '?': 1, 'the': 1, 'what': 1, 'he': 1, 'sat': 1, '”': 1, 'mountaineers': 1, 'sleeping': 1, 'together': 1, 'certainly': 1, 'violent': 1, 'this': 1, 'beyond': 1, 'out': 1, 'ere': 1, 'unsay': 1, 'about': 1, 'a': 1, 'infernal': 1, 'those': 1, 'be': 1, 'coat': 1, 'other': 1, 'idol': 1, 'savage': 1, 'or': 1, 'said': 1, 'Better': 1, 'was': 1, 'supernatural': 1, 'not': 1, 'dim': 1, 'his': 1, 'him': 1, 'in': 1, 'reflections': 1, 'say': 1}
+plunged: {'that': 1, 'drowned': 1}
+deepest: {'his': 1}
+reveries—stand: {'legs': 1}
+man: {'set': 1, 'marvellous': 1, '!': 1, 'there': 1, 'feet': 1, 'their': 1, '“': 1, ';': 1, 'deeply': 1, 'and': 1, 'in': 1, 'my': 1, 'Of': 1, 'any': 1, 'one': 1, '”': 1, 'being': 1, 'me': 1, '’': 1, 'when': 1, 'proper': 1, 'laughable': 1, 'for': 1, 'few': 1, '.': 1}
+legs: {'a-going': 1, 'his': 1, 'if': 1, 'and': 1}
+set: {'and': 1, 'in': 1, 'I': 1, 'ivory': 1, 'Enveloped': 1, 'my': 1, 'jackets': 1, 'of': 1}
+feet: {'will': 1, 'toasting': 1, 'sort': 1, 'was': 1, 'noble': 1, 'stepmother': 1, 'a': 1}
+a-going: {'infallibly': 1}
+he: {',': 7, 'of': 6, 'a': 6, 'it': 5, 'the': 4, 'much': 3, 'and': 3, 'me': 3, 'his': 2, '”': 2, 'I': 2, 'into': 2, '“': 2, 'very': 2, 'to': 1, 'invest': 1, 'tormenting': 1, 'but': 1, ';': 1, 'ears': 1, 'afterwards': 1, 'by': 1, 'him': 1, 'Czar': 1, 'tears': 1, 'Though': 1, 'forehead': 1, 'really': 1, 'nothing': 1, 'He': 1, 'cure': 1, 'spoil': 1, 'shipmate': 1, 'those': 1, 'shipmates': 1, 'before': 1, 'hours': 1, 'he': 1, 'bird—airley': 1, 'what': 1, 'on': 1, 'sell': 1, 'held': 1, 'anchor': 1, 'back': 1, 'some': 1, 'heavens': 1, 'bedfellow': 1, 'face': 1, 'Zealand': 1, 'undressing': 1, 'in': 1, 'savage': 1, 'heathen': 1, 'handful': 1, 'them': 1, 'drawing': 1, '.': 1, 'Stammering': 1, 'keep': 1, 'meaning': 1, 'heads': 1, 'reason': 1, 'hugged': 1, 'how': 1, 'were': 1, 'floor': 1, 'then': 1, 'well': 1, 'booting': 1, 'small': 1, 'have': 1, 'when': 1, 'three': 1, 'weeks': 1, 'rolls': 1}
+infallibly: {',': 1}
+lead: {'if': 1, 'other': 1, 'I': 1}
+region: {'be': 1}
+Should: {'in': 1}
+ever: {'a': 2, 'great': 1, 'an': 1, 'the': 1, 'Paul': 1, 'with': 1, 'would': 1, '.': 1, 'from': 1, 'could': 1, 'any': 1}
+athirst: {'desert': 1}
+great: {'and': 2, 'this': 1, 'a': 1, 'swung': 1, 'Carthage': 1, 'Tophet': 1, 'fact': 1, 'ship': 1, 'all': 1, 'of': 1, ')': 1, '.': 1, 'the': 1, 'have': 1, 'him': 1, 'seas—entire': 1}
+American: {'experiment': 1, 'Where': 1, 'it': 1}
+desert: {',': 1}
+try: {'your': 1, '“': 1, 'weighed': 1, 'When': 1}
+experiment: {'happen': 1}
+caravan: {'with': 1}
+happen: {'a': 1}
+supplied: {'.': 1}
+metaphysical: {'as': 1, 'that': 1}
+professor: {'every': 1}
+Yes: {'knows': 1, 'windows': 1, 'just': 1, 'set': 1}
+knows: {'are': 1, '’': 1}
+meditation: {'for': 1}
+wedded: {'here': 1}
+artist: {'paint': 1, 'of': 1, 'this': 1}
+He: {',': 2, 'to': 2, 'the': 1, 'first': 1, 'at': 1, 'he': 1, 'afore': 1, 'in': 1, 'Sunday': 1, 'hat—a': 1, 'not': 1, 'by': 1, 'If': 1, 'proceeded': 1}
+desires: {'dreamiest': 1}
+paint: {'shadiest': 1}
+dreamiest: {',': 1}
+shadiest: {'enchanting': 1}
+quietest: {'of': 1}
+enchanting: {'in': 1}
+bit: {'all': 1, '’': 1, 'the': 1, 'top': 1, 'wall': 1}
+romantic: {'valley': 1}
+landscape: {'of': 1}
+valley: {'What': 1}
+Saco: {'chief': 1}
+chief: {'There': 1, 'mates': 1}
+element: {'stand': 1}
+employs: {'trees': 1}
+trees: {'hollow': 1}
+each: {',': 2, '.': 2, 'had': 1}
+hollow: {'a': 1}
+trunk: {'hermit': 1, 'was': 1}
+hermit: {'within': 1}
+crucifix: {'here': 1}
+within: {'his': 1, ',': 1, 'opened': 1}
+sleeps: {'there': 1}
+meadow: {'his': 1, ',': 1}
+sleep: {'.': 4, ',': 3, 'up': 1, 'themselves': 1, 'a': 1, ';': 1, 'undress': 1, 'at': 1, '’': 1, 'here—you': 1, 'than': 1}
+cattle: {'yonder': 1}
+cottage: {'.': 1}
+goes: {'Deep': 1, 'the': 1, 'fire-place': 1}
+sleepy: {'distant': 1}
+smoke: {'woodlands': 1, 'the': 1}
+Deep: {'a': 1}
+distant: {'way': 1, 'his': 1, 'met': 1}
+woodlands: {',': 1}
+winds: {'reaching': 1, 'than': 1, 'is': 1}
+mazy: {'overlapping': 1}
+reaching: {'mountains': 1, ',': 1, 'it': 1}
+overlapping: {'in': 1}
+spurs: {'their': 1}
+mountains: {'blue': 1}
+bathed: {'.': 1}
+hill-side: {'the': 1}
+blue: {'picture': 1, 'up': 1, 'lines': 1}
+though: {'a': 2, 'tranced': 1, 'its': 1, 'late': 1, 'old': 1, 'to': 1, ',': 1, 'coming': 1, 'been': 1, 'o': 1, 'his': 1, 'part': 1, 'knowing': 1, 'propriety': 1, 'with': 1, 'great': 1, 'out': 1}
+picture: {'and': 1, 'dim': 1, 'drive': 1, 'That': 1, 'a': 1}
+lies: {'though': 1}
+thus: {'this': 1, 'at': 1}
+tranced: {'pine-tree': 1}
+pine-tree: {'like': 1}
+shakes: {'leaves': 1}
+its: {'this': 1, 'masses': 1, 'visible': 1, 'slipped': 1, 'the': 1}
+sighs: {'shepherd': 1, 'president': 1}
+shepherd: {'yet': 1, 'fixed': 1}
+head: {'the': 2, 'vain': 1, 'prevalent': 1, 'whaling': 1, 'it': 1, 'mixed': 1, 'a': 1, '”': 1, 'I': 1, 'But': 1, 'almost': 1, 'instant': 1, 'little': 1, 'made': 1, 'too': 1}
+yet: {'at': 2, 'unless': 1, 'recall': 1, 'original—the': 1, 'out': 1, 'us': 1, 'refrained': 1, 'harpooneer': 1, 'in': 1, 'well': 1, 'I': 1, 'an': 1}
+vain: {'’': 1}
+unless: {'eye': 1, 'it': 1, '’': 1, 'he': 1}
+eye: {'magic': 1}
+him: {'he': 2, 'to': 2, ',': 2, 'of': 2, 'and': 2, 'there': 2, 'Prairies': 1, 'or': 1, 'line': 1, 'little': 1, 'accommodated': 1, 'gin': 1, 'six': 1, 'voice': 1, 'comrade': 1, 'about': 1, 'try': 1, 'sake': 1, 'we': 1, 'sell': 1, '.': 1, 'first': 1, 'goin': 1, 'the': 1, 'game': 1, 'satisfactory': 1, 'continued': 1, 'same': 1, 't': 1, 'all': 1, 'a': 1, 'in': 1, '’': 1, 'lay': 1, 'misgivings': 1, 'off': 1, 'could': 1, 'been': 1, 'but': 1, 'spend': 1, 'is': 1, 'lighter': 1, 'certainly': 1, 'knows': 1}
+visit: {',': 1}
+Prairies: {'for': 1}
+June: {'on': 1, 'in': 1}
+when: {'of': 2, 'to': 2, 'and': 1, 'am': 1, ',': 1, 'for': 1, 'against': 1, 'rocked': 1, 'else': 1, 'And': 1, 'with': 1, 'in': 1, 'footfall': 1, 'I': 1, 'gaspings': 1, '.': 1, 'he': 1, 'withdrew': 1, 'a': 1}
+scores: {'you': 1, 'knee-deep': 1}
+miles: {'Tiger-lilies—what': 1, 'Why': 1}
+wade: {'the': 1}
+knee-deep: {'one': 1}
+among: {'charm': 1, 'overwhelming': 1, 'been': 1, 'A': 1, 'the': 1}
+Tiger-lilies—what: {'wanting': 1}
+charm: {'not': 1}
+wanting: {'a': 1}
+—Water—there: {'of': 1}
+drop: {'Were': 1}
+Were: {'of': 1}
+Niagara: {'sand': 1}
+cataract: {'you': 1}
+sand: {'your': 1}
+travel: {'see': 1, 'may': 1}
+thousand: {'?': 1, ',': 1}
+Why: {'it': 2, 'of': 1, 'healthy': 1, 'as': 1, 'hold': 1}
+did: {'a': 4, 'the': 4, 'Tennessee': 1, 'into': 1, 'sloop': 1, 'an': 1, 's': 1, 'whales': 1, 'him': 1, 'wash-stand': 1, 'such': 1, ',': 1, 'I': 1, 'can': 1}
+poor: {'upon': 1, 'much': 1, 'craft': 1, 'kind': 1}
+poet: {'suddenly': 1}
+Tennessee: {'two': 1}
+suddenly: {'silver': 1, 'feet': 1, '.': 1}
+receiving: {',': 1}
+two: {'that': 2, 'deliberate': 1, 'us': 1, 'into': 1, 'inmost': 1, ',': 1, 'each': 1, 'In': 1, 'more': 1, 'sea': 1, 'of': 1, 'the': 1}
+handfuls: {'whether': 1}
+silver: {'buy': 1, 'you': 1}
+deliberate: {'a': 1}
+whether: {'coat': 1, 'it': 1, 'that': 1, 'of': 1, 'all': 1, 'or': 1}
+buy: {'which': 1}
+coat: {'needed': 1, 'these': 1, 'little': 1, 'but': 1}
+sadly: {'his': 1, 'a': 1}
+needed: {'money': 1}
+invest: {'pedestrian': 1}
+pedestrian: {'?': 1}
+trip: {'Why': 1}
+Rockaway: {'almost': 1}
+Beach: {'every': 1}
+robust: {'robust': 1, ',': 1}
+healthy: {'healthy': 1, 'at': 1, 'sun-toasted': 1}
+boy: {'soul': 1, 'landlord': 1}
+crazy: {'?': 1, 'did': 1}
+go: {',': 2, 'sailor': 2, 'upon': 1, 'passenger': 1, 'must': 1, 'nor': 1, 'Commodore': 1, 'go': 1, ';': 1, 'I': 1, 'said': 1, 'pit': 1, 'For': 1, 'cold': 1}
+first: {'to': 4, ',': 1, 'your': 1, 'thing': 1, '.': 1, 'stranded': 1, 'forth': 1, 'ambitious': 1, 'No': 1, 'vigorously': 1, 'only': 1, 'be': 1, 'this': 1, 'hardly': 1, 'bitter': 1}
+voyage: {'did': 1, 'police': 1, 'the': 1, 'set': 1, 'great': 1, 'well': 1, 'ship': 1, 'him': 1}
+passenger: {'feel': 1, 'as': 1, 'a': 1, 'I': 1}
+yourself: {'vibration': 1, 'low': 1, 'that': 1, ',': 1, 'prosecution.': 1, 'good': 1}
+feel: {',': 1, 'dark': 1, 'half': 1}
+mystical: {'told': 1}
+vibration: {'that': 1}
+told: {'ship': 1, 'liked': 1, 's': 1, 't': 1, 'at': 1}
+old: {'all': 2, ',': 2, 'the': 2, 'holy': 1, 'and': 1, 'land': 1, 'orders': 1, 'instance': 1, 'about—however': 1, 'under': 1, 'arrived': 1, 'pleased': 1, 'behind': 1, 'palsied': 1, 'possess': 1, 'red': 1, 'side': 1, 'a': 1, 'that': 1, '.': 1, 'flasks': 1, 'for': 1, 'double': 1, 'of': 1}
+Persians: {'?': 1}
+hold: {'Why': 1, 'of': 1}
+holy: {'Greeks': 1, 'such': 1}
+Greeks: {'deity': 1}
+give: {',': 1, '?': 1, 'making': 1, 'His': 1, ';': 1, 'used': 1, 'a': 1, 'for': 1}
+separate: {'brother': 1}
+deity: {'of': 1}
+own: {'Surely': 1, 'judgment': 1, 'coals': 1, 'thinks': 1, 'the': 1, 'upon': 1, '’': 1, 'yourself': 1, 'in': 1, 'I': 1, 'take': 1, 'stuff': 1}
+brother: {'all': 1, 't': 1}
+Jove: {'is': 1}
+Surely: {'without': 1}
+meaning: {'the': 1, 'Narcissus': 1, 'you': 1}
+deeper: {'story': 1}
+story: {'because': 1, 'telling': 1, ',': 1, 'whaleman': 1}
+Narcissus: {'could': 1}
+who: {',': 5, 'my': 2, 'the': 2, 'grasp': 1, 'of': 1, 'is': 1, 'Saturday': 1, 'in': 1, 'like': 1}
+because: {'the': 1, 'obey': 1, 'of': 1, 'and': 1, ',': 1, 'service': 1, 'so': 1}
+could: {'long': 2, ',': 1, 'it—would': 1, 'port': 1, 'an': 1, 'death-harvesting': 1, 'but': 1, 'vile': 1, 'a': 1, 'chair': 1, 'next': 1, 'harpooneer': 1, 'belonging': 1, 'any': 1, 'all': 1, ';': 1, 'the': 1, 'hugging': 1, 'circumstance': 1, '.': 1, 'single': 1, 'toilet': 1, 'Queequeg': 1, 'his': 1}
+grasp: {'image': 1}
+tormenting: {'saw': 1}
+mild: {'the': 1}
+image: {'fountain': 1, 'in': 1, 'of': 1, 'its': 1, ',': 1, 'at': 1}
+saw: {'plunged': 1, 'the': 1, 'till': 1, 'my': 1, 'come': 1, 'sticking-plasters': 1}
+fountain: {'and': 1}
+was: {',': 9, 'the': 6, 'of': 5, 'in': 4, 'and': 4, 'he': 4, 'a': 3, ';': 3, 'me': 3, 'my': 2, 'that': 2, 'but': 2, 'darkness': 2, '.': 2, 'why': 2, 'then': 2, 'same': 1, 'smelt': 1, 'time': 1, 'managers': 1, 'now': 1, 'flood-gates': 1, 'December': 1, 'something': 1, 'meanwhile': 1, 'nay': 1, 'ash-box': 1, 'cheap': 1, 'place—a': 1, 'indefinite': 1, 'vast': 1, 'hump': 1, 'with': 1, 'at': 1, 'kind—not': 1, 'could': 1, 'up': 1, 'entered': 1, 'all': 1, 'from': 1, '’': 1, 'being': 1, 'than': 1, 'I': 1, 'o': 1, 'But': 1, 'room': 1, 'bone': 1, 'broken': 1, 'his': 1, 'purplish': 1, 'head—none': 1, 'had': 1, 'dark': 1, 'First': 1, 'or': 1, 'break': 1, 'Taking': 1, 'wild': 1, '“': 1, 'around': 1, 'clean': 1, 'sensations': 1, 'well': 1, 'dream': 1, 'been': 1, 'clock': 1, 'conscientious': 1, 'hand': 1, 'himself': 1, 'transition': 1, 'show': 1, 'He': 1, 'boarders': 1, 'Mungo': 1, 'good': 1, 'by': 1}
+drowned: {'image': 1}
+we: {'rivers': 1, 'to': 1, '!': 1, 'and': 1, 'he': 1, 'latest': 1, 'bedfellows': 1, '’': 1, 'Sal': 1, 'was': 1, 'They': 1, 'the': 1}
+ourselves: {'and': 1, ',': 1}
+rivers: {'is': 1}
+oceans: {'image': 1}
+ungraspable: {'and': 1}
+phantom: {'this': 1, 'hill': 1, 'hand': 1}
+life: {'the': 1, 'out': 1, 'The': 1}
+key: {'Now': 1}
+Now: {'that': 1, 'a': 1, 'lie': 1, 'ideas': 1, 'awful': 1}
+say: {'the': 3, 'this': 2, 'broiled': 1, 'll': 1, 'to': 1, 'one': 1, 'it': 1, 'wood': 1, 'seen': 1, '.': 1}
+am: {'going': 1, ',': 1, 'itch': 1, 'horror': 1, 'what': 1, 'as': 1}
+habit: {'whenever': 1}
+going: {',': 2, 'begin': 1, 'I': 1, 'is': 1, 'no': 1, 'cool': 1, 'feet': 1}
+begin: {'the': 1, 'of': 1}
+grow: {',': 1}
+hazy: {'and': 1}
+eyes: {'be': 1, 'this': 1, 'did': 1, 'hidden': 1, 'sun-lit': 1, 'not': 1, 'and': 1}
+conscious: {'I': 1}
+lungs: {'mean': 1}
+mean: {',': 3, 'that': 1, 'of': 1}
+inferred: {'to': 1, 'work': 1}
+For: {'up': 2, 'passenger': 1, 'abominate': 1, ',': 1, 'what': 1, 'was': 1, 'there': 1, 'on': 1, 'move': 1}
+needs: {'and': 1, '“': 1}
+rag: {'in': 1}
+something: {',': 1, 'do': 1, 'Grand': 1, 'that': 1, 'of': 1, 's': 1, '“': 1, 'quills': 1, 'the': 1, 'attention': 1, 'what': 1, 'dawning': 1}
+Besides: {'quarrelsome—don': 1, 'of': 1, 'late': 1, 't': 1}
+passengers: {'t': 1, 'I': 1, 'And': 1}
+sea-sick—grow: {'of': 1}
+quarrelsome—don: {'nights—do': 1}
+t: {'I': 3, 'he': 2, 'enjoy': 1, 'me': 1, 'With': 1, 'away': 1, 'and': 1, 'but': 1, ',': 1, 'for': 1, 'on': 1, 'keeps': 1, '“': 1, '—What': 1, 'the': 1, 'in': 1, 'guess.': 1, 'here': 1, ';': 1, '”': 1, 'your': 1, 'that': 1, 'smoking': 1, 'told': 1, 'ye.': 1}
+nights—do: {',': 1}
+enjoy: {'a': 1}
+themselves: {'general': 1, 'there': 1}
+much: {'and': 2, '.': 2, 'thing': 1, 'to': 1, 'a': 1, 'the': 1, 'Nantucket': 1, 'at': 1, 'if': 1, ',': 1, 'I': 1, 'while': 1, 'over': 1, 'his': 1, 'His': 1}
+general: {'I': 1}
+thing: {'never': 1, 'It': 1, 'stumble': 1, 'into': 1, 'scarce': 1, 's': 1, 'anywhere': 1}
+—no: {'as': 1}
+never: {'in': 2, ';': 1, '—though': 1, 'penny': 1, ')': 1, 'don': 1, 'standing': 1, 'especially': 1, 'sun': 1, 'Seas': 1, '.': 1, 'All': 1, 'was': 1, 'life': 1, 'The': 1, 'getting': 1, 'of': 1}
+nor: {'something': 1, 'just': 1}
+salt: {'go': 1}
+Commodore: {',': 1, 'his': 1}
+Captain: {'.': 1}
+Cook: {'glory': 1}
+abandon: {'of': 1}
+glory: {'offices': 1, 'cook': 1}
+distinction: {'those': 1}
+offices: {'them': 1}
+abominate: {',': 1}
+honorable: {',': 1}
+respectable: {'and': 1}
+toils: {'tribulations': 1}
+trials: {'every': 1}
+tribulations: {'.': 1}
+kind: {'quite': 1, 'I': 1, 'say': 1}
+whatsoever: {'as': 1, 'how': 1}
+quite: {'can': 1, '’': 1, 'be': 1, ',': 1, 'Not': 1}
+care: {'taking': 1, ',': 1, 'that': 1}
+taking: {'barques': 1, 'whittling': 1, 'hard': 1, 'on': 1}
+barques: {',': 1}
+brigs: {'what': 1}
+schooners: {'.': 1}
+what: {'.': 4, 'a': 3, 'so': 2, 'is': 2, 'for': 1, 'am': 1, 'them': 1, 'he': 1, 'this': 1, 'you': 1, 'could': 1, 'have': 1, 'myself': 1, 'been': 1, 'But': 1, ',': 1, 'and': 1, 'chest': 1, 'the': 1, ';': 1, 'I': 1, 'unearthly': 1, 'head-peddling': 1, 'from': 1, 'ages': 1, 'of': 1}
+cook: {'there': 1, 'officer': 1}
+—though: {'considerable': 1, 'buttered': 1}
+confess: {'in': 1, 'much': 1}
+considerable: {'a': 1}
+being: {',': 2, 'I': 2, 'on': 1, 'of': 1, 'compare': 1, 'under': 1, 'temperance': 1, 'for': 1, 'linen': 1, 'about': 1, ':': 1, 'he': 1, 'house': 1}
+sort: {',': 4, '“': 2, 'enough': 1, 'solo': 1, 'from': 1, 'house': 1, 'told': 1, 'he—does': 1, 'is': 1, 'put': 1, 'first': 1, 'then': 1, 'a': 1, ';': 1, 'succeeded': 1, 'be': 1}
+officer: {',': 1, 'who': 1}
+ship-board—yet: {'never': 1}
+somehow: {'broiling': 1, 'on': 1, 'all': 1}
+fancied: {'once': 1}
+broiling: {'broiled': 1}
+fowls: {',': 1}
+once: {',': 1, 'all': 1, 'wildly': 1, 'sea-gods': 1, 'a': 1, 'comprehended': 1, 'politely': 1}
+broiled: {'and': 1, '.': 1, 'horse': 1}
+judiciously: {'salted': 1}
+buttered: {'and': 1}
+judgmatically: {'there': 1}
+salted: {'is': 1}
+peppered: {'one': 1}
+speak: {'to': 1, 'who': 1, 'a': 1, 's': 1}
+respectfully: {'reverentially': 1, 'in': 1}
+reverentially: {'fowl': 1}
+fowl: {'It': 1}
+than: {'.': 2, 'is': 1, 'previous': 1, 'that': 1, 'And': 1, 'because': 1, 'poor': 1, 'not': 1, 'be': 1, 'strange': 1, 'sailors': 1, 'was': 1, 'dinner': 1, '“': 1, 'since': 1}
+idolatrous: {'Egyptians': 1}
+dotings: {'upon': 1}
+Egyptians: {'roasted': 1}
+ibis: {',': 1}
+roasted: {'you': 1}
+river: {'see': 1}
+horse: {'the': 1}
+mummies: {'their': 1}
+creatures: {'the': 1}
+huge: {'No': 1, 'they': 1}
+bake-houses: {',': 1}
+pyramids: {'I': 1}
+simple: {'the': 1}
+sailor: {'a': 2, 'mast': 1, 'strong': 1, 'wholesome': 1, 'take': 1}
+right: {'.': 2, 'plumb': 1, 'is': 1, 'at': 1}
+mast: {'the': 1}
+plumb: {',': 1}
+forecastle: {'the': 1, 'breathes': 1}
+royal: {'they': 1}
+mast-head: {'rather': 1}
+True: {'me': 1, ',': 1}
+rather: {',': 1, 'here': 1, 'along': 1, 'a': 1, 'own': 1, 'peddling': 1, '.': 1, 'thing': 1}
+order: {'and': 1, 'thump': 1, 'were': 1, 'frost': 1, 'him': 1}
+make: {'to': 1, 'me': 1, 'The': 1, 'thought': 1, 'So': 1, 'pine': 1, 'and': 1, 'soon': 1, ',': 1, 'rascal': 1}
+jump: {',': 1, 'not': 1}
+spar: {'a': 1, 'in': 1}
+grasshopper: {'.': 1}
+May: {'first': 1, 'taking': 1}
+unpleasant: {'one': 1}
+enough: {'’': 1, 'from': 1, 'little': 1, 'as': 1, 'man': 1, 'shaggy': 1, 'and': 1, 'bed': 1, 'harpooneers': 1, 'him': 1, 'his': 1}
+touches: {'of': 1}
+sense: {'if': 1, 'that': 1, 'what': 1}
+honor: {'come': 1}
+particularly: {'an': 1, 'pantaloons': 1}
+established: {',': 1}
+family: {'the': 1}
+Van: {',': 1}
+Rensselaers: {'or': 1}
+Randolphs: {'And': 1}
+Hardicanutes: {'all': 1}
+putting: {'tar-pot': 1, 'But': 1}
+tar-pot: {'lording': 1}
+been: {'I': 2, 'country': 1, 'for': 1, 'of': 1, 'ruins': 1, 'with': 1, '!': 1, 'has': 1, 'rainy': 1, 'got': 1, ';': 1, '’': 1, 'interval': 1, 'counterpane': 1, 'or': 1, ',': 1, 'he': 1, 'a': 1, 'previous': 1, 'fellow': 1, 'his': 1, 'some': 1}
+lording: {'schoolmaster': 1}
+schoolmaster: {'boys': 1, 'and': 1}
+making: {'in': 1, 'my': 1, 'the': 1, 'by': 1, 'to': 1}
+tallest: {'of': 1}
+boys: {'you': 1, 'll': 1}
+awe: {'transition': 1}
+The: {',': 3, 'the': 3, 'a': 2, 'I': 2, 'his': 2, 'was': 2, 'one': 1, 'perhaps': 1, 'it': 1, 'and': 1, 'on': 1, 'Coffin.': 1, 'gable-ended': 1, 'in': 1, 'entry': 1, '”': 1, 'their': 1, 'this': 1, 'left': 1, 'next': 1, 'of': 1}
+transition: {',': 1, '.': 1}
+keen: {'you': 1}
+assure: {'schoolmaster': 1}
+decoction: {'Stoics': 1}
+Seneca: {'enable': 1}
+Stoics: {'grin': 1}
+enable: {'bear': 1}
+grin: {'But': 1, 'into': 1}
+bear: {'this': 1, 'a': 1}
+even: {'time': 1, '?': 1, 'newly': 1, 'misfortunes': 1}
+wears: {'What': 1}
+hunks: {'me': 1, '?': 1}
+sea-captain: {'a': 1}
+orders: {'broom': 1}
+broom: {'decks': 1}
+sweep: {'What': 1, 'previous': 1}
+decks: {'indignity': 1}
+indignity: {',': 1}
+amount: {'I': 1}
+weighed: {'in': 1, 'hamper': 1}
+scales: {'?': 1}
+New: {'think': 1, 'a': 1, 'embark': 1, 'been': 1, 'could': 1, 'endeavored': 1, 'curios': 1, 'other': 1, 'enough—and': 1, 'Mungo': 1}
+Testament: {'the': 1}
+Do: {'Gabriel': 1, ',': 1}
+think: {'anything': 1, 'little': 1, 'might': 1, 'stayed': 1, 'peddler': 1, 'crawl': 1, 'it': 1, 'was': 1}
+archangel: {'less': 1}
+Gabriel: {'of': 1}
+thinks: {'me': 1, ';': 1, 'warm': 1, 'be': 1}
+anything: {',': 2, 'to': 1, 'it': 1}
+less: {'I': 2}
+promptly: {'old': 1}
+obey: {'that': 1}
+instance: {'t': 1}
+Who: {'slave': 1}
+ain: {'?': 1, 'many': 1, 'This': 1}
+slave: {'.': 1}
+Well: {'the': 1}
+however: {'order': 1, 'be': 1, 'them': 1, 'by': 1, ',': 1}
+sea-captains: {'they': 1}
+may: {'may': 1, 'about': 1, 'that': 1, 'the': 1, '.': 1, 'vast': 1, 'shilling': 1, 'after': 1, '’': 1, 'in': 1, 'best': 1}
+about—however: {'punch': 1}
+thump: {',': 1, 'and': 1}
+punch: {'have': 1}
+satisfaction: {'is': 1}
+knowing: {'right': 1, 'do': 1, 'slowly': 1}
+everybody: {'or': 1}
+else: {',': 2, 'other': 1, 'those': 1, 'ten': 1, 'more': 1, 'or': 1, 'boots': 1}
+served: {'way—either': 1}
+way—either: {'metaphysical': 1}
+physical: {'view': 1}
+point: {'is': 1, 'my': 1}
+view: {'and': 2}
+so: {'I': 2, 'that': 2, ',': 2, 'passed': 1, 'be': 1, 'the': 1, 'same': 1, 'mind': 1, 'first': 1, 'place': 1, 'every': 1, 'side': 1, 'might': 1, 'glass—the': 1, 'get': 1, 'upon': 1, 'take': 1, 'should': 1, 'is': 1, 'out': 1, 'may': 1, 'render': 1, 'candle': 1, 'made': 1, 'country': 1, 'fire-place': 1, 'But': 1, 'began': 1, ';': 1, 'to': 1, 'sun': 1, 'When': 1, 'as': 1}
+universal: {',': 1}
+passed: {'hands': 1, 'The': 1, 'is': 1}
+hands: {'’': 1, 'to': 1, 'his': 1}
+should: {'s': 1, 'my': 1, 'the': 1, 'of': 1, 'it': 1, 'must': 1, '(': 1, 'bed': 1, 'at': 1, 'I': 1}
+rub: {'shoulder-blades': 1}
+shoulder-blades: {'.': 1}
+Again: {'to': 1}
+always: {'a': 2, '?': 1, 'of': 1, ',': 1}
+paying: {',': 1, 'The': 1, 'uncomfortable': 1}
+trouble: {'pay': 1}
+whereas: {'a': 1}
+pay: {'that': 1, 'all': 1, 'Queequeg': 1}
+single: {'heard': 1, 'spell': 1}
+penny: {'of': 1, 'penny': 1, 'on': 1}
+heard: {'the': 3, 'contrary': 1, ',': 1, '’': 1, 'hand': 1, 'man': 1}
+On: {'themselves': 1, 'very': 1, 'long': 1}
+contrary: {'pay': 1}
+difference: {'paying': 1, 'out': 1}
+between: {'.': 1, 'I': 1, 'sunset': 1, 'was': 1, 'to': 1, ',': 1, 'chimney': 1, 'into': 1, 'lay': 1}
+paid: {'paying': 1, 'with': 1}
+act: {'the': 2}
+perhaps: {'that': 1, 'not': 1, 'good': 1, 'these': 1, 'bar-room': 1, 'Siberia': 1}
+uncomfortable: {'orchard': 1, 'whom': 1}
+infliction: {'thieves': 1}
+orchard: {'.': 1}
+thieves: {'But': 1}
+entailed: {'being': 1}
+us: {',': 1, 'our': 1, 'meal': 1, 'strove': 1}
+—what: {'?': 1}
+compare: {'urbane': 1, 'a': 1}
+urbane: {'man': 1}
+activity: {'receives': 1}
+receives: {',': 1}
+really: {'we': 1, 'for': 1, 'only': 1, '.': 1}
+marvellous: {'so': 1, 'lookest': 1, 'and': 1, 'are': 1}
+considering: {'believe': 1}
+earnestly: {'the': 1}
+believe: {'root': 1}
+root: {',': 1}
+earthly: {'on': 1, 'a': 1}
+ills: {'no': 1}
+monied: {'Ah': 1}
+enter: {'how': 1, 'A': 1}
+heaven: {'cheerfully': 1, 'quit—the': 1, 'was': 1, 'the': 1}
+Ah: {'consign': 1}
+cheerfully: {'perdition': 1, 'and': 1}
+consign: {'Finally': 1}
+perdition: {'always': 1}
+Finally: {'to': 1}
+wholesome: {'of': 1}
+exercise: {'the': 1}
+pure: {'deck': 1}
+air: {'.': 1, 'The': 1, ',': 1, 'the': 1}
+fore-castle: {'in': 1}
+deck: {'this': 1}
+far: {'from': 1, 'and': 1, 'lengthwise': 1, 'concerned': 1}
+prevalent: {'(': 1}
+astern: {'if': 1}
+(: {'one': 2, 'you': 1, 'they': 1, 'had': 1, 'know': 1, 'be': 1}
+violate: {',': 1}
+Pythagorean: {'for': 1}
+maxim: {'the': 1}
+): {'most': 1, 'What': 1, 'withered': 1, 'place': 1, 'venture': 1, 's': 1, 'succeeded': 1}
+quarter-deck: {'second': 1}
+gets: {'hand': 1}
+atmosphere: {'the': 1}
+second: {'on': 1, 'It': 1, '.': 1, 'am': 1, 'mates': 1}
+sailors: {'He': 1, 'Abominable': 1, 'in': 1}
+breathes: {'not': 1}
+In: {'do': 1, 'wind': 1, '’': 1, 'however': 1, 'a': 1, 'so': 1, 'third': 1}
+commonalty: {'many': 1}
+leaders: {',': 1, 'But': 1}
+many: {'the': 2, 'I': 1, '?': 1, 'fire': 1, 'slightest': 1}
+things: {'time': 1, 'inducements': 1, 'to': 1, 'whaling': 1, 'the': 1}
+suspect: {'it': 1}
+wherefore: {'having': 1}
+after: {'sea': 1, 'began': 1, 'cherishing': 1, 'telling': 1, 'no': 1, 's': 1, 'his': 1, 'the': 1, 'at': 1}
+having: {'as': 1, 'day': 1, 'he': 1, 'bed': 1, ',': 1}
+repeatedly: {'a': 1}
+smelt: {'merchant': 1, 'every': 1}
+merchant: {'now': 1}
+whaling: {'invisible': 1, 'of': 1, 'were': 1, 'the': 1, 'New': 1, 'this': 1, 'broken': 1, 'small': 1}
+invisible: {'Fates': 1}
+police: {',': 1}
+Fates: {'constant': 1, 'for': 1}
+has: {'me': 1, 'monopolising': 1, 'south': 1, 'to': 1, 'him': 1, '.': 1}
+constant: {'and': 1}
+surveillance: {'secretly': 1}
+secretly: {'influences': 1}
+dogs: {'me': 1, 'or': 1}
+influences: {'way—he': 1}
+unaccountable: {'than': 1, 'shadows': 1, '’': 1, 'that': 1}
+way—he: {'any': 1}
+answer: {'.': 1, 'full—not': 1, 'help': 1, 'in': 1, 'I': 1}
+doubtless: {'this': 1, ',': 1, 'ashore': 1}
+formed: {'programme': 1, 'whirlwinds': 1}
+grand: {'was': 1, 'a': 1, 'not': 1}
+programme: {'drawn': 1}
+Providence: {'a': 1}
+drawn: {'ago': 1, 'did': 1}
+ago: {'as': 1, ',': 1, 'fifteen': 1}
+came: {'of': 2, 'that': 1, 'proceeding': 1, 'knot': 1, 'cold': 1, '.': 1, 'fresh': 1, 'in': 1, 'though': 1, 'fine': 1}
+brief: {'more': 1}
+interlude: {'extensive': 1}
+solo: {'.': 1}
+extensive: {'it': 1}
+performances: {'that': 1}
+bill: {'like': 1}
+run: {'“': 1, 'whale': 1}
+:: {'for': 1, '?': 1, 'my': 1, 'much': 1, 'New': 1}
+“: {'”': 8, 'the': 4, ',': 4, 'I': 4, '’': 4, '.': 3, 'his': 3, 'it': 3, 'he': 2, 't': 2, 'ISHMAEL': 1, '—but': 1, 'there': 1, '—this': 1, '—Peter': 1, 'tempestuous': 1, 'difference': 1, 'to': 1, 'All': 1, 'said': 1, 'whispered': 1, 'is': 1, 'dark': 1, '?': 1, 'here': 1, 'Grampus': 1, 'where': 1, 've': 1, ';': 1, 'chap': 1, 'answered': 1, 'an': 1, 'say': 1, 'shouted': 1, 'sure': 1, 'stop': 1, 'you': 1, 'a': 1, 'I—': 1, 'mean': 1, 'purty': 1, 'landlord': 1, 'lar': 1, 's': 1, 'comfortable': 1, 'dam-me': 1, 'Coffin': 1, 'who-ee': 1, 'afraid': 1, '—grunted': 1, 'touch': 1, 'name': 1}
+Grand: {'Presidency': 1}
+Contested: {'of': 1}
+Election: {'the': 1}
+Presidency: {'.': 1}
+United: {'VOYAGE': 1}
+States: {'BY': 1}
+WHALING: {'.': 1}
+VOYAGE: {'“': 1}
+BY: {'BLOODY': 1}
+ONE: {'BATTLE': 1}
+ISHMAEL: {'IN': 1}
+BLOODY: {'Though': 1}
+BATTLE: {'I': 1}
+IN: {'can': 1}
+AFFGHANISTAN.: {'not': 1}
+”: {',': 7, 'I': 4, '“': 4, 'and': 4, 'the': 3, 'tell': 2, 'that': 2, 'a': 2, 'what': 2, '”': 2, 'said': 2, 'lighted': 2, 'expensive': 1, 'rays': 1, '?': 1, 'needs': 1, 'myself': 1, '—Rather': 1, 'whose': 1, '3': 1, 'his': 1, 'an': 1, 'does': 1, 'Where': 1, 'be': 1, 'rate': 1, 'boots': 1, 'please': 1, 'upon': 1, 'generally': 1, 'sell': 1, 'rage': 1, 'precisely': 1, 'With': 1, 'break': 1, 'flying': 1, 'Broke': 1, 'up': 1, 'fetching': 1, '’': 1, 'placing': 1, 'eyeing': 1, 'Landlord': 1, 'me': 1, 'again': 1, 'know': 1, 'away': 1, 'to': 1, 'Queequeg': 1, 'landlord': 1, 'you': 1, 'was': 1, 'dint': 1}
+Though: {'why': 1, 'the': 1, 'elegant': 1}
+tell: {',': 3, 'that': 1, ';': 1, 'he': 1, 'morning': 1, 'give': 1, 'this': 1, 'harpooneer': 1, 'a': 1, 'tomahawk': 1, 'me': 1, 'movement': 1, 'had': 1}
+why: {'those': 1, 'yet': 1, 'about': 1, 'should': 1, 'tell': 1}
+exactly: {',': 1, 'that': 1, 'three': 1}
+stage: {',': 1}
+managers: {'put': 1}
+put: {'shabby': 1, 'with': 1, 'mouth': 1, 'of': 1, 'Johnny': 1, 'try': 1, 'the': 1, 'last': 1}
+shabby: {'voyage': 1, 'with': 1}
+others: {'magnificent': 1, 'of': 1}
+magnificent: {',': 1}
+parts: {'and': 2, 'not': 1, 'with': 1, 'one': 1}
+tragedies: {'easy': 1}
+short: {'genteel': 1, 'be': 1, 'turn': 1}
+easy: {',': 1, 'this': 1, 'I': 1}
+genteel: {'parts': 1}
+comedies: {'in': 1}
+jolly: {',': 2, 'can': 1, '’': 1}
+farces—though: {'why': 1}
+recall: {'I': 1}
+circumstances: {'can': 1, 'very': 1}
+springs: {'cunningly': 1}
+motives: {'to': 1, 'of': 1}
+cunningly: {'various': 1}
+presented: {'disguises': 1}
+various: {'to': 1, 'his': 1, 'the': 1}
+disguises: {'set': 1}
+induced: {'performing': 1}
+performing: {',': 1}
+besides: {'delusion': 1, 'table': 1}
+cajoling: {'that': 1}
+delusion: {'choice': 1}
+choice: {'unbiased': 1}
+resulting: {'freewill': 1}
+unbiased: {'.': 1}
+freewill: {'Chief': 1}
+discriminating: {'these': 1}
+judgment: {'motives': 1}
+Chief: {'the': 1}
+overwhelming: {'whale': 1}
+idea: {'himself': 1, 'For': 1, 'might': 1, '’': 1, 'thoughts': 1, 'madman': 1, 'the': 1}
+whale: {'portentous': 1, 'all': 1, 'most': 1, 'else': 1, 'clean': 1, 'off': 1, 'Be': 1, 'so': 1, 'the': 1, 'properly': 1}
+Such: {'monster': 1, 'of': 1, 'and': 1, 'was': 1}
+portentous: {'all': 1, 'something': 1, '’': 1}
+mysterious: {'curiosity': 1, 'it': 1}
+monster: {'.': 1}
+roused: {'Then': 1}
+curiosity: {'and': 1, 'my': 1}
+Then: {'seas': 1}
+wild: {'he': 1, 'to': 1, 'altogether': 1, '.': 1, 'his': 1}
+seas: {'island': 1, 'barbarous': 1, 'with': 1, 'up': 1}
+rolled: {'the': 2, 'mariners': 1, ',': 1, 'same': 1, 'feeling': 1}
+island: {',': 1, 'me': 1}
+bulk: {'nameless': 1}
+undeliverable: {'the': 1}
+nameless: {';': 1, ',': 1, 'form': 1}
+perils: {'these': 1}
+attending: {'Patagonian': 1}
+marvels: {'sights': 1}
+Patagonian: {'helped': 1}
+sights: {'to': 1}
+sounds: {'me': 1, 'within': 1, 'that': 1}
+helped: {'my': 1}
+sway: {'.': 1}
+wish: {',': 1}
+inducements: {'me': 1}
+tormented: {'for': 1, 'go': 1}
+everlasting: {'.': 1, 'the': 1}
+itch: {'I': 1}
+remote: {'sail': 1}
+love: {',': 1}
+forbidden: {'on': 1}
+barbarous: {'what': 1}
+coasts: {'is': 1}
+Not: {',': 1, 'Ledyard': 1}
+ignoring: {'I': 1}
+good: {',': 3, 'to': 2, ';': 2, 'supper': 1, 'with': 1, 's': 1, 'story': 1, 'is': 1, 'I': 1, 'not': 1, 'of': 1, 'on': 1, 'sight': 1, 'good': 1, 'too': 1, '’': 1, 'let': 1, 'were': 1}
+quick: {',': 1}
+perceive: {'could': 1}
+horror: {'be': 1}
+social: {'me—since': 1, 'for': 1, 'same': 1}
+it—would: {'is': 1}
+let: {'well': 1, 'light': 1, ',': 1, 'to': 1}
+me—since: {'to': 1}
+well: {'terms': 1, ',': 1, 'eyes': 1, 'round': 1, 'circumstance': 1, 'He': 1, 'to': 1}
+friendly: {'inmates': 1}
+terms: {'of': 1}
+inmates: {'lodges': 1}
+place: {'the': 2, 'By': 1, 'American': 1, 'I': 1, ',': 1, 'may': 1, 'such': 1, 'of': 1, 'so': 1, 'shelf': 1}
+lodges: {'of': 1}
+By: {',': 1}
+reason: {'then': 1, 'them': 1, 'sailor': 1, 'sell': 1, 'as': 1}
+welcome: {'of': 1}
+flood-gates: {'open': 1}
+wonder-world: {'in': 1}
+swung: {'the': 1}
+open: {'wild': 1, 'careless': 1, 'the': 1, 'a': 1, 'in': 1}
+conceits: {'my': 1}
+swayed: {',': 1}
+purpose: {'there': 1, 'of': 1}
+floated: {',': 1, 'not': 1}
+inmost: {'of': 1}
+endless: {',': 1}
+processions: {'and': 1}
+mid: {',': 1}
+hooded: {'snow': 1}
+snow: {'.': 1, 'the': 1}
+hill: {'CHAPTER': 1}
+CHAPTER: {'.': 3, 'I': 1}
+2: {'I': 1}
+Carpet-Bag: {'shirt': 1}
+stuffed: {'into': 1, 'crockery': 1}
+shirt: {'old': 1, 'to': 1, 'his': 1, 'at': 1}
+carpet-bag: {'my': 1}
+tucked: {',': 1}
+arm: {'over': 2, 'Cape': 1, 'Sal': 1, 'the': 1, 'sun': 1, 'say': 1, 'awoke': 1, ',': 1, 'But': 1}
+started: {'the': 1}
+Cape: {'.': 1, 'original': 1, 'you': 1}
+Horn: {'Quitting': 1, 'may': 1}
+Pacific: {'city': 1}
+Quitting: {'old': 1}
+Manhatto: {'in': 1}
+duly: {'.': 1}
+arrived: {'It': 1, ',': 1}
+Bedford: {'Saturday': 1, 'on': 1, 'gradually': 1, 'embark': 1}
+Saturday: {'Much': 1, 'Sunday': 1, 'holy': 1}
+night: {'I': 2, 'was': 1, 'and': 1, 'New': 1, 'cheerless': 1, ',': 1, 'day': 1, ';': 1, 'old': 1, 'up': 1, 'that': 1, 'person': 1, 'morning': 1, 'in': 1, 'Sabbath': 1, 'There': 1, 'Sam': 1, 'turned': 1, 'very': 1, 'said': 1, 'recurred': 1}
+December: {'disappointed': 1}
+Much: {'learning': 1}
+disappointed: {'little': 1}
+learning: {'for': 1}
+packet: {'sailed': 1}
+Nantucket: {'and': 2, 'was': 1, 'her': 1, 'Tyre': 1, ',': 1, 'that': 1}
+had: {'.': 3, 'night': 2, 'the': 2, 'a': 2, 'room': 2, 'that': 1, 'doing': 1, 'and': 1, 'as': 1, 'creak': 1, ')': 1, 'bewitched': 1, 'me': 1, 'boat': 1, 'soon': 1, ',': 1, 'previous': 1, 'Landlord': 1, 'fooling': 1, 'me—but': 1, '’': 1, 'good': 1, 'South': 1, 'chair': 1, 'been': 1, 'The': 1, 'caper': 1, 'do': 1, 'degree': 1, 'savage': 1, 'not': 1, 'young': 1, 'just': 1, 'sight': 1}
+already: {'no': 1}
+sailed: {'way': 1}
+offer: {'Monday': 1, 'little': 1}
+till: {'As': 1, 'oath': 1, 'on': 1, 'came': 1, 'a': 1, 'would': 1}
+following: {'young': 1, 'Bedford': 1}
+Monday: {'candidates': 1}
+As: {'the': 1, 'dim': 1, 'covered': 1}
+young: {'and': 1, 'time': 1, 'table': 1, 'box': 1, 'now': 1, 'cheek': 1}
+candidates: {'penalties': 1}
+pains: {'stop': 1}
+penalties: {'this': 1}
+stop: {'I': 2, 'Bedford': 1, 'the': 1, 'bear': 1, 'me—I': 1, ',': 1}
+embark: {'it': 1, ',': 1}
+related: {'one': 1}
+doing: {'was': 1}
+made: {'and': 2, 'the': 2, 'no': 1, 'by': 1, 'if': 1, 'but': 1, 'shrine': 1, 'it': 1, 'of': 1, 'little': 1, 'sharp': 1}
+craft: {'a': 1, ',': 1, 'hung': 1, 'enormous': 1, 'especially': 1}
+fine: {'everything': 1, 'Orion': 1, 'he': 1, 'a': 1}
+boisterous: {'with': 1}
+everything: {'old': 1}
+connected: {'island': 1}
+famous: {'amazingly': 1}
+amazingly: {'though': 1}
+pleased: {'New': 1, 'dress': 1}
+late: {'be': 2, 'business': 1, 'now': 1, 'harpooneer': 1, 'was': 1, 'more': 1}
+gradually: {'whaling': 1}
+monopolising: {',': 1}
+business: {'though': 1, 'in': 1, 'of': 1, 'at': 1, 'into': 1}
+matter: {'now': 1, 'was': 1, 'then': 1, 'However': 1}
+behind: {'was': 1}
+original—the: {';': 1}
+Tyre: {'—the': 1}
+Carthage: {'the': 1}
+—the: {'dead': 1}
+dead: {'.': 1, ',': 1, 'upon': 1, 'fact': 1, 'queer': 1, 'yet': 1}
+stranded: {'from': 1, 'before': 1}
+Where: {'did': 1, 'Is': 1}
+aboriginal: {',': 1}
+whalemen: {'first': 1, 'and': 1, 'Queequeg—why': 1}
+Red-Men: {'in': 1}
+sally: {'give': 1}
+canoes: {'the': 1}
+chase: {'And': 1}
+Leviathan: {'from': 1}
+too: {'in': 2, ';': 2, 'adventurous': 1, 'steps': 1, '.': 1, 'improvements': 1, 'could': 1, 'other': 1, 'world': 1, 'come': 1, 'the': 1}
+adventurous: {',': 1}
+sloop: {'laden': 1}
+forth: {'imported': 1, 'contrasting': 1}
+partly: {'goes': 1, 'opinions': 1, 'the': 1}
+laden: {'the': 1}
+imported: {'throw': 1}
+cobblestones—so: {'at': 1}
+story—to: {',': 1}
+throw: {'in': 1}
+whales: {'discover': 1, 'a': 1, 'strangers': 1}
+discover: {'enough': 1}
+risk: {'bowsprit': 1}
+harpoon: {',': 2, 'Now': 1, 'of': 1, 'how': 1, 's': 1}
+bowsprit: {'night': 1}
+day: {'night': 1, 'that': 1, 'in': 1, 'our': 1, 'and': 1, 'ways': 1}
+another: {'in': 1, 'which': 1, 'them': 1, 'door': 1, 'without': 1}
+ere: {'my': 1, 'slanderin': 1, 'were': 1}
+destined: {'a': 1}
+port: {'matter': 1}
+became: {'where': 1, 'sea': 1, ',': 1}
+concernment: {'eat': 1}
+eat: {'It': 1}
+meanwhile: {'very': 1}
+dubious-looking: {'very': 1}
+nay: {'and': 1}
+dark: {'bitingly': 1, 'never': 1, 'At': 1, 'colour': 1, 'to': 1, 'up': 1, 'for': 1}
+dismal: {'and': 1, 'in': 1}
+bitingly: {'I': 1}
+cold: {'knew': 1, 'all—the': 1, 'upon': 1, 'under': 1, 'and': 1, 'as': 1, 'now': 1}
+cheerless: {'one': 1}
+anxious: {'my': 1}
+grapnels: {'pocket': 1}
+sounded: {'only': 1}
+pocket: {'up': 1, 'carefully': 1, 'he': 1}
+only: {'pieces': 1, 'maketh': 1, ',': 1, 'of': 1, 'a': 1, 'but': 1, 'wall': 1, 'one': 1, 'man': 1, 'really': 1, 'weight': 1, 'in': 1, 'predicament': 1, '.': 1, 'looked': 1}
+brought: {'of': 1}
+pieces: {',': 1}
+—So: {',': 1}
+wherever: {',': 1}
+said: {'sort': 2, ',': 2, 'do': 2, 'as': 1, 'don': 1, 'afford': 1, 'you': 1, 'and': 1, '“': 1, 'into': 1, 'to': 1, 'a': 1, 'the': 1, 's': 1, 'him': 1, 'may': 1}
+stood: {'a': 1, 'had': 1, 'corner': 1, ',': 1, 'height': 1, 'at': 1, '.': 1, 'the': 1, 'door': 1, 'moment': 1}
+middle: {'he': 2, 'shouldering': 1, 'as': 1, '.': 1}
+dreary: {',': 1, 'blackness': 1}
+shouldering: {'comparing': 1}
+bag: {'gloom': 1, '’': 1, 'as': 1, 'This': 1, 'in': 1, 'off': 1}
+comparing: {'north': 1}
+gloom: {'the': 1}
+north: {'the': 1}
+darkness: {'your': 1, 'and': 1, 'a': 1}
+south—wherever: {'may': 1}
+wisdom: {'lodge': 1}
+conclude: {'night': 1}
+lodge: {'my': 1}
+dear: {'to': 1}
+sure: {',': 1, 'in': 1, 'there': 1, 'prodigious': 1, 'nothing': 1, 'that': 1, 'much': 1}
+inquire: {'don': 1}
+price: {'t': 1}
+don: {'particular': 1, '?': 1, 'but': 1, 'it': 1, 'on': 1, 'a': 1, 'day': 1}
+halting: {'streets': 1}
+steps: {',': 1}
+paced: {'passed': 1}
+sign: {'Harpoons': 1, '”': 1, '!': 1, 'a': 1, 'of': 1, '“': 1}
+Crossed: {'looked': 1, '“': 1}
+Harpoons: {'too': 1, 'The': 1}
+—but: {'and': 1, 'go': 1, 'a': 1}
+looked: {'the': 2, 'like': 2, 'there': 1, 'have': 1, 'here': 1}
+expensive: {'Further': 1, 'thought': 1}
+Further: {'bright': 1}
+bright: {'“': 1, ',': 1}
+red: {'Sword-Fish': 1, 'had': 1}
+windows: {'Inn': 1, 'of': 1}
+Sword-Fish: {'came': 1, 'then': 1}
+Inn: {'such': 1, 'Coffin': 1}
+fervent: {'seemed': 1}
+rays: {'to': 1}
+seemed: {'a': 2, 'packed': 1, 'sitting': 1, 'theory': 1, 'from': 1, 'the': 1, 'but': 1, 'at': 1, 'Meanwhile': 1, 'badly': 1, 'My': 1, 'bed-side': 1, ',': 1, '.': 1, 'character': 1, 'western': 1}
+melted: {'ice': 1}
+packed: {'before': 1, ',': 1}
+ice: {',': 2, 'sighs': 1}
+house: {'the': 1, 'it': 1, 'as': 1, 'they': 1, 'unoccupied': 1, 'wonder': 1, '.': 1, ';': 1, 'and': 1, ',': 1, 'view': 1}
+everywhere: {'lay': 1}
+congealed: {'thick': 1}
+frost: {'in': 1, 'outside': 1, ',': 1, 'Lazarus': 1}
+lay: {'the': 3, 'a': 1, 'resolved': 1, 'sixteen': 1, 'feeling': 1, 'comical': 1, 'having': 1}
+inches: {',': 1, 'one—so': 1}
+thick: {'asphaltic': 1, 'a': 1}
+hard: {'—rather': 1, 'soles': 1, 'clock': 1, 'image': 1, ';': 1, 'centre': 1}
+asphaltic: {'for': 1}
+pavement: {'me': 1}
+—rather: {'when': 1}
+weary: {'I': 1}
+struck: {'flinty': 1}
+foot: {',': 1, 'that': 1, 'the': 1, 'I': 1}
+flinty: {'hard': 1}
+projections: {',': 1}
+remorseless: {'my': 1}
+service: {'boots': 1}
+soles: {'in': 1}
+boots: {'miserable': 1, '.': 1, 'entry': 1, 'out': 1, 'heavens': 1, 'do': 1, 'then': 1, 'damp': 1, 'him': 1}
+miserable: {'and': 1}
+plight: {'jolly': 1}
+Too: {'again': 1}
+again: {'one': 1, 'possible': 1, ',': 1, 'of': 1, 'as': 1, 'responses': 1, 'while': 1, 'wouldn': 1, '.': 1, 'get': 1}
+moment: {'glare': 1, 'stairs': 1, 'his': 1, ',': 1, 'the': 1, 'tattooings': 1}
+watch: {'the': 1, 'their': 1}
+broad: {',': 1, 'great': 1, 'cannibal': 1}
+glare: {'and': 1}
+hear: {'tinkling': 1, 'before': 1, 'whaling': 1}
+tinkling: {'go': 1, 'stained': 1}
+glasses: {'on': 1, 'a': 1}
+last: {'the': 2, 'you': 1, ',': 1, 'sort': 1, 'that': 1, 'to': 1, 'of': 1, 'against': 1, 'stopped': 1, 'a': 1, 'arms': 1, 'he': 1, 'speak-e': 1, 'dressed': 1, 'into': 1, ';': 1, 'made': 1, 'his': 1}
+away: {';': 1, ',': 1, 'his': 1, 'saw': 1, 'the': 1, 'of': 1, 'wall': 1, 'sitting': 1, 'ever': 1, 'waking': 1, 'and': 1}
+door: {'the': 3, 'are': 1, 'open': 1, 'great': 1, 'upon': 1, 'is': 1, 'and': 1, 'into': 1, 'on': 1, 'some': 1, ',': 1, 'bolted': 1, 'went': 1}
+patched: {'way': 1}
+stopping: {'on': 1}
+So: {'I': 1, 'plane': 1, 'with': 1, 'man': 1}
+went: {'instinct': 1, ',': 1, 'and': 1, 'you': 1, 'ushered': 1, 'a': 1, 'fascinated': 1, 'in': 1, 'say': 1}
+instinct: {'took': 1}
+followed: {'me': 1, 'into': 1}
+took: {'there': 1, 'to': 1, 'bench': 1, 'held': 1, ',': 1, 'and': 1, 'ghastly': 1, 'beaver': 1, 'unceremoniously': 1}
+cheapest: {'cheeriest': 1}
+cheeriest: {'streets': 1}
+inns: {'!': 1}
+blocks: {'houses': 1}
+blackness: {'on': 1, 'the': 1}
+houses: {',': 1}
+either: {'and': 1}
+candle: {'moving': 1, 'tomb': 1, 'me': 1, 'sea': 1, 'from': 1}
+moving: {'.': 1}
+tomb: {'of': 1}
+At: {'night': 1, 'tar': 1, 'five': 1, 'made': 1, 'into': 1, 'what': 1, ',': 1, 'fallen': 1, 'of': 1, 'with': 1, 'morning': 1}
+hour: {'of': 1, 'myself': 1}
+quarter: {'all': 1}
+proved: {'But': 1, 'now': 1}
+deserted: {'came': 1}
+presently: {'smoky': 1, 'of': 1, 'his': 1}
+smoky: {'low': 1}
+light: {'and': 3, ',': 2, 'docks': 1, '.': 1, 'pretty': 1, 'from': 1, 'saw': 1, 'to': 1, 'at': 1, 'this': 1, 'But': 1, 'leaping': 1, 'shining': 1}
+proceeding: {'wide': 1}
+low: {'the': 1, 'old-fashioned': 1, 'and': 1, 'with': 1}
+wide: {'of': 1, 'entry': 1, 'nooks': 1, 'almost': 1}
+building: {'which': 1}
+invitingly: {'a': 1}
+careless: {'it': 1}
+meant: {'the': 1, 'a': 1}
+uses: {'so': 1}
+public: {',': 1, 'duskier': 1, 'tomahawk-pipe': 1}
+entering: {'I': 1, 'a': 1}
+stumble: {'the': 1}
+ash-box: {'Ha': 1}
+porch: {'I': 1}
+Ha: {'ha': 1, 'I': 1}
+ha: {'particles': 1}
+flying: {',': 1, 'at': 1}
+particles: {'are': 1}
+choked: {'ashes': 1}
+ashes: {',': 1, 'made': 1, 'thought': 1}
+destroyed: {'But': 1}
+Gomorrah: {'Crossed': 1}
+—this: {'be': 1}
+Trap.: {'picked': 1}
+However: {'up': 1, 'been': 1, 'is': 1}
+picked: {'a': 1}
+hearing: {',': 1}
+loud: {'on': 1, 'the': 1}
+voice: {'and': 1, 'he': 1}
+pushed: {'second': 1}
+opened: {'door': 1, 'commenced': 1, 'the': 1}
+interior: {'the': 1}
+Black: {'.': 1, 'gale.—It': 1}
+Parliament: {'A': 1}
+sitting: {'hundred': 1, '“': 1, 'smoking': 1}
+Tophet: {'faces': 1}
+A: {'round': 1, 'squitchy': 1, 'this': 1, 'was': 1, 'the': 1, ',': 1, 'bashful': 1}
+hundred: {'in': 1}
+black: {'their': 1, 'beating': 1, 'in': 1, '.': 1, 'baby': 1}
+faces: {'rows': 1}
+turned: {'to': 1, 'sleep': 1, 'bed': 1, '!': 1, 'slept': 1}
+rows: {'beyond': 1}
+peer: {'a': 1}
+beyond: {'of': 1, 'No': 1}
+Angel: {'a': 1}
+Doom: {'in': 1}
+beating: {'pulpit': 1}
+book: {'It': 1}
+pulpit: {'negro': 1}
+negro: {'preacher': 1, 'devil': 1, 'which': 1}
+church: {'’': 1}
+preacher: {'about': 1}
+text: {'of': 1}
+weeping: {'there': 1}
+wailing: {'Ha': 1}
+teeth-gnashing: {'Ishmael': 1}
+muttered: {',': 1}
+backing: {'at': 1}
+Wretched: {'of': 1}
+entertainment: {'‘': 1}
+‘: {'Moving': 1}
+Trap: {',': 1}
+Moving: {'last': 1}
+dim: {'far': 1, ',': 1, 'in': 1, 'skrimshander': 1, 'about': 1}
+docks: {'forlorn': 1}
+forlorn: {';': 1}
+creaking: {'and': 1, 'room': 1}
+swinging: {'with': 1, 'sort': 1}
+white: {'faintly': 1, 'contrast': 1, 'falling': 1, 'yellow': 1}
+painting: {'representing': 1, 'anon': 1}
+faintly: {'jet': 1}
+representing: {'of': 1, 'whale': 1}
+tall: {'spray': 1, 'Ridge': 1, 'head': 1, 'by': 1}
+jet: {'and': 1}
+misty: {'words': 1}
+spray: {'underneath—': 1}
+words: {'Inn': 1}
+underneath—: {':': 1}
+Spouter: {'”': 1, 'CHAPTER': 1}
+—Peter: {'—Spouter': 1}
+Coffin.: {'?': 1}
+Coffin: {'ominous': 1, '.': 1, 'me': 1}
+—Spouter: {'that': 1}
+—Rather: {'connexion': 1}
+ominous: {',': 1}
+connexion: {'But': 1, 'is': 1}
+common: {'they': 1}
+name: {'say': 1, ')': 1, ',': 1}
+suppose: {'an': 1, 'arm': 1}
+Peter: {'from': 1, 'I': 1}
+emigrant: {'the': 1}
+quiet: {'dilapidated': 1, 'I': 1, 'get': 1}
+dilapidated: {'looked': 1}
+wooden: {'if': 1, 'over': 1, 'it': 1, 'head': 1}
+itself: {'might': 1, 'keep': 1}
+might: {'.': 2, 'from': 1, 'with': 1, 'if': 1, 'be': 1, 'entry': 1, 'against': 1, 'good': 1, 'mine—heavens': 1, 'quiet': 1, 'satin': 1}
+carted: {'of': 1, 'ago': 1}
+ruins: {',': 1}
+burnt: {'the': 1, 'teeth': 1}
+district: {'swinging': 1}
+poverty-stricken: {'it': 1}
+creak: {'thought': 1}
+spot: {'and': 1, 'to': 1}
+cheap: {'best': 1}
+lodgings: {'of': 1}
+best: {'It': 1, 'stepmothers': 1, '.': 1, 'high': 1}
+pea: {'a': 1}
+coffee: {'queer': 1, 'and': 1}
+queer: {'old': 1, ',': 1}
+place—a: {'one': 1}
+gable-ended: {'side': 1, 'yourself': 1}
+side: {',': 1, 'oilpainting': 1, 'low': 1, 'The': 1, 'and': 1, 'this': 1, 'say—': 1, 'were': 1}
+palsied: {'and': 1}
+sharp: {'that': 1, 'are': 1}
+bleak: {'tempestuous': 1}
+corner: {'wind': 1, 'I': 1, 'seaman': 1, 'working': 1, 'long': 1}
+tempestuous: {'a': 1, '”': 1, 'says': 1}
+wind: {'worse': 1, 'says': 1}
+Euroclydon: {'old': 2, 'howling': 1, 'a': 1, ',': 1}
+kept: {'than': 1, ',': 1, 'time': 1, 'lo': 1, 'his': 1}
+worse: {'did': 1, 'got': 1, 'done': 1}
+howling: {'about': 1, 'corner-anchored': 1}
+Paul: {'.': 1}
+tossed: {'nevertheless': 1}
+nevertheless: {'pleasant': 1}
+mighty: {'one': 1, 'rather': 1}
+pleasant: {'in-doors': 1}
+zephyr: {',': 1}
+in-doors: {'on': 1}
+hob: {'.': 1}
+toasting: {'In': 1}
+bed: {'of': 2, 'you': 2, 'the': 2, 'avast': 1, 'should': 1, 'Supper': 1, 'else': 1, 'bachelor': 1, 'like': 1, 'suit': 1, 'wakened': 1, 'think': 1, ',': 1, 'slept': 1, 'spliced': 1, 'an': 1, 'afore': 1, 'indeed': 1, 'disappeared': 1, 'this': 1, 'about': 1, 'to': 1, 'a': 1, 'thought': 1, 'sang': 1, 'him': 1, 'in': 1, '’': 1, 'dragged': 1, 'only': 1, 'my': 1, 'pike-staff': 1, 'his': 1, 'sundry': 1, '.': 1}
+judging: {'called': 1}
+called: {'an': 1, 'a': 1}
+says: {'works': 1, 'his': 1, 'is': 1}
+writer—of: {'the': 1}
+whose: {'only': 1}
+works: {'copy': 1}
+possess: {'“': 1}
+copy: {'a': 1}
+extant—: {'marvellous': 1}
+maketh: {'whether': 1}
+thou: {'from': 1, 'sashless': 1, ',': 1}
+lookest: {'a': 1}
+glass: {'is': 1, 'dusty': 1, '’': 1, ',': 1}
+window: {'the': 2, 'all': 1, 'is': 1, 'would': 1, 'formed': 1, 'rattling': 1, 'street': 1}
+outside: {'observest': 1, 'be': 1}
+observest: {'window': 1}
+sashless: {'frost': 1}
+both: {'which': 1, 'and': 1, 'of': 1}
+sides: {'the': 1}
+wight: {'glazier.': 1}
+Death: {'”': 1}
+glazier.: {'thought': 1}
+passage: {'black-letter': 1, 'glimmer': 1}
+occurred: {',': 1, 'to': 1, 'remembered': 1}
+mind—old: {'well': 1}
+black-letter: {'.': 1}
+reasonest: {'these': 1}
+body: {'house': 1, 'travelled': 1}
+mine: {'What': 1, 'over': 1, 'in': 1}
+pity: {'stop': 1, 'any': 1}
+didn: {'the': 1, 'headway': 1, 'me': 1}
+chinks: {',': 1}
+crannies: {'in': 1}
+thrust: {'here': 1}
+lint: {'But': 1}
+improvements: {'is': 1}
+universe: {'copestone': 1}
+finished: {'on': 1}
+copestone: {'the': 1}
+chips: {'million': 1}
+million: {'Lazarus': 1}
+Poor: {'his': 1}
+Lazarus: {'teeth': 1, 'his': 1, 'than': 1, 'on': 1}
+chattering: {'curbstone': 1}
+teeth: {'his': 1, 'others': 1, ';': 1, 'with': 1}
+curbstone: {'and': 1, 'Dives': 1}
+pillow: {'his': 1}
+shaking: {'his': 1}
+tatters: {'he': 1}
+shiverings: {'up': 1}
+plug: {'rags': 1}
+ears: {'put': 1}
+rags: {'corn-cob': 1}
+corn-cob: {'and': 1}
+keep: {'.': 1, 'Now': 1, '”': 1, 'me': 1}
+Dives: {'silken': 1, 'wonderful': 1, 'lives': 1}
+silken: {'a': 1}
+wrapper—: {'redder': 1}
+redder: {',': 1}
+afterwards: {'!': 1, 'of': 1, 'confounding': 1, 'apartment': 1}
+pooh: {'a': 1, 'frosty': 1}
+frosty: {'glitters': 1}
+Orion: {'lights': 1}
+glitters: {'!': 1}
+northern: {'talk': 1, 'Lazarus': 1}
+lights: {'of': 1, 'rather': 1}
+talk: {'climes': 1}
+oriental: {'conservatories': 1}
+summer: {';': 1, '.': 1}
+climes: {'give': 1}
+conservatories: {'privilege': 1}
+privilege: {'summer': 1}
+coals: {'Lazarus': 1}
+Can: {'hands': 1, 'head': 1}
+warm: {'holding': 1}
+holding: {'grand': 1, ',': 1}
+Would: {'in': 1, 'lay': 1}
+Sumatra: {'he': 1}
+lengthwise: {'the': 1, 'space': 1}
+along: {'equator': 1, 'against': 1, 'll': 1, ';': 1}
+line: {'yea': 1}
+equator: {'gods': 1}
+yea: {'go': 1}
+ye: {'to': 1, 'pose': 1, 'mattress': 1, 'saying': 1, 'jiffy': 1, 'considered': 1, ';': 1, 'peddlin': 1}
+gods: {'the': 1}
+fiery: {'order': 1}
+pit: {'to': 1}
+lie: {'curbstone': 1, 'length': 1}
+wonderful: {'should': 1}
+iceberg: {'one': 1}
+moored: {'Moluccas': 1}
+Moluccas: {',': 1}
+lives: {'an': 1}
+Czar: {'made': 1}
+palace: {',': 1}
+frozen: {'a': 1, 'fare': 1, 'fears': 1}
+president: {',': 1}
+temperance: {'drinks': 1}
+society: {'the': 1}
+drinks: {'orphans': 1}
+tepid: {'But': 1}
+tears: {'no': 1}
+orphans: {'of': 1}
+blubbering: {'going': 1}
+a-whaling: {'plenty': 1}
+plenty: {'come': 1, 'to': 1, 'puffing': 1}
+scrape: {'frosted': 1}
+our: {'see': 1, 'room': 1, 'hold': 1, 'tea': 1, 'But': 1, 'in': 1, 'dreadfully': 1}
+frosted: {'what': 1}
+3: {'Entering': 1}
+Spouter-Inn: {'Spouter-Inn': 1, 'in': 1}
+Entering: {'you': 1}
+found: {',': 1, 'the': 1, '.': 1, 'seamen': 1, 'foot': 1, 'a': 1, 'thrown': 1}
+straggling: {',': 1}
+entry: {'reminding': 1, 'come': 1, 'with': 1, 'yon': 1, 'flung': 1, 'knock': 1}
+old-fashioned: {'of': 1}
+wainscots: {'the': 1}
+reminding: {'of': 1}
+condemned: {'one': 1}
+hung: {'so': 1, 'heathenish': 1, 'he': 1, 'and': 1}
+large: {',': 2, 'at': 1, 'of': 1, 'Yes': 1}
+oilpainting: {'and': 1}
+thoroughly: {'way': 1}
+besmoked: {'defaced': 1}
+defaced: {'unequal': 1}
+unequal: {'viewed': 1}
+crosslights: {'it': 1}
+viewed: {'only': 1}
+diligent: {'of': 1}
+study: {'systematic': 1, 'the': 1}
+series: {'it': 1, 'the': 1}
+systematic: {'and': 1}
+visits: {'careful': 1}
+careful: {',': 1}
+inquiry: {'that': 1}
+neighbors: {'any': 1}
+arrive: {'its': 1, 'concerning': 1}
+understanding: {'Such': 1}
+masses: {',': 1}
+shades: {'at': 1, 'say': 1}
+shadows: {'you': 1, 'some': 1}
+ambitious: {'the': 1}
+England: {'to': 1, 'Park': 1}
+hags: {'delineate': 1}
+endeavored: {'.': 1}
+delineate: {'by': 1}
+chaos: {'dint': 1}
+bewitched: {'of': 1}
+dint: {'contemplation': 1, 'and': 1}
+earnest: {'repeated': 1}
+contemplation: {'ponderings': 1}
+oft: {'especially': 1}
+repeated: {'by': 1}
+ponderings: {'throwing': 1}
+throwing: {'towards': 1, 'stove': 1, 'side': 1}
+back: {'you': 1, 'when': 1, '.': 1, 'stooped': 1, 'coward': 1, 'all': 1, 'colour': 1, 'it': 1, 'to': 1, 'himself': 1}
+conclusion: {',': 1, 'can': 1}
+altogether: {'most': 1, 'Ignorance': 1, 'to': 1}
+unwarranted: {'puzzled': 1}
+puzzled: {'a': 1}
+confounded: {',': 1, 'I': 1}
+limber: {'mass': 1, 'glistened': 1}
+mass: {'the': 1}
+hovering: {'the': 1}
+centre: {'three': 1, ',': 1, 'no': 1, 'into': 1}
+three: {'perpendicular': 1, ';': 1, 'wall': 1, 'and': 1, 'baby': 1, 'Indian': 1}
+perpendicular: {'nameless': 1}
+lines: {'yeast': 1}
+floating: {'.': 1}
+yeast: {'soggy': 1}
+boggy: {'picture': 1}
+soggy: {',': 1}
+squitchy: {'to': 1}
+truly: {'a': 1, 'abed': 1}
+drive: {'.': 1, 'are': 1}
+nervous: {'was': 1}
+distracted: {'a': 1}
+indefinite: {'sublimity': 1}
+half-attained: {'it': 1}
+unimaginable: {'fairly': 1, 'phantom': 1}
+sublimity: {'froze': 1}
+fairly: {',': 1}
+froze: {'till': 1}
+oath: {'out': 1}
+Ever: {',': 1}
+anon: {',': 1}
+alas: {'dart': 1}
+deceptive: {'through.—It': 1}
+dart: {'the': 1}
+through.—It: {'Sea': 1}
+Sea: {'’': 1}
+midnight: {'unnatural': 1}
+gale.—It: {'combat': 1}
+unnatural: {'primal': 1, 'extinguishing': 1}
+combat: {'elements.—It': 1}
+four: {'a': 1, 'were': 1, 'planed': 1, 'string': 1, '.': 1, 'papered': 1}
+primal: {'blasted': 1}
+elements.—It: {'heath.—It': 1}
+blasted: {'Hyperborean': 1}
+heath.—It: {'winter': 1}
+Hyperborean: {'the': 1}
+winter: {'breaking-up': 1}
+scene.—It: {'of': 1}
+breaking-up: {'of': 1}
+icebound: {'But': 1}
+Time: {'all': 1}
+fancies: {'portentous': 1}
+yielded: {'something': 1}
+midst: {'out': 1}
+That: {'and': 1, '’': 1, ',': 1, 'a': 1}
+rest: {'stop': 1, 'a': 1, 'me': 1, 'soon': 1, ',': 1}
+plain: {'does': 1, 'some': 1, ',': 1}
+faint: {'fish': 1}
+resemblance: {'?': 1}
+gigantic: {'great': 1}
+fish: {'leviathan': 1, 'over': 1}
+leviathan: {',': 1}
+fact: {'s': 1, 'good': 1, 'afraid': 1, 'upon': 1}
+design: {'final': 1, 'of': 1}
+final: {',': 1}
+theory: {'partly': 1}
+based: {'of': 1}
+aggregated: {'persons': 1}
+opinions: {'with': 1}
+aged: {'conversed': 1}
+persons: {'upon': 1}
+whom: {'subject': 1, 'seen': 1, 'bedfellow—a': 1, 'yet': 1, 'had': 1}
+conversed: {'The': 1}
+subject: {'a': 1}
+represents: {'great': 1}
+Cape-Horner: {';': 1}
+hurricane: {'weltering': 1}
+half-foundered: {'its': 1}
+weltering: {'dismantled': 1}
+dismantled: {'and': 1}
+masts: {'an': 1}
+alone: {'exasperated': 1}
+visible: {'whale': 1}
+exasperated: {'spring': 1}
+purposing: {'the': 1}
+spring: {',': 1}
+clean: {'is': 1, ',': 1, '.': 1}
+enormous: {'upon': 1}
+impaling: {'mast-heads': 1}
+mast-heads: {'of': 1}
+opposite: {'was': 1, 'into': 1}
+wall: {'hung': 1, 'interval': 1, 'saw': 1, 'him': 1, 'scraping': 1}
+heathenish: {'and': 1}
+array: {'spears': 1, 'zone': 1}
+monstrous: {'Some': 1, 'ever': 1}
+clubs: {'were': 1}
+spears: {'set': 1}
+thickly: {'resembling': 1}
+glittering: {';': 1}
+resembling: {'were': 1}
+ivory: {'tufted': 1}
+saws: {'with': 1}
+tufted: {'hair': 1}
+knots: {'and': 1, 'But': 1}
+human: {'was': 1, 'when': 1, 'am': 1}
+hair: {'sickle-shaped': 1, 'on': 1, 'speak': 1, '“': 1}
+sickle-shaped: {'handle': 1}
+vast: {'the': 1, 'whale': 1}
+handle: {'segment': 1, 'great': 1}
+sweeping: {'made': 1}
+segment: {'grass': 1}
+new-mown: {'mower': 1}
+grass: {'.': 1}
+long-armed: {'as': 1}
+mower: {'you': 1}
+You: {',': 1, 'one': 1, 'he': 1, 'had': 1, 'how': 1}
+shuddered: {'and': 1}
+gazed: {'monstrous': 1}
+wondered: {'savage': 1, 'operation': 1}
+cannibal: {'have': 1, 'heads': 1, 'teeth': 1, 'flourishings': 1, 'thought': 1, 'all': 1, '.': 1, '“': 1}
+savage: {'a': 1, 'of': 1, 'completely': 1, 'empty': 1, 'as': 1, 'have': 1}
+death-harvesting: {',': 1}
+hacking: {'Mixed': 1}
+horrifying: {'these': 1}
+implement: {'were': 1}
+Mixed: {'old': 1}
+rusty: {'harpoons': 1}
+lances: {'and': 1}
+harpoons: {'.': 1}
+broken: {'were': 1, 'no': 1, 'the': 1, 'how': 1}
+deformed: {'weapons': 1, 'on': 1}
+storied: {'once': 1}
+weapons: {'long': 1}
+lance: {',': 1}
+wildly: {'ago': 1}
+elbowed: {'did': 1}
+fifty: {'Swain': 1}
+Nathan: {'between': 1}
+Swain: {'a': 1}
+kill: {'sunrise': 1, 'a': 1}
+fifteen: {'and': 1}
+sunrise: {'And': 1}
+sunset: {'like': 1}
+harpoon—so: {'flung': 1}
+corkscrew: {'seas': 1}
+now—was: {',': 1}
+flung: {'and': 1, 'rolled': 1}
+Javan: {'away': 1}
+slain: {'Blanco': 1}
+Blanco: {'entered': 1}
+original: {'tail': 1}
+iron: {',': 1}
+entered: {'and': 1, 'then': 1, 'without': 1}
+tail: {'a': 1}
+restless: {'body': 1}
+needle: {'of': 1}
+sojourning: {'a': 1}
+travelled: {'and': 1}
+full: {',': 2, 'at': 1, 'didn': 1, 'boys': 1, 'squares': 1, 'had': 1}
+forty: {'last': 1}
+imbedded: {'Crossing': 1}
+hump: {'entry': 1}
+Crossing: {'and': 1}
+dusky: {'through': 1}
+through: {'what': 1, 'must': 1, 'this': 1, 'nothing': 1}
+yon: {'in': 1}
+low-arched: {'old': 1}
+way—cut: {'times': 1}
+times: {'great': 1}
+central: {'round—you': 1}
+chimney: {'enter': 1, 'bricks': 1, 'seen': 1, 'to': 1}
+fireplaces: {'public': 1}
+round—you: {'.': 1}
+room: {'his': 2, 'and': 2, ',': 2, 'place': 1, 'bar—a': 1, 'that': 1, 'as': 1, 'after': 1, 'higher': 1, 'be': 1, 'about': 1, 'clam': 1, 'bedstead': 1, 'hammock': 1, 'took': 1, '.': 1, 'towards': 1, 'eagerness': 1, 'the': 1, 'night': 1, 'I': 1, 'outer': 1, 'not': 1}
+duskier: {'with': 1}
+ponderous: {'such': 1}
+beams: {'old': 1}
+above: {'wrinkled': 1}
+wrinkled: {'you': 1, 'there': 1, 'to': 1}
+planks: {'would': 1}
+beneath: {'almost': 1, 'shabby': 1}
+fancy: {'craft': 1, 'at': 1, 'fare': 1, 'in': 1}
+trod: {'s': 1}
+cockpits: {'a': 1}
+corner-anchored: {'furiously': 1}
+ark: {'On': 1}
+rocked: {'one': 1}
+furiously: {'stood': 1}
+shelf-like: {'glass': 1}
+table: {'cases': 1, 'dim': 1, 'make': 1, 'other': 1, 'head': 1, 'water': 1, 'preparing': 1, 'so': 1, 'the': 1}
+covered: {',': 1, 'checkered': 1}
+cracked: {'with': 1}
+cases: {'rarities': 1}
+filled: {'from': 1}
+dusty: {'wide': 1}
+rarities: {'world': 1}
+gathered: {'’': 1, 'examining': 1}
+remotest: {'the': 1}
+nooks: {'further': 1}
+Projecting: {'of': 1}
+further: {'stands': 1, 'on': 1, 'jack-knife': 1}
+angle: {'a': 1}
+stands: {'rude': 1, 'of': 1}
+dark-looking: {'at': 1}
+den—the: {'a': 1}
+bar—a: {'right': 1}
+rude: {'whale': 1, 'walls': 1}
+attempt: {'’': 1}
+Be: {',': 1}
+arched: {'’': 1}
+bone: {'s': 1, 'shelf': 1}
+jaw: {'a': 1}
+coach: {'it': 1}
+Within: {'ranged': 1}
+shelves: {'old': 1}
+ranged: {',': 1}
+decanters: {';': 1}
+bottles: {'in': 1}
+flasks: {'jaws': 1}
+jaws: {'like': 1}
+swift: {'cursed': 1}
+destruction: {'Jonah': 1}
+cursed: {'name': 1}
+Jonah: {'indeed': 1, 'soon': 1, 'potion': 1}
+indeed: {',': 1, 'to': 1, 'Going': 1, '.': 1, 'lie': 1}
+bustles: {'man': 1}
+withered: {',': 1}
+dearly: {'and': 1}
+sells: {'death': 1}
+deliriums: {'are': 1}
+death: {'tumblers': 1, '.': 1}
+Abominable: {'which': 1}
+tumblers: {'his': 1}
+pours: {'true': 1}
+poison: {'without—within': 1}
+true: {'villanous': 1, 'good': 1}
+cylinders: {'green': 1}
+without—within: {'goggling': 1}
+villanous: {'tapered': 1}
+goggling: {'to': 1}
+deceitfully: {'cheating': 1}
+tapered: {'bottom': 1}
+downwards: {'.': 1}
+cheating: {'rudely': 1}
+bottom: {'pecked': 1}
+Parallel: {'the': 1}
+meridians: {'glass': 1}
+rudely: {',': 1}
+pecked: {'surround': 1}
+surround: {'.': 1}
+footpads: {'to': 1}
+goblets: {'mark': 1}
+Fill: {'and': 1}
+mark: {'is': 1}
+charge: {';': 1}
+glass—the: {'which': 1}
+measure: {'gulp': 1, 'and': 1}
+gulp: {'.': 1}
+shilling: {'place': 1}
+Upon: {'found': 1, 'daylight': 1}
+number: {'about': 1}
+seamen: {',': 1, 'to': 1}
+examining: {'divers': 1}
+divers: {'I': 1}
+specimens: {'sought': 1}
+skrimshander: {'landlord': 1}
+sought: {'telling': 1, 'and': 1}
+landlord: {'’': 2, ',': 2, 'I': 1, 'other': 1, 't': 1, 'll': 1, 'wrist': 1, 'lean': 1, 'is': 1, 'told': 1, 'quite': 1, 'It': 1, 'You': 1, 'intimate': 1, 'breath': 1, 'had': 1, 'a': 1, 'on': 1, 'light': 1, 'cherished': 1, 'door': 1}
+telling: {'be': 1, 'other': 1, 'into': 1, 'and': 1, 'about': 1}
+desired: {'a': 1}
+accommodated: {'received': 1}
+received: {'house': 1}
+full—not: {'“': 1}
+unoccupied: {',': 1}
+avast: {',': 1}
+added: {',': 1, 'with': 1}
+tapping: {'you': 1}
+forehead: {'no': 1, 'head': 1}
+haint: {'a': 1}
+objections: {'’': 1, 'was': 1}
+sharing: {'blanket': 1}
+harpooneer: {'”': 3, ',': 2, 'and': 2, 'I': 2, '’': 2, 'of': 2, 'have': 1, 'that': 1, '“': 1, 'chap': 1, '?': 1, 'indefinitely': 1, 'abominated': 1, 'woollen': 1, 'but': 1, 'the': 1, 'blessed': 1, 'harpooneer': 1, 'not': 1, 'a': 1, 's': 1, 'no': 1, 'door': 1, 'mat': 1, 'home': 1, '.': 1, 'all': 1}
+blanket: {'I': 1, 'so': 1, 'your': 1}
+pose: {'a-whalin': 1}
+goin: {'so': 1, 'He': 1, 'door': 1}
+a-whalin: {'’': 1}
+d: {'that': 1, 'yarn': 1, 't': 1}
+used: {'thing.': 1, 'and': 1}
+thing.: {'that': 1}
+liked: {'a': 1}
+depend: {'might': 1}
+decidedly: {'than': 1}
+objectionable: {'wander': 1}
+wander: {'town': 1}
+strange: {'a': 1, 'strange': 1, 'stranger': 1, 'still': 1, 'to': 1, 'day': 1}
+bitter: {'would': 1, 'sheets': 1, ',': 1}
+half: {'the': 2, '’': 1, 'harpooneer': 1, ',': 1, 'but': 1}
+decent: {'.': 1, 'home': 1}
+All: {'seat': 1, 'accompanied': 1, 'my': 1}
+seat: {'want': 1}
+Supper: {'?': 1, 'directly.': 1, 'went': 1}
+—you: {'’': 1}
+want: {'ll': 1, 'tell': 1}
+supper: {'be': 1, 'in': 1}
+ll: {',': 2, '”': 2, 'I': 1, 'a': 1, 'from': 1, 'must': 1, 'at': 1, 'that': 1, 'in': 1}
+ready: {'down': 1, '!': 1, '.': 1}
+directly.: {'on': 1}
+sat: {'wooden': 1, 'of': 1, 'stiff': 1, 'table—all': 1, 'head': 1}
+settle: {'like': 1, 'I': 1, 'this': 1}
+carved: {'bench': 1}
+bench: {'At': 1, 'as': 1, 'planing': 1, 'it': 1, 'about': 1, 'clear': 1}
+Battery: {'a': 1}
+end: {'still': 1}
+ruminating: {'adorning': 1}
+tar: {'it': 1}
+adorning: {',': 1}
+jack-knife: {'diligently': 1}
+stooping: {'away': 1}
+diligently: {'space': 1}
+working: {'between': 1, 'cords': 1}
+space: {'He': 1, 'leaving': 1}
+trying: {'ship': 1, 'do': 1, 'cause': 1, 'chimney': 1}
+headway: {'At': 1}
+five: {'to': 1}
+summoned: {'an': 1}
+meal: {'.': 1}
+adjoining: {'cold': 1}
+Iceland—no: {'said': 1}
+fire: {'he': 1, 'withdrawals': 1, 'idol': 1, ',': 1}
+all—the: {'’': 1}
+couldn: {'.': 1, 'a': 1, 'here': 1}
+afford: {'two': 1, 'joke': 1}
+tallow: {'a': 1}
+candles: {'winding': 1}
+winding: {'fain': 1}
+sheet: {'to': 1}
+We: {'up': 1, 'all': 1}
+fain: {'monkey': 1}
+button: {',': 1}
+monkey: {'to': 1, 'stood': 1, 'his': 1, '.': 1}
+jackets: {'our': 1, 'You': 1}
+lips: {'with': 1, 'antics': 1}
+cups: {'our': 1}
+scalding: {'frozen': 1}
+tea: {'fingers': 1}
+fingers: {'was': 1, 'to': 1}
+fare: {'substantial': 1, 'never': 1}
+substantial: {'potatoes': 1}
+kind—not: {',': 1}
+meat: {'dumplings': 1}
+potatoes: {'good': 1}
+dumplings: {'dumplings': 1, 'young': 1, 'manner': 1, 't—he': 1}
+heavens: {'!': 2, ',': 1}
+One: {'green': 1, 'cold': 1}
+fellow: {'coat': 1, 'sort': 1, 'is': 1}
+box: {'to': 1}
+addressed: {'in': 1}
+direful: {'boy': 1}
+manner: {',': 1, 'it': 1, 'the': 1, 'thought': 1, 'company': 1}
+My: {'the': 1, 'Let': 1, 'counterpane': 1}
+nightmare: {'”': 1, 'and': 1}
+sartainty.: {'”': 1}
+Landlord: {',': 4, 'changed': 1, 's': 1, '!': 1}
+whispered: {'the': 1}
+aint: {'?': 1}
+Oh: {'said': 1}
+diabolically: {'harpooneer': 1}
+funny: {'is': 1}
+complexioned: {'eats': 1, 'any': 1}
+chap: {'dumplings': 1, 'keep': 1, 'now': 1}
+eats: {'’': 1, 'and': 1}
+t—he: {',': 1}
+steaks: {'’': 1}
+likes: {'“': 1}
+em: {'devil': 1, 'that': 1}
+rare.: {'he': 1}
+devil: {'says': 1, 'thought': 1, 'broken': 1, 'fancy': 1}
+Is: {'“': 1}
+afore: {'the': 1, ',': 1}
+help: {'began': 1, 'giving': 1, 'up': 1}
+began: {'.': 2, 'the': 2, 'this': 1, 'a': 1, 'all': 1, 'knotted': 1, 'out': 1}
+suspicious: {'complexioned': 1}
+rate: {'my': 1}
+together: {'and': 1, 'but': 1, 'small': 1, 'only': 1}
+undress: {'before': 1}
+company: {'bar-room': 1, ';': 1, 'though': 1}
+bar-room: {'not': 1, 'very': 1, 'the': 1}
+resolved: {'of': 1, 'word': 1}
+spend: {'evening': 1, 'devil': 1, '.': 1, 'that': 1}
+evening: {'.': 1}
+looker: {'rioting': 1}
+Presently: {'heard': 1, 'snatches': 1}
+rioting: {'.': 1}
+noise: {'Starting': 1, 'This': 1}
+Starting: {'cried': 1}
+cried: {'s': 1, 'open': 1}
+Grampus: {'I': 1}
+crew: {'reported': 1}
+seed: {'offing': 1}
+reported: {'morning': 1}
+offing: {'three': 1, 'Nod': 1}
+morning: {'’': 1, 'I': 1, 'head': 1, 'found': 1, 'it': 1, ',': 1, 'washed': 1, 'pretty': 1}
+Hurrah: {'we': 1}
+latest: {'”': 1}
+news: {'A': 1}
+Feegees.: {'sea': 1}
+tramping: {'heard': 1}
+mariners: {'their': 1}
+Enveloped: {'coats': 1}
+shaggy: {'with': 1, 'I': 1, 'monkey': 1}
+coats: {'heads': 1}
+heads: {',': 2, 'does': 1, 'ain': 1, '”': 1, 'you': 1, 'folks': 1, '“': 1, 'his': 1, '.': 1, 'turn': 1, 'beefsteaks': 1}
+muffled: {'all': 1}
+woollen: {'and': 1, 'might': 1}
+comforters: {'ragged': 1}
+bedarned: {'their': 1}
+ragged: {'stiff': 1}
+beards: {'they': 1, 'shaggy': 1}
+stiff: {'seemed': 1, 'looking': 1}
+icicles: {'eruption': 1}
+eruption: {'.': 1}
+bears: {'had': 1, 'whalemen': 1}
+Labrador: {'landed': 1, 'weather': 1}
+landed: {'.': 2, 'and': 1, 'they': 1}
+boat: {'the': 1}
+wonder: {'they': 1}
+wake: {'s': 1, ',': 1}
+mouth—the: {'old': 1}
+bar—when: {'Jonah': 1}
+officiating: {'out': 1}
+poured: {'round': 1}
+brimmers: {'complained': 1}
+complained: {'in': 1}
+bad: {',': 1, 'second': 1}
+mixed: {'of': 1}
+pitch-like: {'molasses': 1}
+potion: {',': 1}
+gin: {'he': 1}
+molasses: {'was': 1}
+swore: {'for': 1}
+sovereign: {'and': 1}
+cure: {'catarrhs': 1}
+colds: {'never': 1}
+catarrhs: {'of': 1}
+standing: {'off': 1, 'all': 1, 'the': 1}
+caught: {'Labrador': 1}
+coast: {'on': 1}
+weather: {'.': 1}
+ice-island: {'mounted': 1}
+liquor: {'heads': 1}
+mounted: {'as': 1, 'this': 1}
+generally: {'arrantest': 1, 'early': 1}
+arrantest: {'sea': 1}
+topers: {',': 1}
+newly: {'and': 1}
+capering: {'I': 1}
+obstreperously: {'however': 1}
+observed: {'one': 1}
+held: {'though': 1, 'offering': 1, 'light': 1}
+somewhat: {'he': 1, 'me': 1, 'get': 1}
+aloof: {'seemed': 1}
+desirous: {'hilarity': 1}
+spoil: {'shipmates': 1}
+hilarity: {'his': 1}
+shipmates: {'face': 1, 'it': 1}
+sober: {'the': 1, 'a': 1, 'Christian': 1}
+face: {'to': 2, 'whole': 1, 'burnt': 1, 'it': 1, 'a': 1, ',': 1, 'too': 1, 'most': 1}
+whole: {'as': 1, 'looking': 1, 'Thinks': 1, 'who': 1}
+refrained: {'noise': 1}
+interested: {'and': 1}
+since: {'that': 1, 'greatest': 1}
+sea-gods: {'should': 1}
+ordained: {'become': 1}
+become: {'but': 1, 'all—there': 1, 'manner': 1}
+shipmate: {'sleeping-partner': 1}
+sleeping-partner: {'as': 1}
+narrative: {'I': 1}
+concerned: {'here': 1}
+venture: {'of': 1}
+description: {'stood': 1}
+six: {'with': 1}
+height: {',': 1, 'away': 1}
+shoulders: {'like': 1}
+chest: {'I': 2, 'as': 1, 'up': 1, 'the': 1, 'hands': 1}
+coffer-dam: {'seen': 1}
+seldom: {'a': 1}
+seen: {'man': 1, 'telling': 1, 'a': 1, 'to': 1, 'become': 1}
+brawn: {'His': 1}
+His: {'and': 1, 'that': 1, 'looked': 1, 'completed': 1, 'have': 1}
+deeply: {'making': 1}
+brown: {'his': 1, 'took': 1, 'hears': 1, 'with': 1}
+dazzling: {'while': 1}
+contrast: {'deep': 1}
+while: {'of': 1, '.': 1, 'bag': 1, 'passing': 1, 'the': 1, 'great': 1}
+deep: {'floated': 1}
+reminiscences: {'to': 1}
+seem: {'joy': 1, 'sort': 1, 'musky': 1}
+joy: {'once': 1}
+announced: {'Southerner': 1}
+Southerner: {'fine': 1}
+stature: {'must': 1}
+mountaineers: {'in': 1}
+Alleghanian: {'When': 1}
+Ridge: {'the': 1}
+Virginia: {'of': 1}
+When: {'companions': 1, ',': 1, 'his': 1}
+revelry: {'mounted': 1}
+companions: {'height': 1}
+slipped: {'I': 1}
+unobserved: {'no': 1}
+comrade: {'In': 1}
+minutes: {'was': 1}
+missed: {'and': 1}
+seems: {'a': 1}
+favourite: {'raised': 1}
+raised: {'Bulkington': 1}
+cry: {'Bulkington': 1}
+Bulkington: {'’': 1, 'Bulkington': 1, 'out': 1}
+darted: {'in': 1}
+pursuit: {'was': 1}
+nine: {'and': 1}
+o: {'the': 1, 'landlord': 1, 'afternoon': 1}
+clock: {'seeming': 1, 'again': 1, 'he': 1, 'the': 1}
+seeming: {'these': 1}
+supernaturally: {',': 1}
+orgies: {'congratulate': 1}
+congratulate: {'plan': 1}
+plan: {'me': 1, 'all': 1}
+entrance: {'No': 1}
+prefers: {'a': 1}
+deal: {'your': 1, 'sleep': 1, 'I': 1, 'ever': 1}
+know: {'but': 1, 'in': 1, '’': 1, '—didn': 1, 'the': 1}
+private: {'.': 1, 'boots': 1}
+sleeping: {'comes': 1, ',': 1, 'was': 1, 'and': 1, 'he': 1, 's': 1}
+comes: {'unknown': 1}
+unknown: {'strange': 1, ',': 1}
+stranger: {'inn': 1, 'your': 1, 'and': 1, 'the': 1, 'was': 1, 'devotee': 1}
+inn: {'town': 1}
+indefinitely: {'there': 1}
+multiply: {'any': 1}
+Nor: {'reason': 1}
+anybody: {'no': 1, 'be': 1}
+bachelor: {'To': 1}
+Kings: {'be': 1}
+ashore: {'they': 1, '’': 1, 'show': 1}
+To: {'sleep': 1, 'might': 1, 'not': 1}
+apartment: {'your': 1, 'I': 1}
+hammock: {'with': 1, 'thrown': 1}
+cover: {'blanket': 1}
+skin: {'pondered': 1, 'what': 1, 'all': 1}
+pondered: {'the': 1}
+abominated: {'with': 1}
+fair: {'a': 1}
+presume: {',': 1}
+linen: {'the': 1, '.': 1}
+case: {'not': 1}
+tidiest: {'the': 1}
+certainly: {'.': 1, 'him': 1}
+none: {'I': 1, ',': 1}
+finest: {'twitch': 1}
+twitch: {',': 1}
+getting: {'decent': 1, '.': 1, 'had': 1, 'breeding': 1, 'put': 1}
+ought: {'going': 1}
+home: {'Suppose': 1, ',': 1}
+bedwards: {'he': 1}
+Suppose: {'tumble': 1}
+tumble: {'midnight—how': 1}
+midnight—how: {'what': 1}
+vile: {'coming': 1}
+hole: {'?': 1, 'middle': 1}
+coming: {'I': 1, 'twos': 1, 'night': 1}
+ve: {'that': 1, 's': 1, 'with': 1}
+changed: {'harpooneer.—I': 1}
+harpooneer.—I: {'with': 1}
+shan: {'him': 1}
+here.: {'you': 1}
+Just: {'I': 1}
+m: {'t': 1, 'May': 1}
+sorry: {'spare': 1}
+spare: {'a': 1}
+tablecloth: {'and': 1}
+mattress: {'s': 1, 'or': 1}
+plaguy: {'—feeling': 1}
+rough: {'of': 1}
+board: {'the': 1}
+—feeling: {'notches': 1}
+notches: {'a': 1}
+wait: {';': 1, 'be': 1}
+Skrimshander: {'got': 1}
+got: {'plane': 1, 'about': 1, ',': 1, 'my': 1, 'here': 1, 'I': 1, 'and': 1}
+carpenter: {'in': 1}
+plane: {',': 1, 'old': 1}
+bar—wait: {'and': 1}
+snug: {'he': 1}
+enough.: {'procured': 1}
+saying: {';': 1, 'and': 1, 'flourishing': 1}
+procured: {'with': 1}
+silk: {'bench': 1}
+handkerchief: {',': 1}
+dusting: {'set': 1}
+vigorously: {'at': 1}
+planing: {',': 1, 'make': 1}
+grinning: {'The': 1, 'here': 1, ',': 1, 'I': 1}
+ape: {'right': 1}
+shavings: {';': 1, 'and': 1, 'pocket': 1, '.': 1}
+flew: {'till': 1}
+plane-iron: {'indestructible': 1}
+bump: {'.': 1}
+indestructible: {'was': 1}
+knot: {'near': 1}
+near: {'and': 1, 'Arter': 1}
+spraining: {'I': 1}
+wrist: {'him': 1}
+sake: {'soft': 1, '”': 1}
+quit—the: {'to': 1}
+soft: {',': 1}
+suit: {'did': 1, 'the': 1}
+eider: {'plank': 1}
+pine: {'up': 1}
+plank: {'the': 1}
+gathering: {'another': 1}
+stove: {'the': 1}
+mended: {'But': 1}
+chair: {'a': 1, 'the': 1}
+narrow: {'bench': 1, 'commanded': 1}
+higher: {'there': 1}
+planed: {'yoking': 1}
+one—so: {'them': 1}
+yoking: {'placed': 1}
+placed: {'along': 1, 'way': 1, 'arm': 1}
+clear: {',': 1}
+leaving: {',': 1, 'myself': 1}
+interval: {'back': 1, 'what': 1}
+draught: {'me': 1}
+sill: {'that': 1}
+current: {'met': 1}
+rickety: {'from': 1}
+met: {'window': 1, '.': 1}
+small: {'vicinity': 1, 'a': 1, 'his': 1, 'to': 1, 'very': 1, 'man': 1}
+whirlwinds: {'of': 1}
+immediate: {'where': 1}
+vicinity: {'I': 1}
+fetch: {'I': 1}
+steal: {'his': 1}
+march: {'inside': 1}
+him—bolt: {'and': 1}
+inside: {'his': 1, 'so': 1}
+wakened: {'knockings': 1}
+violent: {'no': 1, 'I': 1}
+knockings: {'bad': 1}
+thoughts: {'For': 1}
+dismissed: {'could': 1}
+next: {'as': 1, 'he': 1, 'extinguished': 1, 'I': 1, 'himself—boots': 1, 'shades': 1}
+popped: {',': 1}
+knock: {',': 1}
+Still: {'again': 1, 'legs': 1, 'part': 1}
+seeing: {'spending': 1, 'at': 1, 'symptoms': 1, 'arm': 1}
+possible: {'sufferable': 1, 'satisfactory': 1, 'would': 1, 'time': 1, 'was': 1, 'and': 1}
+chance: {'night': 1}
+spending: {'in': 1}
+sufferable: {'other': 1}
+person: {'I': 1, 'a': 1}
+cherishing: {'unknown': 1}
+unwarrantable: {'harpooneer': 1}
+prejudices: {'.': 1}
+Thinks: {'ll': 1, 'under': 1, 'this': 1}
+awhile: {'dropping': 1}
+dropping: {'I': 1, ',': 1}
+bedfellows: {'no': 1}
+all—there: {'.': 1}
+boarders: {'ones': 1, 'in': 1}
+ones: {'threes': 1}
+twos: {'and': 1}
+threes: {'bed': 1}
+he—does: {'late': 1}
+twelve: {'The': 1}
+chuckled: {'chuckle': 1}
+lean: {'to': 1}
+chuckle: {'be': 1}
+mightily: {'my': 1}
+tickled: {'comprehension': 1}
+comprehension: {'”': 1, 'parent': 1}
+answered: {'’': 1}
+early: {'airley': 1}
+bird—airley: {'to': 1}
+airley: {'’': 1}
+rise—yes: {'the': 1}
+bird: {'.': 1}
+catches: {'to-night': 1}
+worm: {'went': 1}
+to-night: {'peddling': 1, 's': 1, 'come': 1}
+peddling: {'and': 1, 'town': 1}
+airth: {',': 1, 'inions.': 1}
+keeps: {'unless': 1}
+sell: {'Can': 1, 'sort': 1, 'market': 1, '”': 1, '’': 1}
+head.: {'t': 1, 'll': 1, 'grinning': 1}
+—What: {'story': 1}
+bamboozingly: {'are': 1}
+towering: {'you': 1}
+rage: {'pretend': 1}
+pretend: {',': 1}
+actually: {'night': 1}
+engaged: {',': 1, 'business': 1}
+blessed: {'rather': 1}
+Sunday: {'his': 1, 'not': 1, 'him': 1}
+precisely: {'the': 1}
+market: {'“': 1}
+overstocked.: {'?': 1}
+shouted: {'heads': 1, '!': 1, 'why': 1}
+calmly: {'d': 1}
+spinning: {'’': 1}
+yarn: {'not': 1}
+me—I: {'”': 1}
+green.: {'not': 1}
+stick: {',': 1}
+whittling: {'but': 1, 'must': 1}
+toothpick: {'rayther': 1}
+rayther: {'be': 1}
+guess: {'done': 1}
+done: {'harpooneer': 1, 'the': 1, 'every': 1, 'that': 1}
+hears: {'his': 1}
+slanderin: {'“': 1}
+break: {'”': 1, 'I': 1}
+passion: {'farrago': 1}
+farrago: {'s': 1}
+broke: {'”': 1, '?': 1}
+Broke: {'“': 1}
+I—: {'you': 1}
+Sartain: {'s': 1}
+guess.: {'”': 1}
+cool: {'in': 1, 'To': 1}
+Mt: {'snow-storm—': 1}
+Hecla: {'landlord': 1}
+snow-storm—: {'whittling': 1}
+understand: {'that': 1, 'pleased': 1}
+delay: {'your': 1}
+belongs: {'.': 1}
+certain: {'this': 1, 'me': 1}
+persist: {'most': 1}
+mystifying: {'to': 1}
+exasperating: {'in': 1}
+stories: {'me': 1, 'my': 1}
+tending: {'an': 1}
+beget: {'feeling': 1}
+feeling: {'you': 1, 'meantime—to': 1, 'something': 1, 'than': 1, 'mine': 1, 'in': 1}
+bedfellow—a: {'landlord': 1}
+intimate: {'the': 1}
+confidential: {'degree': 1}
+highest: {'demand': 1}
+demand: {'out': 1, 'what': 1}
+shall: {'safe': 1}
+respects: {'night': 1}
+safe: {'with': 1}
+unsay: {'his': 1}
+selling: {'if': 1, 'idolators': 1}
+evidence: {'stark': 1}
+stark: {'’': 1}
+mad: {'ve': 1}
+madman: {'sir': 1}
+sir: {',': 1, 'induce': 1}
+induce: {'knowingly': 1}
+knowingly: {'yourself': 1}
+thereby: {'a': 1, 'in': 1}
+render: {'criminal': 1}
+liable: {'”': 1}
+criminal: {',': 1}
+prosecution.: {'”': 1}
+Wall: {'landlord': 1}
+fetching: {'“': 1}
+breath: {'s': 1}
+purty: {'chap': 1}
+sarmon: {'rips': 1}
+rips: {'then': 1}
+tellin: {'just': 1}
+bought: {'’': 1}
+lot: {'Zealand': 1}
+balmed: {'great': 1}
+Zealand: {',': 2, 'crammed': 1}
+curios: {',': 1}
+sold: {'but': 1}
+cause: {',': 1}
+to-morrow: {'and': 1}
+sellin: {'the': 1}
+folks: {'churches': 1}
+churches: {',': 1}
+wanted: {',': 1}
+stopped: {'was': 1}
+strung: {'for': 1}
+string: {'airth': 1, 'account': 1}
+inions.: {'up': 1}
+cleared: {'mystery': 1}
+otherwise: {'showed': 1}
+mystery: {'the': 1, 'this': 1}
+showed: {'after': 1, '.': 1}
+fooling: {'time': 1}
+me—but: {'what': 1}
+stayed: {'night': 1}
+idolators: {'it': 1}
+Depend: {',': 1}
+dangerous: {'pays': 1, 'ain': 1}
+man.: {'reg': 1}
+pays: {'”': 1}
+reg: {'was': 1}
+lar: {'rejoinder': 1}
+rejoinder: {',': 1}
+dreadful: {'better': 1}
+turning: {'nice': 1}
+flukes—it: {'bed': 1}
+nice: {'me': 1}
+Sal: {'that': 1, 'Sam': 1, 't': 1}
+slept: {'the': 1, '.': 1}
+spliced: {'plenty': 1}
+kick: {';': 1}
+almighty: {'Why': 1}
+big: {',': 1, 'four': 1}
+Sam: {'the': 1, 'floor': 1}
+Johnny: {'it': 1}
+dreaming: {'night': 1}
+sprawling: {'and': 1}
+pitched: {'and': 1}
+floor: {'breaking': 1, 'also': 1, 'and': 1, 'no': 1, 'slowly': 1, 'signs': 1}
+breaking: {'that': 1}
+Arter: {'it': 1}
+wouldn: {'Come': 1, 'hair': 1}
+Come: {'’': 1}
+glim: {'”': 1}
+jiffy: {'saying': 1}
+lighted: {'it': 1, 'me': 1, 'was': 1}
+offering: {'.': 1}
+irresolute: {'a': 1}
+exclaimed: {'’': 1}
+vum: {'won': 1}
+Sunday—you: {'that': 1}
+won: {'harpooneer': 1, '?': 1, 'leg': 1}
+anchor: {'do': 1}
+somewhere—come: {'come': 1}
+considered: {',': 1}
+stairs: {'I': 1, 'little': 1}
+ushered: {',': 1}
+clam: {'sure': 1}
+furnished: {'with': 1}
+prodigious: {'enough': 1}
+harpooneers: {'“': 1, ';': 1}
+abreast: {'”': 1}
+placing: {'crazy': 1}
+double: {'and': 1, 'of': 1}
+duty: {'centre': 1}
+wash-stand: {'“': 1, 'it': 1}
+comfortable: {'night': 1}
+ye.: {'from': 1, ',': 1}
+eyeing: {'he': 1, 'serious': 1}
+disappeared: {'counterpane': 1}
+Folding: {'I': 1}
+counterpane: {'the': 1, 'full': 1, ',': 1, 'tomahawk': 1}
+stooped: {'Though': 1}
+elegant: {'the': 1}
+scrutiny: {'then': 1}
+tolerably: {'glanced': 1}
+glanced: {'and': 1}
+bedstead: {'could': 1}
+furniture: {',': 1}
+belonging: {'but': 1, 'there': 1}
+shelf: {',': 1, 'and': 1}
+walls: {'fireboard': 1}
+papered: {'striking': 1, 'this': 1}
+fireboard: {'a': 1}
+striking: {'things': 1}
+Of: {'to': 1}
+properly: {',': 1}
+lashed: {'upon': 1}
+thrown: {'one': 1, 'most': 1, 'at': 1}
+also: {'s': 1}
+seaman: {'containing': 1}
+containing: {'wardrobe': 1}
+wardrobe: {'lieu': 1}
+doubt: {'land': 1}
+lieu: {'.': 1}
+Likewise: {'parcel': 1}
+parcel: {'hooks': 1, 'were': 1}
+outlandish: {'the': 1}
+hooks: {'the': 1}
+fire-place: {'harpoon': 1, 'papered': 1, 'little': 1}
+close: {'and': 1}
+felt: {'it': 1, 'was': 1, 'I': 1, 'all': 1, 'Throwing': 1}
+tried: {'arrive': 1, 'his': 1}
+satisfactory: {'I': 1, 'inexplicable': 1}
+concerning: {'compare': 1, 'him': 1}
+mat: {'edges': 1, 'the': 1, 'streets': 1, 'time': 1}
+ornamented: {'little': 1}
+edges: {'something': 1, 'The': 1}
+tags: {'porcupine': 1}
+stained: {'Indian': 1}
+porcupine: {'moccasin': 1}
+quills: {'.': 1}
+moccasin: {'hole': 1}
+slit: {'this': 1}
+South: {'could': 1, 'the': 1, 'landed': 1}
+ponchos: {'be': 1}
+parade: {'Christian': 1}
+Christian: {'of': 1, 'to': 1, '”': 1, 'face': 1}
+guise: {'on': 1}
+hamper: {'and': 1}
+uncommonly: {'and': 1}
+wearing: {'day': 1, 'gowns': 1}
+rainy: {'up': 1}
+stuck: {'and': 1, 'looking': 1}
+tore: {'in': 1}
+hurry: {'a': 1}
+gave: {'the': 1, ',': 1}
+kink: {'I': 1}
+neck: {'on': 1, 'were': 1}
+commenced: {'harpooneer': 1, 'and': 1, 'donning': 1, 'I': 1}
+thinking: {',': 1, 'bed-side': 1, 'off': 1, 'but': 1}
+head-peddling: {'door': 1, 'my': 1}
+After: {'the': 1}
+bed-side: {'and': 1, 'ages': 1}
+jacket: {'in': 1, 'harpoon': 1}
+sleeves: {'feel': 1, 'various': 1}
+beginning: {'now': 1}
+undressed: {'and': 1, 'possible': 1}
+remembering: {'about': 1}
+ado: {'of': 1}
+jumped: {'and': 1, ',': 1}
+pantaloons: {'then': 1, '.': 1}
+blowing: {'into': 1, 'ashes': 1}
+tumbled: {'commended': 1}
+commended: {'of': 1}
+Whether: {'with': 1}
+corn-cobs: {'there': 1}
+crockery: {'telling': 1}
+slid: {'doze': 1}
+doze: {'nearly': 1, 'from': 1}
+pretty: {'offing': 1, 'thought': 1, 'each': 1}
+Nod: {'a': 1}
+heavy: {',': 2}
+footfall: {'and': 1}
+glimmer: {'the': 1}
+Lord: {'I': 1}
+save: {',': 1, 'Speak-e': 1}
+infernal: {'lay': 1, '?': 1}
+head-peddler: {'perfectly': 1}
+perfectly: {'not': 1}
+word: {'Holding': 1}
+spoken: {'light': 1}
+Holding: {'hand': 1}
+identical: {'the': 1}
+knotted: {'bag': 1}
+cords: {'I': 1}
+spoke: {'the': 1}
+eagerness: {',': 1}
+averted: {'employed': 1}
+employed: {'’': 1}
+unlacing: {'mouth': 1}
+accomplished: {'turned': 1}
+round—when: {'what': 1}
+purplish: {'here': 1, ',': 1, 'all': 1}
+yellow: {'there': 1, 'I': 1}
+colour: {'stuck': 1, '’': 1}
+blackish: {',': 1}
+squares: {'’': 1, 'They': 1, 'be': 1, 'his': 1, 'have': 1, 'this': 1}
+terrible: {'s': 1}
+bedfellow: {'been': 1, ',': 1, 'good': 1}
+fight: {',': 1}
+dreadfully: {'he': 1, 'no': 1}
+cut: {'is': 1}
+surgeon: {'moment': 1}
+chanced: {'so': 1, 'an': 1}
+turn: {'the': 1, 'to': 1, 'But': 1}
+plainly: {'be': 1, 'one': 1}
+sticking-plasters: {'black': 1}
+cheeks: {'of': 1, 'Queequeg': 1}
+stains: {'other': 1}
+inkling: {'to': 1}
+truth: {'I': 1, 'have': 1}
+remembered: {'white': 1, 'for': 1}
+man—a: {'among': 1}
+whaleman: {'the': 1, ',': 1}
+too—who: {'cannibals': 1}
+cannibals: {'by': 1}
+tattooed: {'concluded': 1, 'interminable': 1}
+concluded: {'in': 1, 'nothing': 1}
+course: {',': 1}
+voyages: {'with': 1}
+similar: {'is': 1, 'that': 1, ';': 1, ',': 1}
+adventure: {'it': 1}
+honest: {'skin': 1}
+unearthly: {'of': 1}
+complexion: {'it': 1, 'lingers': 1}
+lying: {'completely': 1, 'arm': 1}
+completely: {'of': 1, 'the': 1, 'and': 1}
+independent: {'tattooing': 1}
+tattooing: {',': 1}
+tropical: {'never': 1}
+tanning: {'heard': 1, 'a': 1}
+hot: {'a': 1, 'till': 1, 'his': 1}
+sun: {'white': 1, 'effects': 1, 'shirt': 1, 'window': 1}
+Seas: {'sun': 1, 'in': 1}
+produced: {'the': 1, 'little': 1}
+extraordinary: {'.': 1}
+effects: {'Now': 1}
+ideas: {'like': 1}
+passing: {',': 1}
+lightning: {'noticed': 1}
+noticed: {'But': 1}
+difficulty: {',': 1}
+fumbling: {'presently': 1}
+pulled: {'tomahawk': 1}
+tomahawk: {'wallet': 1, 'no': 1, 'he': 1, 'sprang': 1, 'in': 1, 'ashes': 1, 'clothes': 1, ',': 1, '’': 1, '—in': 1}
+seal-skin: {'on': 1}
+wallet: {'.': 1}
+Placing: {'chest': 1}
+head—a: {'it': 1}
+ghastly: {'down': 1}
+enough—and: {'the': 1}
+crammed: {'bag': 1}
+hat—a: {'came': 1}
+new: {'nigh': 1}
+beaver: {'singing': 1, 'tall': 1}
+hat—when: {'out': 1}
+singing: {'.': 1, 'other': 1}
+fresh: {'no': 1}
+surprise: {'hair': 1, 'maintained': 1}
+head—none: {'least—nothing': 1}
+least—nothing: {'twisted': 1}
+scalp-knot: {'forehead': 1}
+twisted: {'.': 1}
+bald: {'for': 1}
+mildewed: {'the': 1}
+skull: {'stranger': 1}
+Had: {'between': 1}
+bolted: {'than': 1, 'as': 1}
+quicker: {'a': 1}
+dinner: {'was': 1}
+Even: {'I': 1}
+slipping: {',': 1}
+coward: {'make': 1}
+purple: {'comprehension': 1}
+rascal: {'.': 1}
+Ignorance: {'fear': 1}
+parent: {'being': 1}
+fear: {'nonplussed': 1, 'have': 1, 'at': 1}
+nonplussed: {'stranger': 1}
+afraid: {'it': 1, 'was': 1, 'he': 1, 'sleep': 1}
+game: {'address': 1}
+address: {'a': 1}
+inexplicable: {',': 1}
+Meanwhile: {'business': 1, 'eyeing': 1}
+continued: {',': 1}
+undressing: {'showed': 1}
+arms: {',': 1, 'He': 1}
+live: {'of': 1}
+checkered: {'as': 1}
+Thirty: {'and': 1}
+Years: {'just': 1}
+War: {'from': 1}
+escaped: {'sticking-plaster': 1}
+sticking-plaster: {',': 1}
+marked: {'parcel': 1}
+frogs: {'trunks': 1}
+running: {'young': 1, ';': 1}
+trunks: {'It': 1}
+palms: {'quite': 1}
+abominable: {'aboard': 1}
+shipped: {'in': 1}
+aboard: {'the': 1}
+quaked: {'.': 1}
+peddler: {'heads': 1}
+too—perhaps: {'own': 1}
+brothers: {'a': 1}
+mine—heavens: {'tomahawk': 1}
+shuddering: {'savage': 1}
+fascinated: {'convinced': 1}
+attention: {'that': 1, 'rare': 1}
+convinced: {'indeed': 1}
+heathen: {'heavy': 1}
+Going: {',': 1}
+grego: {'or': 1, 'them': 1, 'if': 1}
+wrapall: {'which': 1}
+dreadnaught: {'previously': 1}
+previously: {',': 1}
+fumbled: {'and': 1}
+pockets: {'length': 1}
+length: {'image': 1, 'she': 1, '’': 1, 'much': 1}
+curious: {'a': 1, ',': 1, 'bears': 1}
+hunch: {'and': 1}
+Congo: {'embalmed': 1, 'screwed': 1}
+baby: {'head': 1, 'manner': 1, ',': 1}
+Remembering: {'at': 1}
+embalmed: {'I': 1}
+manikin: {'preserved': 1}
+real: {'similar': 1}
+preserved: {'.': 1}
+glistened: {'polished': 1}
+polished: {'that': 1}
+ebony: {'it': 1}
+idol: {'proved': 1, 'my': 1, 'bit': 1, 'and': 1}
+empty: {'the': 1, 'negro': 1}
+removing: {'sets': 1}
+fire-board: {'little': 1}
+sets: {'image': 1}
+hunch-backed: {'tenpin': 1}
+tenpin: {'.': 1}
+andirons: {'and': 1}
+jambs: {'inside': 1}
+bricks: {',': 1}
+sooty: {'thought': 1}
+appropriate: {'for': 1}
+shrine: {'Congo': 1}
+chapel: {'.': 1}
+screwed: {'the': 1}
+hidden: {'ill': 1}
+ill: {'what': 1, '“': 1}
+ease: {'next': 1, 'self-possessed': 1}
+meantime—to: {'to': 1}
+follow: {'about': 1}
+First: {'double': 1}
+takes: {'of': 1, 'bed': 1}
+handful: {'his': 1}
+places: {'idol': 1}
+carefully: {'then': 1}
+laying: {'biscuit': 1}
+biscuit: {'the': 2}
+top: {'from': 1, 'hat': 1}
+applying: {'lamp': 1}
+flame: {'he': 1}
+lamp: {'shavings': 1, 'guttural': 1}
+kindled: {'sacrificial': 1}
+sacrificial: {'after': 1}
+blaze: {'many': 1}
+hasty: {',': 1}
+snatches: {'and': 1}
+hastier: {'(': 1}
+withdrawals: {'whereby': 1}
+whereby: {'scorching': 1}
+scorching: {'he': 1}
+badly: {'last': 1}
+succeeded: {'biscuit': 1, ';': 1}
+drawing: {'then': 1}
+heat: {',': 1}
+polite: {'the': 1, 'pay': 1}
+dry: {'all': 1}
+moved: {'these': 1}
+antics: {'stranger': 1}
+accompanied: {'noises': 1}
+guttural: {',': 1, 'once': 1}
+noises: {'who': 1}
+devotee: {'be': 1}
+praying: {'else': 1}
+sing-song: {'pagan': 1}
+pagan: {'during': 1, '.': 1}
+psalmody: {'which': 1}
+during: {'about': 1}
+twitched: {'unnatural': 1}
+extinguishing: {'took': 1}
+unceremoniously: {'again': 1}
+bagged: {'grego': 1}
+carelessly: {'a': 1}
+sportsman: {'.': 1}
+bagging: {'All': 1}
+woodcock: {'proceedings': 1}
+proceedings: {'and': 1}
+increased: {'seeing': 1}
+uncomfortableness: {'now': 1}
+exhibiting: {'his': 1}
+symptoms: {'operations': 1}
+concluding: {'and': 1}
+operations: {'bed': 1}
+jumping: {',': 1}
+spell: {'so': 1, 'I': 1}
+spent: {'say': 1, 'And': 1}
+deliberating: {'was': 1}
+fatal: {'his': 1}
+Taking: {'the': 1}
+examined: {'for': 1}
+instant: {'it': 1}
+puffed: {'tobacco': 1}
+clouds: {'The': 1}
+tobacco: {'moment': 1, 'I': 1}
+extinguished: {'cannibal': 1}
+sprang: {'.': 1}
+sang: {'not': 1}
+giving: {'astonishment': 1}
+sudden: {'began': 1}
+grunt: {'feeling': 1, 'he': 1}
+astonishment: {'.': 1}
+Stammering: {'knew': 1}
+conjured: {'whatever': 1}
+whoever: {'be': 1}
+whatever: {'to': 1, 'tell': 1}
+responses: {'that': 1}
+satisfied: {'he': 1}
+comprehended: {'Who-e': 1}
+Who-e: {'—he': 1}
+debel: {'at': 1}
+—he: {'you': 1}
+said—: {',': 1}
+speak-e: {'kill-e.': 1}
+dam-me: {'And': 1, '”': 1}
+kill-e.: {'the': 1}
+flourishing: {'dark': 1}
+God: {'Peter': 1}
+Watch: {'!': 1}
+Angels: {'”': 1}
+Speak-e: {'be': 1}
+tell-ee: {'or': 1}
+who-ee: {',': 1}
+kill-e: {'the': 1}
+growled: {'his': 1}
+horrid: {'scattered': 1, '.': 1}
+flourishings: {'the': 1}
+scattered: {'about': 1}
+thank: {'moment': 1}
+leaping: {'ran': 1}
+ran: {'“': 1}
+Don: {'now': 1}
+Queequeg: {',': 3, 'me': 2, 'with': 2, 'harm': 1, 'his': 1, 'complied': 1, 'over': 1, 'My': 1, 'thrown': 1, 'only': 1, 'of': 1, 'At': 1, 'see': 1, 'Rogers': 1, 'the': 1, ';': 1}
+harm: {'head.': 1}
+Stop: {'shouted': 1}
+—didn: {'ye': 1}
+peddlin: {'?': 1}
+flukes: {'sleep': 1}
+here—you: {'sabbee—you': 1}
+sabbee: {'this': 1, 'sabbee': 1, ',': 1}
+sabbee—you: {'sabbee': 1}
+sleepe: {'“': 1}
+you—you: {'Me': 1}
+Me: {'Queequeg': 1}
+—grunted: {'at': 1}
+puffing: {'and': 1}
+pipe: {'bed': 1, 'call': 1}
+gettee: {'added': 1}
+motioning: {'tomahawk': 1}
+clothes: {'He': 1}
+civil: {'and': 1}
+charitable: {'looking': 1}
+tattooings: {'whole': 1}
+comely: {'’': 1}
+fuss: {'about': 1}
+myself—the: {'human': 1}
+Better: {'cannibal': 1}
+drunken: {',': 1}
+stash: {'or': 1}
+call: {'to': 1}
+smoking: {'and': 1, '.': 1, 'on': 1}
+insured.: {'to': 1}
+complied: {'motioned': 1, 'to': 1}
+politely: {'into': 1}
+motioned: {'bed—rolling': 1}
+bed—rolling: {'as': 1}
+say—: {'t': 1}
+touch: {'”': 1, 'in': 1}
+leg: {'Good': 1}
+Good: {'”': 1}
+go.: {',': 1}
+4: {'Upon': 1}
+Counterpane: {'morning': 1}
+waking: {',': 1, 'dreams—I': 1, 'I': 1, '’': 1}
+daylight: {'’': 1}
+loving: {'You': 1}
+affectionate: {'almost': 1}
+wife: {'of': 1}
+patchwork: {'little': 1, 'partly': 1}
+odd: {'triangles': 1}
+parti-coloured: {'and': 1}
+triangles: {'of': 1}
+interminable: {'figure': 1}
+Cretan: {',': 1}
+labyrinth: {'no': 1}
+figure: {'of': 1, 'staving': 1}
+precise: {'his': 1}
+shade—owing: {'keeping': 1}
+keeping: {'unmethodically': 1}
+unmethodically: {',': 1}
+shade: {'irregularly': 1}
+irregularly: {'times—this': 1}
+times—this: {',': 1}
+strip: {'quilt': 1}
+quilt: {'lying': 1, 'their': 1}
+Indeed: {'it': 1}
+awoke: {'tell': 1}
+hardly: {'quilt': 1}
+blended: {'and': 1}
+hues: {'was': 1}
+weight: {'could': 1}
+pressure: {'that': 1}
+hugging: {'were': 1, 'that': 1}
+sensations: {'me': 1, 'hand': 1}
+explain: {'was': 1, ',': 1}
+child: {'a': 1}
+remember: {'that': 1, 'be': 1}
+circumstance: {'whether': 1, 'had': 1, 'all': 1}
+befell: {'was': 1}
+reality: {'I': 1, 'lay': 1}
+dream: {'entirely': 1}
+entirely: {'was': 1}
+cutting: {'other—I': 1}
+caper: {'was': 1}
+other—I: {'to': 1}
+crawl: {'as': 1}
+stepmother: {'other': 1, 'myself': 1}
+whipping: {'me': 1}
+sending: {',': 1}
+supperless: {'me': 1}
+—my: {'the': 1}
+mother: {'legs': 1}
+dragged: {'out': 1}
+21st: {'day': 1}
+longest: {'in': 1}
+year: {'I': 1}
+hemisphere: {'.': 1}
+third: {'as': 1, 'carpenters': 1, 'tawn': 1}
+slowly: {'to': 1, 'in': 1, 'Meanwhile': 1}
+sigh: {'.': 1}
+sheets: {'dismally': 1}
+dismally: {'hours': 1}
+calculating: {'must': 1}
+sixteen: {'before': 1}
+entire: {'I': 1}
+elapse: {'for': 1}
+hope: {'Sixteen': 1}
+resurrection: {'bed': 1}
+Sixteen: {'the': 1}
+ached: {'.': 1}
+shining: {',': 1}
+rattling: {'streets': 1}
+coaches: {'and': 1}
+sound: {'over': 1}
+gay: {'house': 1}
+voices: {'.': 1}
+worse—at: {',': 1}
+dressed: {'down': 1}
+softly: {'stockinged': 1}
+stockinged: {'my': 1}
+threw: {',': 1}
+beseeching: {'favour': 1}
+favour: {'good': 1}
+slippering: {'anything': 1}
+misbehaviour: {'condemning': 1}
+condemning: {'such': 1}
+abed: {'of': 1, 'house': 1}
+unendurable: {'But': 1}
+she: {'most': 1}
+conscientious: {'back': 1}
+stepmothers: {'had': 1}
+several: {'broad': 1}
+awake: {'deal': 1}
+greatest: {'last': 1, 'cordially': 1}
+subsequent: {'I': 1}
+misfortunes: {'must': 1}
+fallen: {'of': 1}
+troubled: {';': 1, 'all': 1}
+it—half: {'my': 1}
+steeped: {'eyes': 1}
+dreams—I: {'and': 1}
+sun-lit: {'in': 1}
+wrapped: {'Instantly': 1, 'pilot': 1}
+outer: {'felt': 1}
+Instantly: {'running': 1}
+shock: {'frame': 1}
+frame: {'be': 1}
+supernatural: {'mine': 1, 'very': 1}
+form: {'which': 1}
+belonged: {'by': 1}
+closely: {'.': 1}
+ages: {'I': 1, ',': 1}
+piled: {'lay': 1}
+awful: {'to': 1, 'sensations': 1}
+fears: {'drag': 1}
+daring: {'hand': 1}
+drag: {'yet': 1}
+stir: {',': 1}
+inch: {'would': 1}
+consciousness: {'from': 1, 'me': 1}
+glided: {'but': 1}
+shudderingly: {'and': 1}
+weeks: {'lost': 1, 'could': 1}
+months: {'in': 1}
+lost: {'to': 1}
+confounding: {'mystery': 1}
+attempts: {'.': 1}
+Nay: {'hour': 1}
+often: {'.': 1}
+puzzle: {'Now': 1}
+strangeness: {'I': 1}
+experienced: {'seeing': 1}
+past: {'soberly': 1}
+events: {'by': 1}
+soberly: {'one': 1}
+recurred: {',': 1}
+alive: {'.': 1}
+comical: {'I': 1}
+predicament: {'tried': 1}
+move: {'clasp—yet': 1}
+arm—unlock: {'sleeping': 1}
+bridegroom: {'he': 1}
+clasp—yet: {'was': 1}
+hugged: {'though': 1}
+tightly: {'but': 1}
+naught: {'us': 1}
+twain: {'to': 1}
+strove: {'Queequeg': 1}
+rouse: {'”': 1}
+him—: {'—but': 1}
+snore: {'over': 1}
+horse-collar: {'a': 1}
+slight: {'the': 1}
+scratch: {'counterpane': 1}
+Throwing: {'there': 1}
+aside: {'lay': 1}
+hatchet-faced: {'pickle': 1}
+pickle: {'I': 1}
+—in: {',': 1}
+goodness: {'!': 1}
+wriggling: {'incessant': 1}
+incessant: {'of': 1}
+expostulations: {'his': 1}
+unbecomingness: {'fellow': 1}
+male: {'of': 1}
+matrimonial: {'I': 1}
+style: {'extracting': 1}
+extracting: {'presently': 1}
+drew: {'shook': 1}
+shook: {'a': 1}
+Newfoundland: {'water': 1}
+dog: {',': 1}
+pike-staff: {',': 1}
+rubbing: {'he': 1}
+dawning: {',': 1}
+serious: {'bent': 1}
+misgivings: {'upon': 1}
+bent: {'curious': 1}
+narrowly: {'creature': 1}
+observing: {'.': 1, 'indecorous': 1}
+creature: {'last': 1, 'caterpillar': 1}
+touching: {'bedfellow': 1}
+character: {'and': 1}
+reconciled: {'he': 1}
+signs: {'to': 1}
+dress: {'me': 1, 'whole': 1}
+leave: {',': 1}
+civilized: {'the': 1, 'outlandishness': 1, 'would': 1}
+overture: {'truth': 1}
+savages: {'of': 1}
+innate: {'say': 1}
+delicacy: {'will': 1}
+essentially: {'I': 1}
+compliment: {'he': 1}
+treated: {'civility': 1}
+civility: {'I': 1}
+consideration: {'guilty': 1}
+guilty: {'staring': 1}
+rudeness: {'from': 1}
+staring: {'bed': 1}
+watching: {';': 1, 'kept': 1}
+toilette: {'time': 1}
+motions: {'my': 1}
+breeding: {'man': 1, 'could': 1}
+Nevertheless: {'Queequeg': 1}
+ways: {'regarding': 1}
+worth: {'commenced': 1}
+unusual: {'dressing': 1}
+regarding: {'at': 1}
+dressing: {'his': 1}
+donning: {'a': 1}
+hat: {'one': 1, 'when': 1, 'crushed': 1, 'I': 1, 'sallied': 1}
+then—still: {'up': 1}
+minus: {'his': 1}
+trowsers—he: {'.': 1}
+hunted: {'What': 1}
+movement: {'in': 1}
+crush: {'and': 1}
+himself—boots: {'hat': 1}
+on—under: {',': 1}
+sundry: {',': 1}
+gaspings: {'inferred': 1}
+strainings: {'was': 1}
+work: {'by': 1}
+booting: {'no': 1}
+law: {'ever': 1}
+propriety: {'of': 1}
+required: {'putting': 1}
+stage—neither: {'He': 1}
+caterpillar: {'was': 1}
+butterfly: {'enough': 1}
+show: {'the': 1, '?': 1, ',': 1}
+outlandishness: {'manners': 1}
+strangest: {'education': 1}
+manners: {'not': 1}
+education: {'.': 1}
+completed: {'undergraduate': 1}
+undergraduate: {'not': 1}
+probably: {'himself': 1}
+dreamt: {'bed': 1}
+emerged: {'much': 1}
+dented: {'his': 1}
+crushed: {',': 1}
+limping: {'as': 1}
+accustomed: {'pair': 1}
+pair: {'cowhide': 1}
+cowhide: {'order': 1}
+ones—probably: {'either—rather': 1}
+either—rather: {'at': 1}
+pinched: {'the': 1}
+Seeing: {'there': 1}
+curtains: {'and': 1}
+commanded: {'the': 1}
+indecorous: {',': 1}
+staving: {'but': 1}
+begged: {'I': 1}
+accelerate: {'and': 1}
+toilet: {'to': 1, 'and': 1}
+proceeded: {'At': 1}
+wash: {'time': 1}
+amazement: {'restricting': 1}
+contented: {'ablutions': 1}
+restricting: {'chest': 1}
+ablutions: {'arms': 1}
+donned: {'taking': 1}
+waistcoat: {'a': 1}
+piece: {'the': 1}
+soap: {'table': 1}
+dipped: {'commenced': 1}
+lathering: {'was': 1}
+razor: {'behold': 1}
+lo: {'takes': 1}
+behold: {'harpoon': 1}
+slips: {'stock': 1}
+stock: {',': 1}
+unsheathes: {'it': 1}
+whets: {'his': 1}
+boot: {'to': 1}
+striding: {'of': 1}
+mirror: {'begins': 1}
+begins: {'or': 1}
+vigorous: {'harpooning': 1}
+scraping: {'of': 1}
+harpooning: {'Thinks': 1}
+using: {'cutlery': 1, ';': 1}
+Rogers: {'with': 1}
+cutlery: {'Afterwards': 1}
+vengeance: {'the': 1}
+Afterwards: {'at': 1}
+operation: {'know': 1}
+steel: {'harpoon': 1}
+exceedingly: {'edges': 1}
+achieved: {'marched': 1}
+proudly: {'room': 1}
+marched: {',': 1}
+pilot: {'sporting': 1}
+sporting: {'marshal': 1}
+marshal: {'CHAPTER': 1}
+baton: {'Breakfast': 1}
+5: {'quickly': 1}
+Breakfast: {'suit': 1}
+quickly: {'descending': 1}
+descending: {'the': 1}
+accosted: {'pleasantly': 1}
+pleasantly: {'malice': 1}
+cherished: {',': 1}
+malice: {'he': 1}
+skylarking: {'little': 1}
+laugh: {'thing': 1}
+scarce: {'the': 1}
+proper: {'for': 1}
+stuff: {'to': 1}
+joke: {'him': 1}
+backward: {'cheerfully': 1}
+allow: {'be': 1}
+bountifully: {'be': 1}
+laughable: {'sure': 1}
+mates: {',': 3}
+carpenters: {',': 1}
+coopers: {',': 1}
+blacksmiths: {'and': 1}
+keepers: {'brawny': 1}
+brawny: {'beards': 1}
+bosky: {',': 1}
+unshorn: {'all': 1}
+gowns: {'plainly': 1}
+cheek: {'pear': 1, ',': 1}
+sun-toasted: {'and': 1}
+pear: {'would': 1}
+hue: {'to': 1}
+smell: {'he': 1}
+musky: {'have': 1}
+looks: {';': 1}
+lighter: {'a': 1}
+satin: {'.': 1}
+wood: {'In': 1}
+lingers: {'but': 1}
+tropic: {'bleached': 1}
+tawn: {'withal': 1}
+slightly: {'doubtless': 1}
+bleached: {'has': 1}
+withal: {'tarried': 1}
+tarried: {'But': 1}
+barred: {'seemed': 1}
+tints: {'Andes': 1}
+Andes: {'to': 1}
+western: {'forth': 1}
+slope: {'in': 1}
+contrasting: {'zone': 1}
+climates: {'.': 1}
+zone: {'Grub': 1, 'ho': 1}
+Grub: {'now': 1}
+ho: {'the': 1}
+flinging: {'and': 1}
+breakfast: {'men': 1, 'calling': 1, 'using': 1, 'like': 1}
+self-possessed: {'always': 1}
+Ledyard: {'England': 1, 'taking': 1}
+traveller: {',': 1}
+Mungo: {'one': 1, 'of': 1}
+Park: {';': 1}
+Scotch: {'men': 1}
+possessed: {'the': 1}
+least: {'.': 1}
+assurance: {'But': 1}
+parlor: {'mere': 1}
+mere: {'a': 1}
+crossing: {'sledge': 1}
+Siberia: {'by': 1}
+sledge: {'Ledyard': 1}
+solitary: {'stomach': 1}
+walk: {',': 1}
+stomach: {'heart': 1}
+heart: {'was': 1}
+Africa: {'sum': 1}
+sum: {'s': 1}
+performances—this: {'I': 1}
+mode: {'social': 1}
+attaining: {'.': 1}
+polish: {'the': 1}
+anywhere: {'here': 1}
+These: {'occasioned': 1}
+reflections: {'by': 1}
+occasioned: {'after': 1}
+preparing: {'stories': 1}
+maintained: {'And': 1}
+profound: {'only': 1}
+silence: {'that': 1}
+embarrassed: {'were': 1}
+sea-dogs: {'without': 1}
+slightest: {'whales': 1}
+bashfulness: {'on': 1}
+boarded: {'high': 1}
+seas—entire: {'them': 1}
+strangers: {'dead': 1}
+them—and: {'winking': 1}
+duelled: {';': 1}
+winking: {'here': 1}
+table—all: {',': 1}
+calling: {'tastes—looking': 1}
+kindred: {'at': 1}
+tastes—looking: {'each': 1}
+sheepishly: {'though': 1}
+sheepfold: {'.': 1}
+Green: {'sight': 1}
+Mountains: {';': 1}
+bashful: {'warrior': 1}
+timid: {'as': 1}
+warrior: {'for': 1}
+Queequeg—why: {'among': 1}
+them—at: {'table': 1}
+icicle: {'I': 1}
+admirer: {'justified': 1}
+cordially: {'harpoon': 1}
+justified: {'into': 1}
+ceremony: {'table': 1}
+imminent: {',': 1}
+jeopardy: {'and': 1}
+grappling: {'.': 1}
+beefsteaks: {'that': 1, 'Enough': 1}
+coolly: {'and': 1, 'genteelly': 1}
+estimation: {'coolly': 1}
+genteelly: {'speak': 1}
+peculiarities: {'eschewed': 1}
+eschewed: {',': 1}
+rolls: {'undivided': 1}
+applied: {'beefsteaks': 1}
+undivided: {'done': 1}
+rare: {'when': 1}
+Enough: {'was': 1}
+withdrew: {'the': 1}
+tomahawk-pipe: {'there': 1}
+digesting: {'inseparable': 1}
+inseparable: {'I': 1}
+sallied: {'.': 1}

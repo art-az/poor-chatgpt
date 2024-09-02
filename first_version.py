@@ -33,20 +33,21 @@ class CreateVocabulary:                                                         
     def indx2word(self, indx):
         return self.indx2word_list.get(indx, -1)                                #Return -1 if index not found ("None" could be a existing word)
     
-class PairFrequencyTable():                                                     #Creates frequency table of pair of words that are n steps/words seperated in text. Note: It takes 1 step to pass first/original word. Meaning 2 steps will lead to the word next to the first word
-    def __init__(self, word_list, n_step):
+class PairFrequencyTable():                                                     #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
+    def __init__(self, word_list, n_step = 2):
         self.table = defaultdict(lambda: defaultdict(int))                      #Creates dict where the default value of any new key is a new dict initilized with value 0 (the frequency of the word pair) The keys in both outer and inner dicts consist of words
-        self.n = n_step                                                         #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
+        #self.n = n_step                                                         #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
         self.create_pair_frequency_table(word_list, n_step)
 
-    def create_pair_frequency_table(self, word_list, n_step):                   #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple 
+    def create_pair_frequency_table(self, word_list, n_step):                   #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple as a pair
         ngram_list = ngrams(word_list, n_step)
         for ngram_tuple in ngram_list:
-            first_word, last_word = ngram_tuple[0], ngram_tuple[-1]             #[-1] "shortcut" for accessing last element in list
+            first_word, last_word = ngram_tuple[0], ngram_tuple[-1]             #[-1] will access last element in list
             self.table[first_word][last_word] += 1
 
-    def print_table(self):
-        with open("pair_frequensies.txt", 'w') as file:
+    def print_table(self, iteration = 2):
+        filename = f"pair_frequensies_{iteration}.txt"
+        with open(filename, 'w') as file:
             for first_word, following_words in self.table.items():
                 sorted_following_words = dict(sorted(following_words.items(), key=lambda item: item[1], reverse=True))
                 file.write(f"{first_word}: {dict(sorted_following_words)}\n")
@@ -74,19 +75,20 @@ def main():
         print("Error reading the file")
         return
 
-    word_list = word_tokenize(text)                                 #Split text into words/tokens with help from nltk built in models. (Will also tokenize symbols like ., [, &)
+    word_list = word_tokenize(text)                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )
     vocabulary = CreateVocabulary(word_list)
 
     
     wordfreq = create_frequency_table(word_list, vocabulary)
-    pairfreq = PairFrequencyTable(word_list, 4)
+    pairfreq_tables = []                                            #List to store frequency tables to aid in dynamic creation and handling of several frequency tables
 
-    pairfreq.print_table()
-    """ print("Frequency Table:")
-    for indx, freq in wordfreq.items():
-        word = vocabulary.indx2word(indx)
-        print(f"{word} ({indx}): {freq}")
-    """
+    for n in range(2, 9):
+        pairfreq = PairFrequencyTable(word_list, n)
+        pairfreq_tables.append(pairfreq)
+        pairfreq.print_table(n)
+
+ 
+    
 
 
 if __name__ == "__main__":
