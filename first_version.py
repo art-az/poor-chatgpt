@@ -4,6 +4,7 @@ from nltk.tokenize import word_tokenize
 from nltk.util import ngrams
 import re
 from collections import defaultdict
+import random
 
 
 def download_punkt():                                                           #Download the nlkt tokenizer data if missing
@@ -35,8 +36,8 @@ class CreateVocabulary:                                                         
     
 class PairFrequencyTable():                                                     #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
     def __init__(self, word_list, n_step = 2):
-        self.table = defaultdict(lambda: defaultdict(int))                      #Creates dict where the default value of any new key is a new dict initilized with value 0 (the frequency of the word pair) The keys in both outer and inner dicts consist of words
-        #self.n = n_step                                                         #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
+        self.table = defaultdict(defaultdict(int).copy)                         #Key is the first word. Value is another dict where the key is the word pair and value it's frequency. [Word]-[WordPair]:[Frequency]
+        #self.n = n_step                                                        #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
         self.create_pair_frequency_table(word_list, n_step)
 
     def create_pair_frequency_table(self, word_list, n_step):                   #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple as a pair
@@ -49,7 +50,7 @@ class PairFrequencyTable():                                                     
         filename = f"pair_frequensies_{iteration}.txt"
         with open(filename, 'w') as file:
             for first_word, following_words in self.table.items():
-                sorted_following_words = dict(sorted(following_words.items(), key=lambda item: item[1], reverse=True))
+                sorted_following_words = dict(sorted(following_words.items(), key=lambda item: item[1], reverse=True))  #Sort the inner dict in terms of value(frequency) with the highest frequency first
                 file.write(f"{first_word}: {dict(sorted_following_words)}\n")
 
 def create_frequency_table(word_list, vocabulary):
@@ -58,10 +59,13 @@ def create_frequency_table(word_list, vocabulary):
         index = vocabulary.word2indx(word)
         if index is not None:
             frequency_table[index] += 1
+    frequency_table = sorted(frequency_table.items(), key=lambda item:item[1], reverse=True)
     return dict(frequency_table)
 
-
-
+def print_frequency_table(wordfreq, vocabulary):
+    with open("frequency_table", 'w') as file:
+        for word, freq in wordfreq.items():
+            file.write(f"{vocabulary.indx2word(word)}: {freq}\n")
 #------------------------------MAIN------------------------------
 
 def main():
@@ -77,17 +81,24 @@ def main():
 
     word_list = word_tokenize(text)                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )
     vocabulary = CreateVocabulary(word_list)
-
     
-    wordfreq = create_frequency_table(word_list, vocabulary)
-    pairfreq_tables = []                                            #List to store frequency tables to aid in dynamic creation and handling of several frequency tables
+    wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
+    print_frequency_table(wordfreq, vocabulary)
 
-    for n in range(2, 9):
+    pairfreq_tables = []                                            #List to store frequency tables to aid in dynamic creation and handling of several frequency tables
+    for n in range(2, 21):
         pairfreq = PairFrequencyTable(word_list, n)
         pairfreq_tables.append(pairfreq)
         pairfreq.print_table(n)
 
- 
+        
+
+    #Weighted random choice for initial word in text generation
+    words = list(wordfreq.keys())
+    weights = list(wordfreq.values())
+    initial_word = random.choices(words, weights=weights)[0]
+
+    print(vocabulary.indx2word(initial_word))
     
 
 
