@@ -66,6 +66,37 @@ def print_frequency_table(wordfreq, vocabulary):
     with open("frequency_table", 'w') as file:
         for word, freq in wordfreq.items():
             file.write(f"{vocabulary.indx2word(word)}: {freq}\n")
+
+class MarkovChain:
+    def __init__(self, pairfreq_tables, vocabulary):
+        self.pairfreq_tables = pairfreq_tables
+        self.vocabulary = vocabulary
+
+    def generate_sentence(self, start_word=None, length=5):
+        
+        if not start_word:
+            start_word = self.vocabulary.word2indx("the")
+
+        sentence = [start_word]
+        current_word = start_word
+
+        for _ in range(length-1):
+            current_word = self.get_next_word(current_word)
+            if not current_word:
+                break
+            sentence.append(current_word)
+
+    def get_next_word(self, current_word):
+
+        following_words = self.pairfreq_tables[0].table.get(current_word, None)
+
+        if not following_words:
+            return None
+
+        #words, frequencies = zip(*following_words.items())    
+        
+
+
 #------------------------------MAIN------------------------------
 
 def main():
