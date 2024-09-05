@@ -72,29 +72,43 @@ class MarkovChain:
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
 
-    def generate_sentence(self, start_word=None, length=5):
+    def generate_sentence(self, start_word=None, length=10):
         
         if not start_word:
-            start_word = self.vocabulary.word2indx("the")
+            start_word = self.vocabulary.word2indx("call")
 
-        sentence = [start_word]
-        current_word = start_word
-
+        current_word = self.vocabulary.indx2word(start_word)
+        sentence = [current_word]
+        
         for _ in range(length-1):
             current_word = self.get_next_word(current_word)
+
             if not current_word:
                 break
             sentence.append(current_word)
+            
+
+        sentence_str = ' '.join(sentence)
+        print(sentence_str)
+        return sentence_str
 
     def get_next_word(self, current_word):
-
-        following_words = self.pairfreq_tables[0].table.get(current_word, None)
+        
+       
+        following_words = self.pairfreq_tables[0].table.get(current_word, None)             #Get the corresponding dict of words and frequencies for the current word
 
         if not following_words:
             return None
 
-        #words, frequencies = zip(*following_words.items())    
+        words, frequencies = zip(*following_words.items())                                  #Create two seperate lists of words and their frequencies respectively (They are linked by their position in the list)
         
+        #Create probability distribution
+        total = sum(frequencies)
+        probabilites = [freq / total for freq in frequencies]
+
+        #Choose next word at random, weighed by the probability distibution
+        next_word = random.choices(words, probabilites)[0]
+        return next_word
 
 
 #------------------------------MAIN------------------------------
@@ -117,21 +131,23 @@ def main():
     print_frequency_table(wordfreq, vocabulary)
 
     pairfreq_tables = []                                            #List to store frequency tables to aid in dynamic creation and handling of several frequency tables
-    for n in range(2, 21):
+    for n in range(2, 3):
         pairfreq = PairFrequencyTable(word_list, n)
         pairfreq_tables.append(pairfreq)
         pairfreq.print_table(n)
 
         
-
+    """
     #Weighted random choice for initial word in text generation
     words = list(wordfreq.keys())
     weights = list(wordfreq.values())
     initial_word = random.choices(words, weights=weights)[0]
 
     print(vocabulary.indx2word(initial_word))
-    
+    """  
 
+    generated_text = MarkovChain(pairfreq_tables, vocabulary)
+    generated_text.generate_sentence()
 
 if __name__ == "__main__":
     download_punkt()
