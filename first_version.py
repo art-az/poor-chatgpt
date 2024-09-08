@@ -5,7 +5,7 @@ from nltk.util import ngrams
 import re
 from collections import defaultdict
 import random
-
+from pprint import pprint                                                       #Debug aid
 
 def download_punkt():                                                           #Download the nlkt tokenizer data if missing
     try:
@@ -33,7 +33,9 @@ class CreateVocabulary:                                                         
     
     def indx2word(self, indx):
         return self.indx2word_list.get(indx, -1)                                #Return -1 if index not found ("None" could be a existing word)
-    
+
+
+
 class PairFrequencyTable():                                                     #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
     def __init__(self, word_list, n_step = 2):
         self.table = defaultdict(defaultdict(int).copy)                         #Key is the first word. Value is another dict where the key is the word pair and value it's frequency. [Word]-[WordPair]:[Frequency]
@@ -53,6 +55,8 @@ class PairFrequencyTable():                                                     
                 sorted_following_words = dict(sorted(following_words.items(), key=lambda item: item[1], reverse=True))  #Sort the inner dict in terms of value(frequency) with the highest frequency first
                 file.write(f"{first_word}: {dict(sorted_following_words)}\n")
 
+
+#Stand alone table for the frequency of each seperate word 
 def create_frequency_table(word_list, vocabulary):
     frequency_table = defaultdict(int)
     for word in word_list:
@@ -67,6 +71,8 @@ def print_frequency_table(wordfreq, vocabulary):
         for word, freq in wordfreq.items():
             file.write(f"{vocabulary.indx2word(word)}: {freq}\n")
 
+
+#Main implementation for text generation 
 class MarkovChain:
     def __init__(self, pairfreq_tables, vocabulary):
         self.pairfreq_tables = pairfreq_tables
@@ -86,8 +92,8 @@ class MarkovChain:
             if not current_word:
                 break
             sentence.append(current_word)
-            
-
+           
+        
         sentence_str = ' '.join(sentence)
         print(sentence_str)
         return sentence_str
@@ -96,7 +102,7 @@ class MarkovChain:
         
        
         following_words = self.pairfreq_tables[0].table.get(current_word, None)             #Get the corresponding dict of words and frequencies for the current word
-
+        
         if not following_words:
             return None
 
@@ -125,13 +131,15 @@ def main():
         return
 
     word_list = word_tokenize(text)                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )
+    word_list = [re.sub(r"[^\w\s'-]", '', token.lower()) for token in word_list if re.sub(r"[^\w\s'-]", '', token.lower())]            #Clean tokens by removing special characters and lowercase all words
+
     vocabulary = CreateVocabulary(word_list)
     
     wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
     print_frequency_table(wordfreq, vocabulary)
 
     pairfreq_tables = []                                            #List to store frequency tables to aid in dynamic creation and handling of several frequency tables
-    for n in range(2, 3):
+    for n in range(2, 21):
         pairfreq = PairFrequencyTable(word_list, n)
         pairfreq_tables.append(pairfreq)
         pairfreq.print_table(n)
