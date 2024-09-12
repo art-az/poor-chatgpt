@@ -2,6 +2,7 @@
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.util import ngrams
+import numpy as np
 import re
 from collections import defaultdict
 import random
@@ -23,7 +24,7 @@ class CreateVocabulary:                                                         
     def build_vocab(self, word_list):
         idx = 0        
         for word in word_list:
-            if word not in self.word2indx_list and re.match("^[a-zA-Z]+$", word):           #Do not include duplicates or non-aplhabetical characters  Note: Include numbers?
+            if word not in self.word2indx_list:                                 #Do not include duplicates
                 self.word2indx_list[word] = idx
                 self.indx2word_list[idx] = word
                 idx += 1
@@ -77,6 +78,21 @@ class MarkovChain:
     def __init__(self, pairfreq_tables, vocabulary):
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
+        self.transition_matrix = self.build_transition_matrix()
+
+    def build_transition_matrix(self):
+        vocab_size = len(self.vocabulary.word2indx_list)
+        transition_matrix = np.zeros((vocab_size, vocab_size))
+
+        for word, index in self.vocabulary.word2indx_list.items():
+            following_words = self.pairfreq_tables[0].table.get(word, None)
+            if following_words:
+                total = sum(following_words.values())
+                for next_word, count in following_words.items():
+                    next_index = self.vocabulary.word2indx(next_word)
+                    transition_matrix[index][next_index] = count / total                    #Probability of word -> next word
+
+        return transition_matrix
 
     def generate_sentence(self, start_word=None, length=10):
         
@@ -99,6 +115,22 @@ class MarkovChain:
         return sentence_str
 
     def get_next_word(self, current_word):
+        current_index = self.vocabulary.word2indx(current_word)
+        probabilities = self.transition_matrix[current_index]
+
+        if np.sum(probabilities) == 0:                                               #Cases when there is no next word to transition to
+            return None
+        
+        #Create probability distribution by normalizing counts 
+        probabilities_sum = np.sum(probabilities)
+        if probabilities_sum != 1:
+            probabilities = probabilities / probabilities_sum
+        
+        next_index = np.random.choice(len(probabilities), p = probabilities)
+        return self.vocabulary.indx2word(next_index)
+
+    """
+    def get_next_word(self, current_word):
         
        
         following_words = self.pairfreq_tables[0].table.get(current_word, None)             #Get the corresponding dict of words and frequencies for the current word
@@ -115,7 +147,7 @@ class MarkovChain:
         #Choose next word at random, weighed by the probability distibution
         next_word = random.choices(words, probabilites)[0]
         return next_word
-
+    """
 
 #------------------------------MAIN------------------------------
 
@@ -138,24 +170,25 @@ def main():
     wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
     print_frequency_table(wordfreq, vocabulary)
 
-    pairfreq_tables = []                                            #List to store frequency tables to aid in dynamic creation and handling of several frequency tables
+    #List to store pairfrequency tables to aid in dynamic creation and handling of several tables
+    pairfreq_tables = []                                            
     for n in range(2, 21):
         pairfreq = PairFrequencyTable(word_list, n)
         pairfreq_tables.append(pairfreq)
         pairfreq.print_table(n)
 
         
-    """
+    
     #Weighted random choice for initial word in text generation
     words = list(wordfreq.keys())
     weights = list(wordfreq.values())
     initial_word = random.choices(words, weights=weights)[0]
 
-    print(vocabulary.indx2word(initial_word))
-    """  
+    #Text generation with implementation of MarkovChain algorithm  
+    generated_text = MarkovChain(pairfreq_tables,vocabulary)
 
-    generated_text = MarkovChain(pairfreq_tables, vocabulary)
-    generated_text.generate_sentence()
+    for _ in range(1,5):
+        generated_text.generate_sentence(initial_word)
 
 if __name__ == "__main__":
     download_punkt()
