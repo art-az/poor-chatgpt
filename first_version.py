@@ -71,7 +71,7 @@ def print_frequency_table(wordfreq, vocabulary):
     with open("frequency_table", 'w') as file:
         for word, freq in wordfreq.items():
             file.write(f"{vocabulary.indx2word(word)}: {freq}\n")
-
+            
 
 #Main implementation for text generation 
 class MarkovChain:
@@ -81,16 +81,16 @@ class MarkovChain:
         self.transition_matrix = self.build_transition_matrix()
 
     def build_transition_matrix(self):
-        vocab_size = len(self.vocabulary.word2indx_list)
-        transition_matrix = np.zeros((vocab_size, vocab_size))
+        vocab_size = len(self.vocabulary.word2indx_list)                                    #Amount of unique words in the vocabulary
+        transition_matrix = np.zeros((vocab_size, vocab_size))                              #Create a matrix filled with zeros (2D NumPy array) 
 
-        for word, index in self.vocabulary.word2indx_list.items():
-            following_words = self.pairfreq_tables[0].table.get(word, None)
+        for word, index in self.vocabulary.word2indx_list.items():                          #Loop through each word and it's index, in the vocabulary 
+            following_words = self.pairfreq_tables[0].table.get(word, None)                 #Get all pair-words for the current word
             if following_words:
-                total = sum(following_words.values())
-                for next_word, count in following_words.items():
-                    next_index = self.vocabulary.word2indx(next_word)
-                    transition_matrix[index][next_index] = count / total                    #Probability of word -> next word
+                total = sum(following_words.values())                                       #Calculate the total frequency of all pair-words/following words to the current word
+                for next_word, count in following_words.items():                            #Loop through each pair-word and it's frequency 
+                    next_index = self.vocabulary.word2indx(next_word)                       #Get the index of the current pair-word (For storage/look-up optimization)
+                    transition_matrix[index][next_index] = count / total                    #Store the current word (Row) and current pair-word (Column), and the probability to transition to the pair-word
 
         return transition_matrix
 
@@ -118,36 +118,18 @@ class MarkovChain:
         current_index = self.vocabulary.word2indx(current_word)
         probabilities = self.transition_matrix[current_index]
 
-        if np.sum(probabilities) == 0:                                               #Cases when there is no next word to transition to
+        #Cases when there is no next word to transition to
+        if np.sum(probabilities) == 0:                                                      
             return None
         
         #Create probability distribution by normalizing counts 
-        probabilities_sum = np.sum(probabilities)
-        if probabilities_sum != 1:
+        probabilities_sum = np.sum(probabilities)                                           #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
+        if probabilities_sum != 1:                                                          #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
             probabilities = probabilities / probabilities_sum
         
         next_index = np.random.choice(len(probabilities), p = probabilities)
         return self.vocabulary.indx2word(next_index)
 
-    """
-    def get_next_word(self, current_word):
-        
-       
-        following_words = self.pairfreq_tables[0].table.get(current_word, None)             #Get the corresponding dict of words and frequencies for the current word
-        
-        if not following_words:
-            return None
-
-        words, frequencies = zip(*following_words.items())                                  #Create two seperate lists of words and their frequencies respectively (They are linked by their position in the list)
-        
-        #Create probability distribution
-        total = sum(frequencies)
-        probabilites = [freq / total for freq in frequencies]
-
-        #Choose next word at random, weighed by the probability distibution
-        next_word = random.choices(words, probabilites)[0]
-        return next_word
-    """
 
 #------------------------------MAIN------------------------------
 
