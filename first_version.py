@@ -78,7 +78,7 @@ class MarkovChain:
     def __init__(self, pairfreq_tables, vocabulary):
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
-        self.transition_matrice = self.build_transition_matrix()
+        self.transition_matrices = self.build_transition_matrix()
 
     def build_transition_matrix(self):
         vocab_size = len(self.vocabulary.word2indx_list)                                        #Amount of unique words in the vocabulary
@@ -113,31 +113,42 @@ class MarkovChain:
         
         #Generate sentence word for word 
         for _ in range(length-1):
-            current_word = self.get_next_word(current_word)
+            current_word = self.get_next_word(sentence)
 
             if not current_word:
                 break
             sentence.append(current_word)
            
         
-        sentence_str = ' '.join(sentence)                                                   #Format list containing the sentence to string. For print functionality 
+        sentence_str = ' '.join(sentence)                                                     #Format list containing the sentence to string. For print functionality 
         print(sentence_str)
-        return sentence_str                                                                 #Return sentence (currently unused)
+        return sentence_str                                                                   #Return sentence (currently unused)
 
-    def get_next_word(self, current_word, sentence = None):
-        current_index = self.vocabulary.word2indx(current_word)
-        probabilities = self.transition_matrice[0][current_index]                           #Returns the row of probabilites for potential words corresponding to the current word 
+    def get_next_word(self, sentence):
+        last_word_index = self.vocabulary.word2indx(sentence[-1])
+        probabilities = self.transition_matrices[0][last_word_index]                          #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
 
-        for n in range(10):
-            probabilities = self.transition_matrice[n][current_index]                              
+        #Loop through all previous words in the sentence
+        for n, previous_words in enumerate(reversed(sentence[:-1])):                          #Sentence[:-1] omits the last word since that is already handled in previous line of code
+            if n > 10:                                                                        #Max size for sentence is 10 words
+                break                             
+        
+            previous_word_index = self.vocabulary.word2indx(previous_words)
+
+            #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
+            values = self.transition_matrices[n+1][previous_word_index]                       #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
+            
+            for i, value in enumerate(values):                                                #Work around for when a value in the matrix is 0
+                if value > 0:
+                    probabilities[i] *= value
 
         #Cases when there is no next word to transition to
         if np.sum(probabilities) == 0:                                                      
             return None
         
         #Create probability distribution by normalizing counts 
-        probabilities_sum = np.sum(probabilities)                                           #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
-        if probabilities_sum != 1:                                                          #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
+        probabilities_sum = np.sum(probabilities)                                             #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
+        if probabilities_sum != 1:                                                            #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
             probabilities = probabilities / probabilities_sum
         
         next_index = np.random.choice(len(probabilities), p = probabilities)
@@ -168,7 +179,7 @@ def main():
 
     #List to store pairfrequency tables to aid in dynamic creation and handling of several tables
     pairfreq_tables = []                                            
-    for n in range(2, 21):
+    for n in range(2, 12):  
         pairfreq = PairFrequencyTable(word_list, n)
         pairfreq_tables.append(pairfreq)
         pairfreq.print_table(n)
