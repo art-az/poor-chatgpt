@@ -78,30 +78,40 @@ class MarkovChain:
     def __init__(self, pairfreq_tables, vocabulary):
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
-        self.transition_matrix = self.build_transition_matrix()
+        self.transition_matrice = self.build_transition_matrix()
 
     def build_transition_matrix(self):
-        vocab_size = len(self.vocabulary.word2indx_list)                                    #Amount of unique words in the vocabulary
-        transition_matrix = np.zeros((vocab_size, vocab_size))                              #Create a matrix filled with zeros (2D NumPy array) 
+        vocab_size = len(self.vocabulary.word2indx_list)                                        #Amount of unique words in the vocabulary
+        transition_matrices = []
 
-        for word, index in self.vocabulary.word2indx_list.items():                          #Loop through each word and it's index, in the vocabulary 
-            following_words = self.pairfreq_tables[0].table.get(word, None)                 #Get all pair-words for the current word
-            if following_words:
-                total = sum(following_words.values())                                       #Calculate the total frequency of all pair-words/following words to the current word
-                for next_word, count in following_words.items():                            #Loop through each pair-word and it's frequency 
-                    next_index = self.vocabulary.word2indx(next_word)                       #Get the index of the current pair-word (For storage/look-up optimization)
-                    transition_matrix[index][next_index] = count / total                    #Store the current word (Row) and current pair-word (Column), and the probability to transition to the pair-word
+        #Initilize the matrixes and store them in a list 
+        for _ in range(10):
+            transition_matrix = np.zeros((vocab_size, vocab_size))                              #Create a matrix filled with zeros (2D NumPy array) 
+            transition_matrices.append(transition_matrix)
 
-        return transition_matrix
+        #Loop through each word and it's index, in the vocabulary 
+        for word, index in self.vocabulary.word2indx_list.items():                          
+            
+            for n in range(10):
+                following_words = self.pairfreq_tables[n].table.get(word, None)                 #Get all pair-words for the current word
+            
+                if following_words:
+                    total = sum(following_words.values())                                       #Calculate the total frequency of all pair-words/following words to the current word
+                    for next_word, count in following_words.items():                                #Loop through each pair-word and it's frequency 
+                        next_index = self.vocabulary.word2indx(next_word)                           #Get the index of the current pair-word (For storage/look-up optimization)
+                        transition_matrices[n][index][next_index] = count / total                   #Store the current word (Row) and current pair-word (Column), and the probability to transition to the pair-word
+
+        return transition_matrices
 
     def generate_sentence(self, start_word=None, length=10):
         
-        if not start_word:
+        if not start_word:                                                                  #Default start word when no input
             start_word = self.vocabulary.word2indx("call")
 
         current_word = self.vocabulary.indx2word(start_word)
         sentence = [current_word]
         
+        #Generate sentence word for word 
         for _ in range(length-1):
             current_word = self.get_next_word(current_word)
 
@@ -110,13 +120,16 @@ class MarkovChain:
             sentence.append(current_word)
            
         
-        sentence_str = ' '.join(sentence)
+        sentence_str = ' '.join(sentence)                                                   #Format list containing the sentence to string. For print functionality 
         print(sentence_str)
-        return sentence_str
+        return sentence_str                                                                 #Return sentence (currently unused)
 
-    def get_next_word(self, current_word):
+    def get_next_word(self, current_word, sentence = None):
         current_index = self.vocabulary.word2indx(current_word)
-        probabilities = self.transition_matrix[current_index]
+        probabilities = self.transition_matrice[0][current_index]                           #Returns the row of probabilites for potential words corresponding to the current word 
+
+        for n in range(10):
+            probabilities = self.transition_matrice[n][current_index]                              
 
         #Cases when there is no next word to transition to
         if np.sum(probabilities) == 0:                                                      
@@ -144,6 +157,7 @@ def main():
         print("Error reading the file")
         return
 
+    #String management needs work! 
     word_list = word_tokenize(text)                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )
     word_list = [re.sub(r"[^\w\s'-]", '', token.lower()) for token in word_list if re.sub(r"[^\w\s'-]", '', token.lower())]            #Clean tokens by removing special characters and lowercase all words
 
