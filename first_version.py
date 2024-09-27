@@ -1,6 +1,6 @@
 #import fileinput
 import nltk
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import TweetTokenizer
 from nltk.util import ngrams
 import numpy as np
 import re
@@ -34,7 +34,6 @@ class CreateVocabulary:                                                         
     
     def indx2word(self, indx):
         return self.indx2word_list.get(indx, -1)                                #Return -1 if index not found ("None" could be a existing word)
-
 
 
 class PairFrequencyTable():                                                     #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
@@ -169,9 +168,11 @@ def main():
         return
 
     #String management needs work! 
-    word_list = word_tokenize(text)                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )
-    word_list = [re.sub(r"[^\w\s'-]", '', token.lower()) for token in word_list if re.sub(r"[^\w\s'-]", '', token.lower())]            #Clean tokens by removing special characters and lowercase all words
-
+    tokenizer = TweetTokenizer(preserve_case = False)
+    text = re.sub(r"[‘’´`]", "'", text)                                                                                                  #Edge case where apostrophes can have different Unicode. This normalize them
+    word_list = tokenizer.tokenize(text)                                                                                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
+    word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token)]                                                          #Clean tokens by removing special characters
+   
     vocabulary = CreateVocabulary(word_list)
     
     wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
