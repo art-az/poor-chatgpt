@@ -157,24 +157,29 @@ class MarkovChain:
 #------------------------------MAIN------------------------------
 
 def main():
-    try:
-        with open("sample.txt") as file:                            #Open text file and input content into "text" variable
-            text = file.read()
-    except FileNotFoundError:
-        print("File 'Sample.txt' not found")
-        return
-    except IOError:
-        print("Error reading the file")
-        return
+    file_names = ["sample.txt", "A_room_with_a_view.txt"]
+    all_text = ""
+
+    for file_name in file_names:
+        try:
+            with open(file_name) as file:                            #Open text file and input content into "text" variable
+                text = file.read()
+                all_text += text
+        except FileNotFoundError:
+            print(f"File '{file_name}' not found")
+            return
+        except IOError:
+            print(f"Error reading the file '{file_name}'")
+            return
 
     #String management needs work! 
     tokenizer = TweetTokenizer(preserve_case = False)
     text = re.sub(r"[‘’´`]", "'", text)                                                                                                  #Edge case where apostrophes can have different Unicode. This normalize them
     word_list = tokenizer.tokenize(text)                                                                                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
-    word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token)]                                                          #Clean tokens by removing special characters
+    word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token) and "_" not in token]                                                          #Clean tokens by removing special characters
    
     vocabulary = CreateVocabulary(word_list)
-    
+    print(len(word_list))
     wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
     print_frequency_table(wordfreq, vocabulary)
 
