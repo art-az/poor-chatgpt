@@ -1,6 +1,7 @@
 #import fileinput
 import nltk
 from nltk.tokenize import TweetTokenizer
+from nltk.tag import pos_tag
 from nltk.util import ngrams
 import numpy as np
 import re
@@ -8,11 +9,14 @@ from collections import defaultdict
 import random
 from pprint import pprint                                                       #Debug aid
 
+
 def download_punkt():                                                           #Download the nlkt tokenizer data if missing
     try:
         nltk.data.find('tokenizers/punkt')
+        nltk.data.find('taggers/averaged_perceptron_tagger')
     except LookupError:
         nltk.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
 
 
 class CreateVocabulary:                                                         #Create 2 dictionaries mapping all unique words in the working text. For word and index lookup respectivily   
@@ -154,7 +158,7 @@ class MarkovChain:
         return self.vocabulary.indx2word(next_index)
 
 
-#------------------------------MAIN------------------------------
+#------------------------------------------------MAIN------------------------------------------------
 
 def main():
     file_names = ["sample.txt", "A_room_with_a_view.txt"]
@@ -162,7 +166,7 @@ def main():
 
     for file_name in file_names:
         try:
-            with open(file_name) as file:                            #Open text file and input content into "text" variable
+            with open(file_name) as file:                            #Open text files and input content into "text" variable
                 text = file.read()
                 all_text += text
         except FileNotFoundError:
@@ -172,12 +176,14 @@ def main():
             print(f"Error reading the file '{file_name}'")
             return
 
-    #String management needs work! 
+     
     tokenizer = TweetTokenizer(preserve_case = False)
-    text = re.sub(r"[‘’´`]", "'", text)                                                                                                  #Edge case where apostrophes can have different Unicode. This normalize them
-    word_list = tokenizer.tokenize(text)                                                                                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
-    word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token) and "_" not in token]                                                          #Clean tokens by removing special characters
-   
+    corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                                  #Edge case where apostrophes can have different Unicode. This normalize them
+    word_list = tokenizer.tokenize(corpus)                                                                                                 #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
+    word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token) and "_" not in token]                                                          #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
+    pos_tags = pos_tag(word_list)                                                                                                        #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
+
+    
     vocabulary = CreateVocabulary(word_list)
     print(len(word_list))
     wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
@@ -199,7 +205,7 @@ def main():
 
     #Text generation with implementation of MarkovChain algorithm  
     generated_text = MarkovChain(pairfreq_tables,vocabulary)
-
+   
     for _ in range(1,5):
         generated_text.generate_sentence(initial_word)
 
