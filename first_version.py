@@ -87,18 +87,20 @@ def print_frequency_table(wordfreq, vocabulary):
 
 #Main implementation for text generation 
 class MarkovChain:
-    def __init__(self, pairfreq_tables, vocabulary):
+    def __init__(self, pairfreq_tables, vocabulary, pos_tags):
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
+        self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix 
         self.transition_matrices = self.build_transition_matrix()
+        self.pos_transition_matrix = self.build_POS_transition_matrix(pos_tags)
 
     def build_transition_matrix(self):
-        vocab_size = len(self.vocabulary.word2indx_list)                                        #Amount of unique words in the vocabulary
+        vocab_size = len(self.vocabulary.word2indx_list)                                            #Amount of unique words in the vocabulary
         transition_matrices = []
 
         #Initilize the matrixes and store them in a list 
         for _ in range(10):
-            transition_matrix = np.zeros((vocab_size, vocab_size))                              #Create a matrix filled with zeros (2D NumPy array) 
+            transition_matrix = np.zeros((vocab_size, vocab_size))                                  #Create a matrix filled with zeros (2D NumPy array) 
             transition_matrices.append(transition_matrix)
 
         #Loop through each word and it's index, in the vocabulary 
@@ -127,7 +129,7 @@ class MarkovChain:
         tag_amount = len(unique_tags)
         pos_transition_matrix = np.zeros((tag_amount, tag_amount))
 
-        for i in range(len(pos_only)):
+        for i in range(len(pos_only) - 1):                                                          #Last tag will have no "next_tag", therefore the -1
             current_tag = pos_only[i]                                                               #Row
             next_tag = pos_only[i+1]                                                                #Column
             pos_transition_matrix[ pos_to_indx[current_tag], pos_to_indx[next_tag] ] += 1           #Add 1 in intersection cell, corresponding to how often a tag follows another
@@ -135,7 +137,12 @@ class MarkovChain:
         #Normilize counts to get probability
         row_sums = pos_transition_matrix.sum(axis=1)                                                #Returns an array with the sum of each rown in the matrix
         pos_transition_matrix = pos_transition_matrix / row_sums[:, np.newaxis]                     #row_sums is a 1D array, operation to change it's shape to 2D to be compatible for division with 2D matrix
+        
+        #trans_print = pos_transition_matrix[pos_to_indx['NNP'], pos_to_indx['NN']]                 #Debug purpose 
+        #print(f"{trans_print}")
 
+        return pos_transition_matrix
+    
     def generate_sentence(self, start_word=None, length=10):
         
         if not start_word:                                                                  #Default start word when no input
@@ -234,7 +241,7 @@ def main():
     initial_word = random.choices(words, weights=weights)[0]
 
     #Text generation with implementation of MarkovChain algorithm  
-    generated_text = MarkovChain(pairfreq_tables,vocabulary)
+    generated_text = MarkovChain(pairfreq_tables,vocabulary, pos_tags)
    
     for _ in range(1,5):
         generated_text.generate_sentence(initial_word)
