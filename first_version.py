@@ -93,6 +93,7 @@ class MarkovChain:
         self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix 
         self.transition_matrices = self.build_transition_matrix()
         self.pos_transition_matrix = self.build_POS_transition_matrix(pos_tags)
+        self.emission_matrix = self.build_emission_matrix(pos_tags)
 
     def build_transition_matrix(self):
         vocab_size = len(self.vocabulary.word2indx_list)                                            #Amount of unique words in the vocabulary
@@ -135,13 +136,33 @@ class MarkovChain:
             pos_transition_matrix[ pos_to_indx[current_tag], pos_to_indx[next_tag] ] += 1           #Add 1 in intersection cell, corresponding to how often a tag follows another
 
         #Normilize counts to get probability
-        row_sums = pos_transition_matrix.sum(axis=1)                                                #Returns an array with the sum of each rown in the matrix
-        pos_transition_matrix = pos_transition_matrix / row_sums[:, np.newaxis]                     #row_sums is a 1D array, operation to change it's shape to 2D to be compatible for division with 2D matrix
+        row_sums = pos_transition_matrix.sum(axis=1, keepdims=True)                                 #Returns an array with the sum of each rown in the matrix. Keepdims retains the 2D format instead of reshaping the output to a 1D array in row_sums
+        pos_transition_matrix = pos_transition_matrix / row_sums                                                   
         
         #trans_print = pos_transition_matrix[pos_to_indx['NNP'], pos_to_indx['NN']]                 #Debug purpose 
         #print(f"{trans_print}")
 
         return pos_transition_matrix
+    
+    def build_emission_matrix(self, pos_tags):
+        vocab_size = len(self.vocabulary.word2indx_list)
+        pos_only = [tag for word, tag in pos_tags]
+        unique_tags = list(set(pos_only))
+
+        pos_to_indx = {tag: i for i, tag in enumerate(unique_tags)}                                 #Dict where each tag has a numerical index 
+        indx_to_pos = {i: tag for tag, i in pos_to_indx.items()}
+
+        emission_matrix = np.zeros((len(unique_tags), vocab_size))
+
+        for word, tag in pos_tags:
+            word_indx = self.vocabulary.word2indx(word)
+            pos_indx = pos_to_indx[tag]
+            emission_matrix[pos_indx][word_indx] =+ 1
+
+        row_sums = emission_matrix.sum(axis=1, keepdims=True)
+        emission_matrix = emission_matrix/row_sums
+
+        return emission_matrix
     
     def generate_sentence(self, start_word=None, length=10):
         
