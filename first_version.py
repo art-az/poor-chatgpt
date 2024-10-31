@@ -1,4 +1,5 @@
-#import fileinput
+import os
+from save_file_utils import save_variables, load_variables
 import nltk
 from nltk.tokenize import TweetTokenizer
 from nltk.tag import pos_tag
@@ -9,6 +10,7 @@ from collections import defaultdict
 import random
 from pprint import pprint                                                       #Debug aid
 
+#---------------------------------OS and Data/File handling---------------------------------
 
 def download_punkt():                                                           #Download the nlkt tokenizer data if missing
     try:
@@ -18,6 +20,22 @@ def download_punkt():                                                           
         nltk.download('punkt')
         nltk.download('averaged_perceptron_tagger')
 
+def prompt_for_corpus():
+    # Ask user if they want to use the previous corpus
+    user_input = input("Do you wish to run with the previous corpus? [y/n]: ").strip().lower()
+    
+    if user_input == "n":
+        # Delete the saved data file if it exists
+        filepath = "saved_data.pkl"
+        if os.path.exists(filepath):
+            os.remove(filepath)
+            print("Previous corpus deleted.")
+        else:
+            print("No saved corpus found to delete.")
+    elif user_input != "y":
+        print("Invalid input. Running with previous corpus by default.")
+
+#---------------------------------OS and Data/File handling END---------------------------------
 
 #Incorporate POS-tags in existing word dict or create new dict variable? (New variable storing over 20K entries but easier code management and debugging)
 class CreateVocabulary:                                                             #Create 2 dictionaries mapping all unique words in the working text. For word and index lookup respectivily   
@@ -48,6 +66,15 @@ class CreateVocabulary:                                                         
 
     def word_pos_tag(self, word):
         return self.word2indx_list.get(word, (None, None))[1]
+    
+    def write_word2indx_to_file(self, filename="word2indx_debug.txt"):
+        with open(filename, "w") as file:
+            file.write("self.word2indx_list = {\n")
+            for word, (index, pos_tags) in self.word2indx_list.items():
+                pos_tags_str = repr(pos_tags)  # Use repr() to show list format in string
+                file.write(f"    '{word}': ({index}, {pos_tags_str}),\n")
+            file.write("}\n")
+        print(f"Debug information written to {filename}")
 
 class PairFrequencyTable():                                                         #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
     def __init__(self, word_list, n_step = 2):
@@ -87,10 +114,12 @@ def print_frequency_table(wordfreq, vocabulary):
 
 #Main implementation for text generation 
 class MarkovChain:
-    def __init__(self, pairfreq_tables, vocabulary, pos_tags):
+    def __init__(self, pairfreq_tables, vocabulary, pos_tags, wordfreq):
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
+        self.wordfreq = wordfreq
         self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix 
+        self.current_pos_tag = ''
         self.transition_matrices = self.build_transition_matrix()
         self.pos_transition_matrix = self.build_POS_transition_matrix(pos_tags)
         self.emission_matrix = self.build_emission_matrix(pos_tags)
@@ -123,8 +152,8 @@ class MarkovChain:
         unique_tags = list(set(pos_only))                                                           #Convert to set to remove duplicates and convert back to list again
 
         #Map/index the tags to aid the construction and look-up of the Numpy matrix
-        pos_to_indx = {tag: i for i, tag in enumerate(unique_tags)}                                 #Dict where each tag has a numerical index 
-        indx_to_pos = {i: tag for tag, i in pos_to_indx.items()}
+        self.pos_to_indx = {tag: i for i, tag in enumerate(unique_tags)}                                 #Dict where each tag has a numerical index 
+        indx_to_pos = {i: tag for tag, i in self.pos_to_indx.items()}
 
         #Initialize matrix
         tag_amount = len(unique_tags)
@@ -133,7 +162,7 @@ class MarkovChain:
         for i in range(len(pos_only) - 1):                                                          #Last tag will have no "next_tag", therefore the -1
             current_tag = pos_only[i]                                                               #Row
             next_tag = pos_only[i+1]                                                                #Column
-            pos_transition_matrix[ pos_to_indx[current_tag], pos_to_indx[next_tag] ] += 1           #Add 1 in intersection cell, corresponding to how often a tag follows another
+            pos_transition_matrix[ self.pos_to_indx[current_tag], self.pos_to_indx[next_tag] ] += 1           #Add 1 in intersection cell, corresponding to how often a tag follows another
 
         #Normilize counts to get probability
         row_sums = pos_transition_matrix.sum(axis=1, keepdims=True)                                 #Returns an array with the sum of each rown in the matrix. Keepdims retains the 2D format instead of reshaping the output to a 1D array in row_sums
@@ -148,15 +177,15 @@ class MarkovChain:
         vocab_size = len(self.vocabulary.word2indx_list)
         pos_only = [tag for word, tag in pos_tags]
         unique_tags = list(set(pos_only))
-
-        pos_to_indx = {tag: i for i, tag in enumerate(unique_tags)}                                 #Dict where each tag has a numerical index 
-        indx_to_pos = {i: tag for tag, i in pos_to_indx.items()}
+        #Use the class global variable instead? 
+        #pos_to_indx = {tag: i for i, tag in enumerate(unique_tags)}                                 #Dict where each tag has a numerical index 
+        indx_to_pos = {i: tag for tag, i in self.pos_to_indx.items()}
 
         emission_matrix = np.zeros((len(unique_tags), vocab_size))
 
         for word, tag in pos_tags:
             word_indx = self.vocabulary.word2indx(word)
-            pos_indx = pos_to_indx[tag]
+            pos_indx = self.pos_to_indx[tag]
             emission_matrix[pos_indx][word_indx] =+ 1
 
         row_sums = emission_matrix.sum(axis=1, keepdims=True)
@@ -164,10 +193,37 @@ class MarkovChain:
 
         return emission_matrix
     
+    #Hard-coded probabilities for the starting POS-tag in a sentence (Based on real life observations of sentence structures, can be adjusted)
+    def starting_pos_tag(self):
+        start_pos_tags = ['DT', 'PRP', 'NN', 'NNP', 'JJ', 'CC', 'IN', 'RB', 'VB']
+        start_probabilities = [0.25, 0.2, 0.15, 0.15, 0.1, 0.05, 0.05, 0.025, 0.025]
+
+        start_tag = np.random.choice(start_pos_tags, p=start_probabilities)
+
+        return start_tag
+    
+    def generate_starting_word(self, wordfreq):
+        self.current_pos_tag = self.starting_pos_tag()
+        print(self.current_pos_tag)
+        
+        words_with_tag = []
+        for word in wordfreq.keys():
+            if self.current_pos_tag in self.vocabulary.word_pos_tag(self.vocabulary.indx2word(word)):
+                words_with_tag.append(word)
+
+        if not words_with_tag:
+            words_with_tag = list(wordfreq.keys())
+
+        freq_weights = [wordfreq[word] for word in words_with_tag] 
+        initial_word = random.choices(words_with_tag, weights=freq_weights)[0]
+
+        return initial_word
+        
+
     def generate_sentence(self, start_word=None, length=10):
         
         if not start_word:                                                                  #Default start word when no input
-            start_word = self.vocabulary.word2indx("call")
+            start_word = self.generate_starting_word(self.wordfreq)
 
         current_word = self.vocabulary.indx2word(start_word)
         sentence = [current_word]
@@ -195,14 +251,18 @@ class MarkovChain:
                 break                             
         
             previous_word_index = self.vocabulary.word2indx(previous_words)
+            #current_pos_tag = self.vocabulary.word_pos_tag(previous_words)
+            #current_pos_index = self.pos_to_indx[self.vocabulary.word_pos_tag(previous_words)]
+            #print(self.vocabulary.word_pos_tag(previous_words))
 
             #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
             values = self.transition_matrices[n+1][previous_word_index]                       #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
             
+
             for i, value in enumerate(values):                                                #Work around for when a value in the matrix is 0
                 if value > 0:
                     probabilities[i] *= value                                                 #Future note: Due to the sturcture of the matrices, this should multiply the values of the same words. Look into if this is actually correct
-                                                                                              #Future future note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
+                                                                                              #Future x2 note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
         #Cases when there is no next word to transition to
         if np.sum(probabilities) == 0:                                                      
             return None
@@ -214,59 +274,67 @@ class MarkovChain:
         
         next_index = np.random.choice(len(probabilities), p = probabilities)                  #Get next word, weighed on the calculated probabilites 
         return self.vocabulary.indx2word(next_index)
-
+    
 
 #------------------------------------------------MAIN------------------------------------------------
 
 def main():
-    file_names = ["sample.txt", "A_room_with_a_view.txt"]
-    all_text = ""
+    if os.path.exists("saved_data.pkl"):
+        pos_tags, pairfreq_tables, word_list = load_variables("saved_data.pkl")
+    else:
+        file_names = ["sample.txt", "A_room_with_a_view.txt"]
+        all_text = ""
 
-    for file_name in file_names:
-        try:
-            with open(file_name) as file:                            #Open text files and input content into "text" variable
-                text = file.read()
-                all_text += text
-        except FileNotFoundError:
-            print(f"File '{file_name}' not found")
-            return
-        except IOError:
-            print(f"Error reading the file '{file_name}'")
-            return
+        for file_name in file_names:
+            try:
+                with open(file_name) as file:                            #Open text files and input content into "text" variable
+                    text = file.read()
+                    all_text += text
+            except FileNotFoundError:
+                print(f"File '{file_name}' not found")
+                return
+            except IOError:
+                print(f"Error reading the file '{file_name}'")
+                return
 
-     
-    tokenizer = TweetTokenizer(preserve_case = False)
-    corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                              #Edge case where apostrophes can have different Unicode. This normalize them
-    word_list = tokenizer.tokenize(corpus)                                                                                                  #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
-    word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
-    pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
+        
+        tokenizer = TweetTokenizer(preserve_case = False)
+        corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                              #Edge case where apostrophes can have different Unicode. This normalize them
+        word_list = tokenizer.tokenize(corpus)                                                                                                  #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
+        word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
+        pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
 
-    
+        #List to store pairfrequency tables to aid in dynamic creation and handling of several tables
+        pairfreq_tables = []                                            
+        for n in range(2, 12):  
+            pairfreq = PairFrequencyTable(word_list, n)
+            pairfreq_tables.append(pairfreq)
+            pairfreq.print_table(n)
+
+        save_variables(pos_tags, pairfreq_tables, word_list)
+
+
     vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
-    print(len(word_list))
+    #vocabulary.write_word2indx_to_file()
+    #print(len(word_list))
     wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
     print_frequency_table(wordfreq, vocabulary)
 
-    #List to store pairfrequency tables to aid in dynamic creation and handling of several tables
-    pairfreq_tables = []                                            
-    for n in range(2, 12):  
-        pairfreq = PairFrequencyTable(word_list, n)
-        pairfreq_tables.append(pairfreq)
-        pairfreq.print_table(n)
 
-        
-    
+    """
     #Weighted random choice for initial word in text generation
     words = list(wordfreq.keys())
     weights = list(wordfreq.values())
     initial_word = random.choices(words, weights=weights)[0]
+    """
 
     #Text generation with implementation of MarkovChain algorithm  
-    generated_text = MarkovChain(pairfreq_tables,vocabulary, pos_tags)
+    text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
    
     for _ in range(1,5):
-        generated_text.generate_sentence(initial_word)
+        text_generator.generate_sentence()
 
 if __name__ == "__main__":
     download_punkt()
+    prompt_for_corpus()
     main()
