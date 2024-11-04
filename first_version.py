@@ -37,8 +37,9 @@ def prompt_for_corpus():
 
 #---------------------------------OS and Data/File handling END---------------------------------
 
+
 #Incorporate POS-tags in existing word dict or create new dict variable? (New variable storing over 20K entries but easier code management and debugging)
-class CreateVocabulary:                                                             #Create 2 dictionaries mapping all unique words in the working text. For word and index lookup respectivily   
+class CreateVocabulary:                                                                     #Create 2 dictionaries mapping all unique words in the working text. For word and index lookup respectivily   
     def __init__(self, pos_tags):
         self.word2indx_list = {}
         self.indx2word_list = {}
@@ -47,26 +48,27 @@ class CreateVocabulary:                                                         
     def build_vocab(self, pos_tags):
         idx = 0        
         for word, tag in pos_tags:
-            if word not in self.word2indx_list:                                     #Do not include duplicates
-                self.word2indx_list[word] = (idx, [tag])                            #Store index and POS tag as list (there can be multiple tags)
+            if word not in self.word2indx_list:                                             #Do not include duplicates
+                self.word2indx_list[word] = (idx, [tag])                                    #Store index and POS tag as list (there can be multiple tags)
                 self.indx2word_list[idx] = word
                 idx += 1
-            else:                                                                   #If word exist only append the POS tag
+            else:                                                                           #If word exist only append the POS tag
                 existing_index, existing_tags = self.word2indx_list[word]
-                if tag not in existing_tags:                                        #Only append if it is a new tag
+                if tag not in existing_tags:                                                #Only append if it is a new tag
                     existing_tags.append(tag)
                     self.word2indx_list[word] = (existing_index, existing_tags)
 
     def word2indx(self, word):
         word = self.word2indx_list.get(word, None)
-        return word[0] if word else None                                            #Return only word index. First element in the tuple
+        return word[0] if word else None                                                    #Return only word index. First element in the tuple
     
     def indx2word(self, indx):
-        return self.indx2word_list.get(indx, -1)                                    #Return -1 if index not found ("None" could be a existing word)
+        return self.indx2word_list.get(indx, -1)                                            #Return -1 if index not found ("None" could be a existing word)
 
     def word_pos_tag(self, word):
         return self.word2indx_list.get(word, (None, None))[1]
     
+    #DEBUG: prints word2indx (pos tags) to readable file
     def write_word2indx_to_file(self, filename="word2indx_debug.txt"):
         with open(filename, "w") as file:
             file.write("self.word2indx_list = {\n")
@@ -76,16 +78,17 @@ class CreateVocabulary:                                                         
             file.write("}\n")
         print(f"Debug information written to {filename}")
 
-class PairFrequencyTable():                                                         #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
+
+class PairFrequencyTable():                                                                 #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
     def __init__(self, word_list, n_step = 2):
-        self.table = defaultdict(defaultdict(int).copy)                             #Key is the first word. Value is another dict where the key is the word pair and value it's frequency. [Word]-[WordPair]:[Frequency]
-        #self.n = n_step                                                            #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
+        self.table = defaultdict(defaultdict(int).copy)                                     #Key is the first word. Value is another dict where the key is the word pair and value it's frequency. [Word]-[WordPair]:[Frequency]
+        #self.n = n_step                                                                    #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
         self.create_pair_frequency_table(word_list, n_step)
 
-    def create_pair_frequency_table(self, word_list, n_step):                       #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple as a pair
+    def create_pair_frequency_table(self, word_list, n_step):                               #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple as a pair
         ngram_list = ngrams(word_list, n_step)
         for ngram_tuple in ngram_list:
-            first_word, last_word = ngram_tuple[0], ngram_tuple[-1]                 #[-1] will access last element in list
+            first_word, last_word = ngram_tuple[0], ngram_tuple[-1]                         #[-1] will access last element in list
             self.table[first_word][last_word] += 1
 
     def print_table(self, iteration = 2):
@@ -118,10 +121,11 @@ class MarkovChain:
         self.pairfreq_tables = pairfreq_tables
         self.vocabulary = vocabulary
         self.wordfreq = wordfreq
-        self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix 
+        self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix. Used for navigating matrixes 
+        self.indx_to_pos = {}                               
         self.current_pos_tag = ''
-        self.transition_matrices = self.build_transition_matrix()
-        self.pos_transition_matrix = self.build_POS_transition_matrix(pos_tags)
+        self.transition_matrices = self.build_transition_matrix()                                   #Transition matrices based on word pairs
+        self.pos_transition_matrix = self.build_POS_transition_matrix(pos_tags)                     #Transition matrix on the probability of next POS tag based on current POS tag
         self.emission_matrix = self.build_emission_matrix(pos_tags)
 
     def build_transition_matrix(self):
@@ -153,7 +157,7 @@ class MarkovChain:
 
         #Map/index the tags to aid the construction and look-up of the Numpy matrix
         self.pos_to_indx = {tag: i for i, tag in enumerate(unique_tags)}                                 #Dict where each tag has a numerical index 
-        indx_to_pos = {i: tag for tag, i in self.pos_to_indx.items()}
+        self.indx_to_pos = {i: tag for tag, i in self.pos_to_indx.items()}
 
         #Initialize matrix
         tag_amount = len(unique_tags)
@@ -173,6 +177,7 @@ class MarkovChain:
 
         return pos_transition_matrix
     
+    #NOTE currently unused
     def build_emission_matrix(self, pos_tags):
         vocab_size = len(self.vocabulary.word2indx_list)
         pos_only = [tag for word, tag in pos_tags]
@@ -193,7 +198,7 @@ class MarkovChain:
 
         return emission_matrix
     
-    #Hard-coded probabilities for the starting POS-tag in a sentence (Based on real life observations of sentence structures, can be adjusted)
+    #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general real life observations of sentence structures, can be adjusted)
     def starting_pos_tag(self):
         start_pos_tags = ['DT', 'PRP', 'NN', 'NNP', 'JJ', 'CC', 'IN', 'RB', 'VB']
         start_probabilities = [0.25, 0.2, 0.15, 0.15, 0.1, 0.05, 0.05, 0.025, 0.025]
@@ -202,16 +207,17 @@ class MarkovChain:
 
         return start_tag
     
+    #Find start word by only including words that match with starting POS tag and pick at random, with higher probability based on frequency 
     def generate_starting_word(self, wordfreq):
         self.current_pos_tag = self.starting_pos_tag()
-        print(self.current_pos_tag)
+        print(self.current_pos_tag)                                                        #debug
         
         words_with_tag = []
         for word in wordfreq.keys():
             if self.current_pos_tag in self.vocabulary.word_pos_tag(self.vocabulary.indx2word(word)):
                 words_with_tag.append(word)
 
-        if not words_with_tag:
+        if not words_with_tag:                                                              #if no words with POS tag found. Fall back on frequency based pick
             words_with_tag = list(wordfreq.keys())
 
         freq_weights = [wordfreq[word] for word in words_with_tag] 
@@ -219,10 +225,10 @@ class MarkovChain:
 
         return initial_word
         
-
+    #The start and main function for generating text
     def generate_sentence(self, start_word=None, length=10):
         
-        if not start_word:                                                                  #Default start word when no input
+        if not start_word:                                                                    #Default start word when no input
             start_word = self.generate_starting_word(self.wordfreq)
 
         current_word = self.vocabulary.indx2word(start_word)
@@ -241,39 +247,63 @@ class MarkovChain:
         print(sentence_str)
         return sentence_str                                                                   #Return sentence (currently unused)
 
+    #Called in generate_sentence()
     def get_next_word(self, sentence):
         last_word_index = self.vocabulary.word2indx(sentence[-1])
-        probabilities = self.transition_matrices[0][last_word_index]                          #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
+        word_probabilities = self.transition_matrices[0][last_word_index]                           #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
 
-        #Loop through all previous words in the sentence
-        for n, previous_words in enumerate(reversed(sentence[:-1])):                          #Sentence[:-1] omits the last word since that is already handled in previous line of code
-            if n > 10:                                                                        #Max size for sentence is 10 words. Can be removed, sentence should not extend set length
-                break                             
+        #Get next POS tag
+        current_pos_index = self.pos_to_indx[self.current_pos_tag]
+        next_pos_probs = self.pos_transition_matrix[current_pos_index]
+        next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)                    #Pick next pos tag weighed by the probabilities in pos_transition_matrix (Alt: pick POS with highest prob)
+        self.current_pos_tag = self.indx_to_pos[next_pos_index]
         
-            previous_word_index = self.vocabulary.word2indx(previous_words)
-            #current_pos_tag = self.vocabulary.word_pos_tag(previous_words)
-            #current_pos_index = self.pos_to_indx[self.vocabulary.word_pos_tag(previous_words)]
-            #print(self.vocabulary.word_pos_tag(previous_words))
+        #Pick words containing current POS tag
+        candidate_words = []
+        for word in self.vocabulary.word2indx_list: 
+            if self.current_pos_tag in self.vocabulary.word_pos_tag(word):
+                candidate_words.append(word)
+        
+        if not candidate_words:
+            print("No candidate words found")
+            return None                                                                             #Case where no words match the current POS tag
 
-            #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
-            values = self.transition_matrices[n+1][previous_word_index]                       #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
+        
+        
+        #Loop through all previous words in the sentence
+        for n, previous_words in enumerate(reversed(sentence[:-1])):                                #Sentence[:-1] omits the last word since that is already handled in previous line of code
+            if n > 10:                                                                              #Max size for sentence is 10 words. Can be removed, sentence should not extend set length
+                break                             
             
-
-            for i, value in enumerate(values):                                                #Work around for when a value in the matrix is 0
+            #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
+            previous_word_index = self.vocabulary.word2indx(previous_words)
+            transition_probs = self.transition_matrices[n+1][previous_word_index]                             #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
+            
+            
+            
+            for i, value in enumerate(transition_probs):                                                      #Work around for when a value in the matrix is 0
                 if value > 0:
-                    probabilities[i] *= value                                                 #Future note: Due to the sturcture of the matrices, this should multiply the values of the same words. Look into if this is actually correct
-                                                                                              #Future x2 note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
+                    word_probabilities[i] *= value                                                  #Future note: Due to the sturcture of the matrices, this should multiply the values of the same words. Look into if this is actually correct
+                                                                                                    #Future x2 note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
+        
+
+        #NOTE put this before the loop for better optimization (need to fix logic before that though)
+        #Filter word_probabilities to only include the words and probabilities corresponding to candidate_words
+        candidate_words_indices = [self.vocabulary.word2indx(word) for word in candidate_words]
+        candidate_probs = word_probabilities[candidate_words_indices]                               #Creates 2 seperate lists that are linked by their identical indices 
+        
         #Cases when there is no next word to transition to
-        if np.sum(probabilities) == 0:                                                      
+        if np.sum(candidate_probs) == 0:
+            print("Candidate_probs == 0")                                                      
             return None
         
         #Create probability distribution by normalizing counts 
-        probabilities_sum = np.sum(probabilities)                                             #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
-        if probabilities_sum != 1:                                                            #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
-            probabilities = probabilities / probabilities_sum
+        probabilities_sum = np.sum(candidate_probs)                                             #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
+        if probabilities_sum != 1:                                                                 #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
+            candidate_probs = candidate_probs / probabilities_sum
         
-        next_index = np.random.choice(len(probabilities), p = probabilities)                  #Get next word, weighed on the calculated probabilites 
-        return self.vocabulary.indx2word(next_index)
+        next_word_index = np.random.choice(candidate_words_indices, p = candidate_probs)                  #Get next word, weighed on the calculated probabilites 
+        return self.vocabulary.indx2word(next_word_index)
     
 
 #------------------------------------------------MAIN------------------------------------------------
@@ -317,16 +347,9 @@ def main():
     vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
     #vocabulary.write_word2indx_to_file()
     #print(len(word_list))
-    wordfreq = create_frequency_table(word_list, vocabulary)        #Frequency of each word in the corpus 
+    wordfreq = create_frequency_table(word_list, vocabulary)                                                                               #Frequency of each word in the corpus 
     print_frequency_table(wordfreq, vocabulary)
 
-
-    """
-    #Weighted random choice for initial word in text generation
-    words = list(wordfreq.keys())
-    weights = list(wordfreq.values())
-    initial_word = random.choices(words, weights=weights)[0]
-    """
 
     #Text generation with implementation of MarkovChain algorithm  
     text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
