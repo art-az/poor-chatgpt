@@ -151,6 +151,7 @@ class MarkovChain:
 
         return transition_matrices
 
+    #Probability for a POS tag to transition to another tag (Row: POS, Column: POS)
     def build_POS_transition_matrix(self, pos_tags):
         pos_only = [tag for word, tag in pos_tags]                                                  #Only extract the POS tags
         unique_tags = list(set(pos_only))                                                           #Convert to set to remove duplicates and convert back to list again
@@ -178,6 +179,7 @@ class MarkovChain:
         return pos_transition_matrix
     
     #NOTE currently unused
+    #Holds the probabilities for each word given a POS tag (Row: POS, Column: Word)
     def build_emission_matrix(self, pos_tags):
         vocab_size = len(self.vocabulary.word2indx_list)
         pos_only = [tag for word, tag in pos_tags]
@@ -196,6 +198,13 @@ class MarkovChain:
         row_sums = emission_matrix.sum(axis=1, keepdims=True)
         emission_matrix = emission_matrix/row_sums
 
+        #Insert small value in 0s. Excluding this introduces filtering for words mismatching current POS tag 
+        emission_matrix[emission_matrix == 0] = 0.01
+
+        #Re-normalize rows after previous adjustments 
+        row_sums = emission_matrix.sum(axis=1, keepdims=True)
+        emission_matrix = emission_matrix/row_sums
+
         return emission_matrix
     
     #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general real life observations of sentence structures, can be adjusted)
@@ -210,7 +219,7 @@ class MarkovChain:
     #Find start word by only including words that match with starting POS tag and pick at random, with higher probability based on frequency 
     def generate_starting_word(self, wordfreq):
         self.current_pos_tag = self.starting_pos_tag()
-        print(self.current_pos_tag)                                                        #debug
+        #print(self.current_pos_tag)                                                        #debug
         
         words_with_tag = []
         for word in wordfreq.keys():
@@ -233,18 +242,20 @@ class MarkovChain:
 
         current_word = self.vocabulary.indx2word(start_word)
         sentence = [current_word]
-        
+        pos_tag_sequence = []
+        pos_tag_sequence.append(self.current_pos_tag)
         #Generate sentence word for word 
         for _ in range(length-1):
+            
             current_word = self.get_next_word(sentence)
-
-            if not current_word:
-                break
-            sentence.append(current_word)
+            pos_tag_sequence.append(self.current_pos_tag)
+            if current_word:              
+             sentence.append(current_word)
            
-        
+        pos_str = ' '.join(pos_tag_sequence)
+        print(pos_str)
         sentence_str = ' '.join(sentence)                                                     #Format list containing the sentence to string. For print functionality 
-        print(sentence_str)
+        print(sentence_str.capitalize())
         return sentence_str                                                                   #Return sentence (currently unused)
 
     #Called in generate_sentence()
@@ -256,8 +267,11 @@ class MarkovChain:
         current_pos_index = self.pos_to_indx[self.current_pos_tag]
         next_pos_probs = self.pos_transition_matrix[current_pos_index]
         next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)                    #Pick next pos tag weighed by the probabilities in pos_transition_matrix (Alt: pick POS with highest prob)
-        self.current_pos_tag = self.indx_to_pos[next_pos_index]
         
+        self.current_pos_tag = self.indx_to_pos[next_pos_index]                                     #Save the new POS tag        
+        emission_probs = self.emission_matrix[next_pos_index]                                       #Retrieve the probabilities of words given the new POS tag
+
+        """
         #Pick words containing current POS tag
         candidate_words = []
         for word in self.vocabulary.word2indx_list: 
@@ -267,7 +281,7 @@ class MarkovChain:
         if not candidate_words:
             print("No candidate words found")
             return None                                                                             #Case where no words match the current POS tag
-
+        """
         
         
         #Loop through all previous words in the sentence
@@ -279,9 +293,7 @@ class MarkovChain:
             previous_word_index = self.vocabulary.word2indx(previous_words)
             transition_probs = self.transition_matrices[n+1][previous_word_index]                             #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
             
-            
-            
-            for i, value in enumerate(transition_probs):                                                      #Work around for when a value in the matrix is 0
+            for i, value in enumerate(transition_probs):                                            #Work around for when a value in the matrix is 0
                 if value > 0:
                     word_probabilities[i] *= value                                                  #Future note: Due to the sturcture of the matrices, this should multiply the values of the same words. Look into if this is actually correct
                                                                                                     #Future x2 note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
@@ -289,20 +301,24 @@ class MarkovChain:
 
         #NOTE put this before the loop for better optimization (need to fix logic before that though)
         #Filter word_probabilities to only include the words and probabilities corresponding to candidate_words
-        candidate_words_indices = [self.vocabulary.word2indx(word) for word in candidate_words]
-        candidate_probs = word_probabilities[candidate_words_indices]                               #Creates 2 seperate lists that are linked by their identical indices 
+        #candidate_words_indices = [self.vocabulary.word2indx(word) for word in candidate_words]
+        #candidate_probs = word_probabilities[candidate_words_indices]                               #Creates 2 seperate lists that are linked by their identical indices 
         
+        
+        #Bias words with the correct POS tag
+        total_probs = word_probabilities * emission_probs
+
         #Cases when there is no next word to transition to
-        if np.sum(candidate_probs) == 0:
-            print("Candidate_probs == 0")                                                      
+        if np.sum(total_probs) == 0:
+            print("No next word found")                                                      
             return None
         
         #Create probability distribution by normalizing counts 
-        probabilities_sum = np.sum(candidate_probs)                                             #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
+        probabilities_sum = np.sum(total_probs)                                                    #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
         if probabilities_sum != 1:                                                                 #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
-            candidate_probs = candidate_probs / probabilities_sum
+            total_probs = total_probs / probabilities_sum
         
-        next_word_index = np.random.choice(candidate_words_indices, p = candidate_probs)                  #Get next word, weighed on the calculated probabilites 
+        next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
         return self.vocabulary.indx2word(next_word_index)
     
 
@@ -310,7 +326,7 @@ class MarkovChain:
 
 def main():
     if os.path.exists("saved_data.pkl"):
-        pos_tags, pairfreq_tables, word_list = load_variables("saved_data.pkl")
+        pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list = load_variables("saved_data.pkl")
     else:
         file_names = ["sample.txt", "A_room_with_a_view.txt"]
         all_text = ""
@@ -334,6 +350,13 @@ def main():
         word_list = [token for token in word_list if re.match(r"^[\w]+(?:['-][\w]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
         pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
 
+        vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
+        #vocabulary.write_word2indx_to_file()
+        #print(len(word_list))
+        wordfreq = create_frequency_table(word_list, vocabulary)                                                                               #Frequency of each word in the corpus 
+        print_frequency_table(wordfreq, vocabulary)
+
+
         #List to store pairfrequency tables to aid in dynamic creation and handling of several tables
         pairfreq_tables = []                                            
         for n in range(2, 12):  
@@ -341,15 +364,10 @@ def main():
             pairfreq_tables.append(pairfreq)
             pairfreq.print_table(n)
 
-        save_variables(pos_tags, pairfreq_tables, word_list)
+        save_variables(pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list)
 
 
-    vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
-    #vocabulary.write_word2indx_to_file()
-    #print(len(word_list))
-    wordfreq = create_frequency_table(word_list, vocabulary)                                                                               #Frequency of each word in the corpus 
-    print_frequency_table(wordfreq, vocabulary)
-
+   
 
     #Text generation with implementation of MarkovChain algorithm  
     text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
