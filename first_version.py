@@ -9,6 +9,9 @@ import re
 from collections import defaultdict
 import random
 from pprint import pprint                                                       #Debug aid
+import time
+import sys
+import threading
 
 #---------------------------------OS and Data/File handling---------------------------------
 
@@ -34,6 +37,37 @@ def prompt_for_corpus():
             print("No saved corpus found to delete.")
     elif user_input != "y":
         print("Invalid input. Running with previous corpus by default.")
+
+animation_running = True
+
+def show_processing_animation():
+    animation = "Processing corpus"
+    dots = ""
+    
+    while animation_running:
+        sys.stdout.write(f"\r{animation}{dots}")
+        sys.stdout.flush()
+        dots += "."
+        if len(dots) > 3:
+            dots = " "
+        time.sleep(1)
+
+def start_animation():
+    global animation_running
+    animation_running = True
+    # Start the animation in a separate thread
+    threading.Thread(target=show_processing_animation, daemon=True).start()
+
+def stop_animation():
+    global animation_running
+    animation_running = False
+    # Adding a final message to stop the animation gracefully
+    sys.stdout.write("\rProcessing completed.            \n")
+    sys.stdout.flush()
+
+
+
+
 
 #---------------------------------OS and Data/File handling END---------------------------------
 
@@ -327,8 +361,10 @@ class MarkovChain:
 def main():
     if os.path.exists("saved_data.pkl"):
         pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list = load_variables("saved_data.pkl")
+        end_program = False
     else:
-        file_names = ["sample.txt", "A_room_with_a_view.txt"]
+        start_animation()
+        file_names = ["sample.txt", "A_room_with_a_view.txt", "en_first_quarter.txt"]
         all_text = ""
 
         for file_name in file_names:
@@ -365,10 +401,13 @@ def main():
             pairfreq.print_table(n)
 
         save_variables(pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list)
+        stop_animation()
+        end_program = True
 
+    if end_program:
+        return None 
 
-   
-
+    print(len(word_list))
     #Text generation with implementation of MarkovChain algorithm  
     text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
    
