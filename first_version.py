@@ -95,7 +95,7 @@ class CreateVocabulary:                                                         
     def indx2word(self, indx):
         return self.indx2word_list.get(indx, -1)                                            #Return -1 if index not found ("None" could be a existing word)
 
-    def word_pos_tag(self, word):
+    def word_pos_tag(self, word):                                                           #Returns a tuple of POS tags corresponding to the word 
         return self.word2indx_list.get(word, (None, None))[1]
     
     #DEBUG: prints word2indx (pos tags) to readable file
@@ -251,14 +251,30 @@ class MarkovChain:
 
         if starting_word_indx is None:
             raise ValueError(f"Starting word '{start_word}' not found in vocabulary")
-        
-        all_pos_tags = list(self.pos_to_indx.keys())
+       
         initial_probs = {}
 
+        for pos_tag in self.vocabulary.word_pos_tag(starting_word_indx):
+            pos_index = self.pos_to_indx[pos_tag]
 
-        return
+            emission_prob = self.pos2word_matrix[pos_index, starting_word_indx]
+            initial_probs[pos_tag] = emission_prob
 
-    #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general real life observations of sentence structures, can be adjusted)
+        #Normalize probabilities
+        total_prob = sum(initial_probs.values())
+        if total_prob == 0:
+            raise ValueError(f"No valid emission probabilities for starting word '{start_word}'.")
+
+        for pos_tag in initial_probs:
+            initial_probs[pos_tag] /= total_prob
+
+        #Init viterbi paths & probabilities
+        self.viterbi_paths = {tag: [start_word] for tag in initial_probs}
+        self.viterbi_probs = initial_probs
+
+        return 
+
+    #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general observations of sentence structures, can be adjusted)
     def starting_pos_tag(self):
         start_pos_tags = ['DT', 'PRP', 'NN', 'NNP', 'JJ', 'CC', 'IN', 'RB', 'VB']
         start_probabilities = [0.25, 0.2, 0.15, 0.15, 0.1, 0.05, 0.05, 0.025, 0.025]
@@ -279,6 +295,7 @@ class MarkovChain:
 
         if not words_with_tag:                                                              #if no words with POS tag found. Fall back on frequency based pick
             words_with_tag = list(wordfreq.keys())
+            print("Words with POS tag not found. Fall back on frequency based pick for start word")
 
         freq_weights = [wordfreq[word] for word in words_with_tag] 
         initial_word = random.choices(words_with_tag, weights=freq_weights)[0]
