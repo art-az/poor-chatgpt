@@ -155,9 +155,11 @@ class MarkovChain:
         self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix. Used for navigating matrixes 
         self.indx_to_pos = {}                               
         self.current_pos_tag = ''
-        self.transition_matrices = self.build_transition_matrix()                                   #Transition matrices based on word pairs
+        self.word2word_matrices = self.build_transition_matrix()                                   #Transition matrices based on word pairs
         self.pos2pos_matrix = self.build_POS_transition_matrix(pos_tags)                            #Transition matrix on the probability of next POS tag based on current POS tag
         self.pos2word_matrix = self.build_emission_matrix(pos_tags)
+        self.viterbi_probs = {}
+        self.viterbi_paths = {}
 
 ###Initialization of Markov Model
 
@@ -240,7 +242,7 @@ class MarkovChain:
 
         return emission_matrix
 
-###Start of Text Generation
+##### Start of Text Generation
 
     def viterbi_init(self, start_word=None):
 
@@ -254,7 +256,7 @@ class MarkovChain:
        
         initial_probs = {}
 
-        for pos_tag in self.vocabulary.word_pos_tag(starting_word_indx):
+        for pos_tag in self.vocabulary.word_pos_tag(start_word):
             pos_index = self.pos_to_indx[pos_tag]
 
             emission_prob = self.pos2word_matrix[pos_index, starting_word_indx]
@@ -273,6 +275,58 @@ class MarkovChain:
         self.viterbi_probs = initial_probs
 
         return 
+    
+    #Input generated sentence to process optimal POS sequence and score of said sequence
+    def viterbi_scoring(self, sentence):
+        
+        self.viterbi_init(sentence[0])
+
+        for i in range(1, len(sentence)):
+            new_viterbi_probs = {}
+            new_viterbi_paths = {}
+            current_word = sentence[i]
+            current_word_pos_tags = self.vocabulary.word_pos_tag(current_word)
+            
+            for current_tag in current_word_pos_tags:
+                max_prob = 0
+                best_prev_tag = None
+
+                for prev_tag in self.viterbi_probs.keys():
+                    
+                    prev_prob = self.viterbi_probs[prev_tag]
+
+                    #Prob of transitioning to current POS tag from previous one
+                    pos_transition_prob = self.pos2pos_matrix[self.pos_to_indx[prev_tag], self.pos_to_indx[current_tag]]
+
+                    #Prob of current word marked as current POS tag
+                    emission_prob = self.pos2word_matrix[self.pos_to_indx[current_tag], self.vocabulary.word2indx(current_word)]
+
+                    #
+                    #Consider leveraging word pairs into the probability?
+                    #
+
+                    #Combine probabilities with previous steps
+                    combined_prob = prev_prob * pos_transition_prob * emission_prob
+
+                    if combined_prob > max_prob:
+                        max_prob = combined_prob
+                        best_prev_tag = prev_tag
+
+                #Store path and probability 
+                if max_prob > 0:
+                    new_viterbi_probs[current_tag] = max_prob
+                    new_viterbi_paths[current_tag] = self.viterbi_paths[best_prev_tag] + [current_word]                             #Update the path by appending current_word (value) in the list of words from the previous sequence (best_prev_tag)
+            
+            self.viterbi_paths = new_viterbi_paths
+            self.viterbi_probs = new_viterbi_probs
+
+        #Find best sequence from the final tag with highest probability
+        best_final_tag = max(self.viterbi_probs, key=self.viterbi_probs.get)
+        best_sequence = self.viterbi_paths[best_final_tag]
+
+        score = max(self.viterbi_probs.values())
+        
+        return score
 
     #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general observations of sentence structures, can be adjusted)
     def starting_pos_tag(self):
@@ -323,13 +377,14 @@ class MarkovChain:
         pos_str = ' '.join(pos_tag_sequence)
         print(pos_str)                                                                        #Debug: print the POS tags for the sentence
         sentence_str = ' '.join(sentence)                                                     #Format list containing the sentence to string. For print functionality 
+        self.viterbi_scoring(sentence)
         print(sentence_str.capitalize())
         return sentence_str                                                                   #Return sentence (currently unused)
 
     #Called in generate_sentence()
     def get_next_word(self, sentence):
         last_word_index = self.vocabulary.word2indx(sentence[-1])
-        word_probabilities = self.transition_matrices[0][last_word_index]                           #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
+        word_probabilities = self.word2word_matrices[0][last_word_index]                           #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
 
         #Get next POS tag
         current_pos_index = self.pos_to_indx[self.current_pos_tag]
@@ -347,7 +402,7 @@ class MarkovChain:
             
             #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
             previous_word_index = self.vocabulary.word2indx(previous_words)
-            transition_probs = self.transition_matrices[n+1][previous_word_index]                             #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
+            transition_probs = self.word2word_matrices[n+1][previous_word_index]                             #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
             
             for i, value in enumerate(transition_probs):                                            #Work around for when a value in the matrix is 0
                 if value > 0:
@@ -370,6 +425,7 @@ class MarkovChain:
             total_probs = total_probs / probabilities_sum
         
         next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
+        #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
 
@@ -409,7 +465,7 @@ def main():
         pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
 
         vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
-        #vocabulary.write_word2indx_to_file()
+        vocabulary.write_word2indx_to_file()
         #print(len(word_list))
         wordfreq = create_frequency_table(word_list, vocabulary)                                                                               #Frequency of each word in the corpus 
         print_frequency_table(wordfreq, vocabulary)
