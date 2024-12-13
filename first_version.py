@@ -155,15 +155,15 @@ class MarkovChain:
         self.pos_to_indx = {}                                                                       #Arranged when building POS transition matrix. Used for navigating matrixes 
         self.indx_to_pos = {}                               
         self.current_pos_tag = ''
-        self.word2word_matrices = self.build_transition_matrix()                                   #Transition matrices based on word pairs
-        self.pos2pos_matrix = self.build_POS_transition_matrix(pos_tags)                            #Transition matrix on the probability of next POS tag based on current POS tag
+        self.word2word_matrices = self.build_wordpair_matrix()                                   #Transition matrices based on word pairs
+        self.pos2pos_matrix = self.build_POS2POS_transition_matrix(pos_tags)                            #Transition matrix on the probability of next POS tag based on current POS tag
         self.pos2word_matrix = self.build_emission_matrix(pos_tags)
         self.viterbi_probs = {}
         self.viterbi_paths = {}
 
 ###Initialization of Markov Model
 
-    def build_transition_matrix(self):
+    def build_wordpair_matrix(self):
         vocab_size = len(self.vocabulary.word2indx_list)                                            #Amount of unique words in the vocabulary
         transition_matrices = []
 
@@ -187,7 +187,7 @@ class MarkovChain:
         return transition_matrices
 
     #Probability for a POS tag to transition to another tag (Row: POS, Column: POS)
-    def build_POS_transition_matrix(self, pos_tags):
+    def build_POS2POS_transition_matrix(self, pos_tags):
         pos_only = [tag for word, tag in pos_tags]                                                  #Only extract the POS tags
         unique_tags = list(set(pos_only))                                                           #Convert to set to remove duplicates and convert back to list again
 
@@ -234,7 +234,7 @@ class MarkovChain:
         emission_matrix = emission_matrix/row_sums
 
         #Insert small value in 0s. Excluding this introduces filtering for words mismatching current POS tag 
-        emission_matrix[emission_matrix == 0] = 0.001
+        emission_matrix[emission_matrix == 0] = 0.000001
 
         #Re-normalize rows after previous adjustments 
         row_sums = emission_matrix.sum(axis=1, keepdims=True)
@@ -277,13 +277,14 @@ class MarkovChain:
         return 
     
     #Input generated sentence to process optimal POS sequence and score of said sequence
-    def viterbi_scoring(self, sentence):
+    def viterbi_scoring(self, sentence, pos_sequence=None):
         
         self.viterbi_init(sentence[0])
 
         for i in range(1, len(sentence)):
             new_viterbi_probs = {}
             new_viterbi_paths = {}
+            viterbi_POS_path = []
             current_word = sentence[i]
             current_word_pos_tags = self.vocabulary.word_pos_tag(current_word)
             
@@ -316,7 +317,8 @@ class MarkovChain:
                 if max_prob > 0:
                     new_viterbi_probs[current_tag] = max_prob
                     new_viterbi_paths[current_tag] = self.viterbi_paths[best_prev_tag] + [current_word]                             #Update the path by appending current_word (value) in the list of words from the previous sequence (best_prev_tag)
-            
+                    viterbi_POS_path.insert(i-1, current_tag)
+
             self.viterbi_paths = new_viterbi_paths
             self.viterbi_probs = new_viterbi_probs
 
@@ -366,20 +368,23 @@ class MarkovChain:
         sentence = [current_word]
         pos_tag_sequence = []                                                                 #Debug: print purpose 
         pos_tag_sequence.append(self.current_pos_tag)
+        
         #Generate sentence word for word 
         for _ in range(length-1):
             
             current_word = self.get_next_word(sentence)
             pos_tag_sequence.append(self.current_pos_tag)
             if current_word:              
-             sentence.append(current_word)
+                sentence.append(current_word)
            
+        
         pos_str = ' '.join(pos_tag_sequence)
         print(pos_str)                                                                        #Debug: print the POS tags for the sentence
-        sentence_str = ' '.join(sentence)                                                     #Format list containing the sentence to string. For print functionality 
-        self.viterbi_scoring(sentence)
-        print(sentence_str.capitalize())
-        return sentence_str                                                                   #Return sentence (currently unused)
+        #sentence_str = ' '.join(sentence)                                                     #Format list containing the sentence to string. For print functionality 
+        #sentence_str.capitalize()
+        #self.viterbi_scoring(sentence)
+        #print(sentence_str)
+        return sentence, pos_tag_sequence                                                                       #Return sentence (currently unused)
 
     #Called in generate_sentence()
     def get_next_word(self, sentence):
@@ -414,6 +419,7 @@ class MarkovChain:
         #Bias words with the correct POS tag
         total_probs = word_probabilities * emission_probs
 
+        self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
         #Cases when there is no next word to transition to
         if np.sum(total_probs) == 0:
             print("No next word found")                                                      
@@ -428,6 +434,21 @@ class MarkovChain:
         #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
+    def print_sentence(self, sentence):
+        sentence_str = ' '.join(sentence)
+        print(sentence_str.capitalize())
+        return
+    
+    def save_debug_data(self, word_probabilities, emission_probs, total_probs, step_name):
+        with open(os.path.join('Debug_matrix_prob', f"debug_data_{step_name}.txt"), "w") as file:
+            file.write("Word Probabilities (non-zero entries):\n")
+            np.savetxt(file, word_probabilities[word_probabilities > 0], fmt="%.6f", delimiter=",")
+
+            file.write("\nEmission Probabilities (non-zero entries):\n")
+            np.savetxt(file, emission_probs[emission_probs > 0], fmt="%.6f", delimiter=",")
+
+            file.write("\nTotal Probabilities (non-zero entries):\n")
+            np.savetxt(file, total_probs[total_probs > 0], fmt="%.6f", delimiter=",")
 
 #------------------------------------------------MAIN------------------------------------------------
 
@@ -482,17 +503,29 @@ def main():
         stop_animation()
         end_program = True
 
+    #End program after running with new corpus. To make runtime more manageable 
     if end_program:
         return None 
+
+
 
     #Print the corpus size 
     print(len(word_list))
 
-    #Init the Markov Model  
+    #Init the Markov Model
+    num_sentences = 5
+    generated_sentences = []
+    scores = [] 
     text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
    
-    for _ in range(1,5):
-        text_generator.generate_sentence()
+    for _ in range(num_sentences):
+        sentence, pos_sequence = text_generator.generate_sentence()
+        text_generator.print_sentence(sentence)
+        score = text_generator.viterbi_scoring(sentence)
+        generated_sentences.append((sentence, score))
+
+    best_sentence = max(generated_sentences, key=lambda x: x[1])
+
 
 if __name__ == "__main__":
     download_punkt()
