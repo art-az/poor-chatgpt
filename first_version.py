@@ -4,6 +4,7 @@ import nltk
 from nltk.tokenize import TweetTokenizer
 from nltk.tag import pos_tag
 from nltk.util import ngrams
+from nltk.corpus import webtext
 import numpy as np
 import re
 from collections import defaultdict
@@ -19,9 +20,12 @@ def download_punkt():                                                           
     try:
         nltk.data.find('tokenizers/punkt')
         nltk.data.find('taggers/averaged_perceptron_tagger')
+        nltk.data.find("corpora/webtext")
     except LookupError:
         nltk.download('punkt')
         nltk.download('averaged_perceptron_tagger')
+        nltk.download("webtext")
+
 
 def prompt_for_corpus():
     # Ask user if they want to use the previous corpus
@@ -277,14 +281,14 @@ class MarkovChain:
         return 
     
     #Input generated sentence to process optimal POS sequence and score of said sequence
-    def viterbi_scoring(self, sentence, pos_sequence=None):
+    def viterbi_scoring(self, sentence, pos_sequence):
         
         self.viterbi_init(sentence[0])
+        viterbi_POS_path = [None] * len(sentence)
 
         for i in range(1, len(sentence)):
             new_viterbi_probs = {}
             new_viterbi_paths = {}
-            viterbi_POS_path = []
             current_word = sentence[i]
             current_word_pos_tags = self.vocabulary.word_pos_tag(current_word)
             
@@ -317,17 +321,32 @@ class MarkovChain:
                 if max_prob > 0:
                     new_viterbi_probs[current_tag] = max_prob
                     new_viterbi_paths[current_tag] = self.viterbi_paths[best_prev_tag] + [current_word]                             #Update the path by appending current_word (value) in the list of words from the previous sequence (best_prev_tag)
-                    viterbi_POS_path.insert(i-1, current_tag)
+                    
+                    if len(viterbi_POS_path) < len(sentence):
+                        viterbi_POS_path.append(current_tag)
+                    else:
+                        viterbi_POS_path[i-1] = current_tag
 
             self.viterbi_paths = new_viterbi_paths
             self.viterbi_probs = new_viterbi_probs
 
         #Find best sequence from the final tag with highest probability
-        best_final_tag = max(self.viterbi_probs, key=self.viterbi_probs.get)
-        best_sequence = self.viterbi_paths[best_final_tag]
+        #best_final_tag = max(self.viterbi_probs, key=self.viterbi_probs.get)
+        #best_sequence = self.viterbi_paths[best_final_tag]
+        #score = max(self.viterbi_probs.values())
 
-        score = max(self.viterbi_probs.values())
-        
+        #Make sure both list are of equal length 
+        min_length = min(len(viterbi_POS_path), len(pos_sequence))
+        viterbi_POS_path = viterbi_POS_path[:min_length]
+        pos_sequence = pos_sequence[:min_length]
+
+        #Compare and count amount of identical tags in same position
+        matches = sum(1 for v_tag, p_tag in zip(viterbi_POS_path, pos_sequence) if v_tag == p_tag)
+
+        #Count the amount of matches as percentage 
+        score = (matches/min_length) * 100
+        #print(viterbi_POS_path, '' ,score)
+
         return score
 
     #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general observations of sentence structures, can be adjusted)
@@ -342,7 +361,6 @@ class MarkovChain:
     #Find start word by only including words that match with starting POS tag and pick at random, with higher probability based on frequency 
     def generate_starting_word(self, wordfreq):
         self.current_pos_tag = self.starting_pos_tag()
-        #print(self.current_pos_tag)                                                        #debug
         
         words_with_tag = []
         for word in wordfreq.keys():
@@ -378,13 +396,13 @@ class MarkovChain:
                 sentence.append(current_word)
            
         
-        pos_str = ' '.join(pos_tag_sequence)
-        print(pos_str)                                                                        #Debug: print the POS tags for the sentence
-        #sentence_str = ' '.join(sentence)                                                     #Format list containing the sentence to string. For print functionality 
-        #sentence_str.capitalize()
-        #self.viterbi_scoring(sentence)
-        #print(sentence_str)
-        return sentence, pos_tag_sequence                                                                       #Return sentence (currently unused)
+        #pos_str = ' '.join(pos_tag_sequence)
+        #print(pos_str)                                                                        #Debug: print the POS tags for the sentence
+        
+        #Returns score of how matching the POS sequence is to the computed POS sequence of the viterbi algorithm
+        score = self.viterbi_scoring(sentence, pos_tag_sequence)
+        
+        return sentence, score                                                                       #Return sentence (currently unused)
 
     #Called in generate_sentence()
     def get_next_word(self, sentence):
@@ -394,7 +412,8 @@ class MarkovChain:
         #Get next POS tag
         current_pos_index = self.pos_to_indx[self.current_pos_tag]
         next_pos_probs = self.pos2pos_matrix[current_pos_index]
-        next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)                    #Pick next pos tag weighed by the probabilities in pos_transition_matrix (Alt: pick POS with highest prob)
+        #next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)                    #Pick next pos tag weighed by the probabilities in pos_transition_matrix (Alt: pick POS with highest prob)
+        next_pos_index = np.argmax(next_pos_probs)
         
         self.current_pos_tag = self.indx_to_pos[next_pos_index]                                     #Save the new POS tag        
         emission_probs = self.pos2word_matrix[next_pos_index]                                       #Retrieve the probabilities of words given the new POS tag
@@ -415,28 +434,36 @@ class MarkovChain:
                                                                                                     #Future x2 note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
 
         
-        
         #Bias words with the correct POS tag
         total_probs = word_probabilities * emission_probs
 
-        self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
+
+        #Prints the probabilities into text files 
+        #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
+        
         #Cases when there is no next word to transition to
         if np.sum(total_probs) == 0:
-            print("No next word found")                                                      
-            return None
+            next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)
+            self.current_pos_tag = self.indx_to_pos[next_pos_index]
+            emission_probs = self.pos2word_matrix[next_pos_index]
+            total_probs = word_probabilities * emission_probs
+
+            if np.sum(total_probs) == 0:
+                #print("No next word found")                                                      
+                return None
         
         #Create probability distribution by normalizing counts 
         probabilities_sum = np.sum(total_probs)                                                    #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
         if probabilities_sum != 1:                                                                 #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
             total_probs = total_probs / probabilities_sum
         
-        next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
-        #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
+        #next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
+        next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
     def print_sentence(self, sentence):
-        sentence_str = ' '.join(sentence)
-        print(sentence_str.capitalize())
+        sentence_str = ' '.join(sentence[0])
+        print(sentence_str.capitalize(), sentence[1])
         return
     
     def save_debug_data(self, word_probabilities, emission_probs, total_probs, step_name):
@@ -460,7 +487,7 @@ def main():
         start_animation()
         file_names = ["sample.txt", "A_room_with_a_view.txt", "half_first_quart.txt"]
         all_text_list = []
-
+        '''
         for file_name in file_names:
             try:
                 with open(file_name, 'r') as file:
@@ -475,9 +502,11 @@ def main():
             except IOError:
                 print(f"Error reading the file '{file_name}'")
                 return
+        
+        #all_text = ''.join(all_text_list)
+        '''
 
-        all_text = ''.join(all_text_list)
-
+        all_text = webtext.raw()
         
         tokenizer = TweetTokenizer(preserve_case = False)
         corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                              #Edge case where apostrophes can have different Unicode. This normalize them
@@ -510,22 +539,23 @@ def main():
 
 
     #Print the corpus size 
-    print(len(word_list))
+    #print(len(word_list))
 
     #Init the Markov Model
-    num_sentences = 5
+    num_sentences = 20
     generated_sentences = []
     scores = [] 
     text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
    
     for _ in range(num_sentences):
-        sentence, pos_sequence = text_generator.generate_sentence()
-        text_generator.print_sentence(sentence)
-        score = text_generator.viterbi_scoring(sentence)
+        sentence, score = text_generator.generate_sentence()
         generated_sentences.append((sentence, score))
 
-    best_sentence = max(generated_sentences, key=lambda x: x[1])
-
+    #Sort the sentences by viterbi score 
+    best_sentences = sorted(generated_sentences, key=lambda x: x[1], reverse=True)
+    
+    for i in range(0, 5):
+        text_generator.print_sentence(best_sentences[i])
 
 if __name__ == "__main__":
     download_punkt()
