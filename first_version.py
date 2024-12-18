@@ -5,6 +5,8 @@ from nltk.tokenize import TweetTokenizer
 from nltk.tag import pos_tag
 from nltk.util import ngrams
 from nltk.corpus import webtext
+from nltk.corpus import gutenberg
+from nltk.corpus import reuters
 import numpy as np
 import re
 from collections import defaultdict
@@ -21,11 +23,14 @@ def download_punkt():                                                           
         nltk.data.find('tokenizers/punkt')
         nltk.data.find('taggers/averaged_perceptron_tagger')
         nltk.data.find("corpora/webtext")
+        #nltk.data.find("corpora/gutenberg")
+        #nltk.data.find("corpora/reuters")
     except LookupError:
         nltk.download('punkt')
         nltk.download('averaged_perceptron_tagger')
         nltk.download("webtext")
-
+        #nltk.download("gutenberg")
+        #nltk.download("reuters")
 
 def prompt_for_corpus():
     # Ask user if they want to use the previous corpus
@@ -173,7 +178,7 @@ class MarkovChain:
 
         #Initilize the matrixes and store them in a list 
         for _ in range(10):
-            transition_matrix = np.zeros((vocab_size, vocab_size), dtype=np.float16)                                  #Create a matrix filled with zeros (2D NumPy array) 
+            transition_matrix = np.zeros((vocab_size, vocab_size), dtype=np.float32)                                  #Create a matrix filled with zeros (2D NumPy array) 
             transition_matrices.append(transition_matrix)
 
         #Loop through each word and it's index, in the vocabulary 
@@ -234,11 +239,9 @@ class MarkovChain:
             pos_indx = self.pos_to_indx[tag]
             emission_matrix[pos_indx][word_indx] =+ 1
 
-        row_sums = emission_matrix.sum(axis=1, keepdims=True)
-        emission_matrix = emission_matrix/row_sums
 
         #Insert small value in 0s. Excluding this introduces filtering for words mismatching current POS tag 
-        emission_matrix[emission_matrix == 0] = 0.000001
+        emission_matrix[emission_matrix == 0] = 0.00000001
 
         #Re-normalize rows after previous adjustments 
         row_sums = emission_matrix.sum(axis=1, keepdims=True)
@@ -463,7 +466,7 @@ class MarkovChain:
     
     def print_sentence(self, sentence):
         sentence_str = ' '.join(sentence[0])
-        print(sentence_str.capitalize(), sentence[1])
+        print(sentence_str.capitalize(), sentence[1], "\n")
         return
     
     def save_debug_data(self, word_probabilities, emission_probs, total_probs, step_name):
@@ -516,7 +519,7 @@ def main():
 
         vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
         vocabulary.write_word2indx_to_file()
-        #print(len(word_list))
+        
         wordfreq = create_frequency_table(word_list, vocabulary)                                                                               #Frequency of each word in the corpus 
         print_frequency_table(wordfreq, vocabulary)
 
@@ -530,6 +533,7 @@ def main():
 
         save_variables(pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list)
         stop_animation()
+        print(len(word_list))
         end_program = True
 
     #End program after running with new corpus. To make runtime more manageable 
