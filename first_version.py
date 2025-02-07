@@ -8,6 +8,7 @@ from nltk.corpus import webtext
 from nltk.corpus import gutenberg
 from nltk.corpus import reuters
 import numpy as np
+from scipy.sparse import lil_matrix, csr_matrix
 import re
 from collections import defaultdict
 import random
@@ -178,7 +179,9 @@ class MarkovChain:
 
         #Initilize the matrixes and store them in a list 
         for _ in range(10):
-            transition_matrix = np.zeros((vocab_size, vocab_size), dtype=np.float32)                                  #Create a matrix filled with zeros (2D NumPy array) 
+            #transition_matrix = np.zeros((vocab_size, vocab_size), dtype=np.float32)                                  #Create a matrix filled with zeros (2D NumPy array) 
+            #transition_matrices.append(transition_matrix)
+            transition_matrix = lil_matrix((vocab_size, vocab_size), dtype=np.float32)
             transition_matrices.append(transition_matrix)
 
         #Loop through each word and it's index, in the vocabulary 
@@ -191,9 +194,19 @@ class MarkovChain:
                     total = sum(following_words.values())                                           #Calculate the total frequency of all pair-words/following words to the current word
                     for next_word, count in following_words.items():                                #Loop through each pair-word and it's frequency 
                         next_index = self.vocabulary.word2indx(next_word)                           #Get the index of the current pair-word (For storage/look-up optimization)
-                        transition_matrices[n][index][next_index] = count / total                   #Store the current word (Row) and current pair-word (Column), and the probability to transition to the pair-word
+                        transition_matrices[n][index, next_index] = count / total                   #Store the current word (Row) and current pair-word (Column), and the probability to transition to the pair-word
 
-        return transition_matrices
+        csr_matrices = [matrix.tocsr() for matrix in transition_matrices]
+        
+        """
+        data_size = csr_matrices[5].data.nbytes
+        indices_size = csr_matrices[5].indices.nbytes
+        indptr_size = csr_matrices[5].indptr.nbytes
+
+        total_size_bytes = data_size + indices_size + indptr_size
+        """
+
+        return csr_matrices
 
     #Probability for a POS tag to transition to another tag (Row: POS, Column: POS)
     def build_POS2POS_transition_matrix(self, pos_tags):
@@ -410,7 +423,7 @@ class MarkovChain:
     #Called in generate_sentence()
     def get_next_word(self, sentence):
         last_word_index = self.vocabulary.word2indx(sentence[-1])
-        word_probabilities = self.word2word_matrices[0][last_word_index]                           #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
+        word_probabilities = self.word2word_matrices[0][last_word_index].toarray().flatten()                           #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
 
         #Get next POS tag
         current_pos_index = self.pos_to_indx[self.current_pos_tag]
@@ -429,7 +442,7 @@ class MarkovChain:
             
             #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
             previous_word_index = self.vocabulary.word2indx(previous_words)
-            transition_probs = self.word2word_matrices[n+1][previous_word_index]                             #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
+            transition_probs = self.word2word_matrices[n+1][previous_word_index].toarray().flatten()                             #NOTE: If there is a 0 frequency this might set the whole probability to 0 for that word. Need further investigation
             
             for i, value in enumerate(transition_probs):                                            #Work around for when a value in the matrix is 0
                 if value > 0:
@@ -460,8 +473,8 @@ class MarkovChain:
         if probabilities_sum != 1:                                                                 #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
             total_probs = total_probs / probabilities_sum
         
-        #next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
-        next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
+        next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
+        #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
     def print_sentence(self, sentence):
