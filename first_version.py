@@ -2,11 +2,13 @@ import os
 from save_file_utils import save_variables, load_variables
 import nltk
 from nltk.tokenize import TweetTokenizer
+from nltk.tokenize import TreebankWordTokenizer
 from nltk.tag import pos_tag
 from nltk.util import ngrams
 from nltk.corpus import webtext
 from nltk.corpus import gutenberg
 from nltk.corpus import reuters
+from datasets import load_dataset
 import numpy as np
 from scipy.sparse import lil_matrix, csr_matrix
 import re
@@ -24,14 +26,14 @@ def download_punkt():                                                           
         nltk.data.find('tokenizers/punkt')
         nltk.data.find('taggers/averaged_perceptron_tagger')
         nltk.data.find("corpora/webtext")
-        #nltk.data.find("corpora/gutenberg")
-        #nltk.data.find("corpora/reuters")
+        nltk.data.find("corpora/gutenberg")
+        nltk.data.find("corpora/reuters")
     except LookupError:
         nltk.download('punkt')
         nltk.download('averaged_perceptron_tagger')
         nltk.download("webtext")
-        #nltk.download("gutenberg")
-        #nltk.download("reuters")
+        nltk.download("gutenberg")
+        nltk.download("reuters")
 
 def prompt_for_corpus():
     # Ask user if they want to use the previous corpus
@@ -181,7 +183,7 @@ class MarkovChain:
         for _ in range(10):
             #transition_matrix = np.zeros((vocab_size, vocab_size), dtype=np.float32)                                  #Create a matrix filled with zeros (2D NumPy array) 
             #transition_matrices.append(transition_matrix)
-            transition_matrix = lil_matrix((vocab_size, vocab_size), dtype=np.float32)
+            transition_matrix = lil_matrix((vocab_size, vocab_size), dtype=np.float64)
             transition_matrices.append(transition_matrix)
 
         #Loop through each word and it's index, in the vocabulary 
@@ -198,13 +200,17 @@ class MarkovChain:
 
         csr_matrices = [matrix.tocsr() for matrix in transition_matrices]
         
-        """
-        data_size = csr_matrices[5].data.nbytes
-        indices_size = csr_matrices[5].indices.nbytes
-        indptr_size = csr_matrices[5].indptr.nbytes
+        #Size debugger
+        data_size = csr_matrices[1].data.nbytes
+        indices_size = csr_matrices[1].indices.nbytes
+        indptr_size = csr_matrices[1].indptr.nbytes
 
         total_size_bytes = data_size + indices_size + indptr_size
-        """
+        total_size_bytes = total_size_bytes/1000000
+        print("Data size (bytes):", data_size)
+        print("Indices size (bytes):", indices_size)
+        print("Indptr size (bytes):", indptr_size)
+        print("Total sparse matrix size (MB):", total_size_bytes)
 
         return csr_matrices
 
@@ -254,7 +260,7 @@ class MarkovChain:
 
 
         #Insert small value in 0s. Excluding this introduces filtering for words mismatching current POS tag 
-        emission_matrix[emission_matrix == 0] = 0.00000001
+        emission_matrix[emission_matrix == 0] = 0.0000001
 
         #Re-normalize rows after previous adjustments 
         row_sums = emission_matrix.sum(axis=1, keepdims=True)
@@ -497,8 +503,10 @@ class MarkovChain:
 
 def main():
     if os.path.exists("saved_data.pkl"):
-        pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list = load_variables("saved_data.pkl")
-        end_program = False
+        start_animation()
+        pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list, text_generator = load_variables("saved_data.pkl")
+        stop_animation()
+
     else:
         start_animation()
         file_names = ["sample.txt", "A_room_with_a_view.txt", "half_first_quart.txt"]
@@ -521,15 +529,18 @@ def main():
         
         #all_text = ''.join(all_text_list)
         '''
-
-        all_text = webtext.raw()
+        dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="train")
+        #all_text = "\n".join(dataset["text"])
+        #all_text = ''.join([str(webtext.raw()), str(gutenberg.raw())])
         
-        tokenizer = TweetTokenizer(preserve_case = False)
-        corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                              #Edge case where apostrophes can have different Unicode. This normalize them
+        all_text = "\n".join(["\n".join(dataset["text"]), webtext.raw(), gutenberg.raw()])
+
+        tokenizer = TreebankWordTokenizer()
+        corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                               #Edge case where apostrophes can have different Unicode. This normalize them
         word_list = tokenizer.tokenize(corpus)                                                                                                  #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
         word_list = [token for token in word_list if re.match(r"^[A-Za-z]+(?:['-][A-Za-z]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
         pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
-
+        
         vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
         vocabulary.write_word2indx_to_file()
         
@@ -544,30 +555,32 @@ def main():
             pairfreq_tables.append(pairfreq)
             pairfreq.print_table(n)
 
-        save_variables(pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list)
+        text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
+        
+        save_variables(pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list, text_generator)
         stop_animation()
         print(len(word_list))
-        end_program = True
-
+    
+        return
     #End program after running with new corpus. To make runtime more manageable 
-    if end_program:
-        return None 
+   
 
 
 
     #Print the corpus size 
     #print(len(word_list))
+    print("Generating text")
 
     #Init the Markov Model
     num_sentences = 20
     generated_sentences = []
     scores = [] 
-    text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
+    
    
     for _ in range(num_sentences):
         sentence, score = text_generator.generate_sentence()
         generated_sentences.append((sentence, score))
-
+    
     #Sort the sentences by viterbi score 
     best_sentences = sorted(generated_sentences, key=lambda x: x[1], reverse=True)
     
