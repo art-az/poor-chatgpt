@@ -256,7 +256,7 @@ class MarkovChain:
         for word, tag in pos_tags:
             word_indx = self.vocabulary.word2indx(word)
             pos_indx = self.pos_to_indx[tag]
-            emission_matrix[pos_indx][word_indx] =+ 1
+            emission_matrix[pos_indx][word_indx] += 1
 
 
         #Insert small value in 0s. Excluding this introduces filtering for words mismatching current POS tag 
@@ -267,6 +267,8 @@ class MarkovChain:
         emission_matrix = emission_matrix/row_sums
 
         return emission_matrix
+
+
 
 ##### Start of Text Generation
 
@@ -434,8 +436,8 @@ class MarkovChain:
         #Get next POS tag
         current_pos_index = self.pos_to_indx[self.current_pos_tag]
         next_pos_probs = self.pos2pos_matrix[current_pos_index]
-        #next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)                    #Pick next pos tag weighed by the probabilities in pos_transition_matrix (Alt: pick POS with highest prob)
-        next_pos_index = np.argmax(next_pos_probs)
+        next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)                    #Pick next pos tag weighed by the probabilities in pos_transition_matrix (Alt: pick POS with highest prob)
+        #next_pos_index = np.argmax(next_pos_probs)
         
         self.current_pos_tag = self.indx_to_pos[next_pos_index]                                     #Save the new POS tag        
         emission_probs = self.pos2word_matrix[next_pos_index]                                       #Retrieve the probabilities of words given the new POS tag
@@ -460,7 +462,7 @@ class MarkovChain:
         total_probs = word_probabilities * emission_probs
 
 
-        #Prints the probabilities into text files 
+        """Prints the probabilities into text files"""
         #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
         
         #Cases when there is no next word to transition to
@@ -491,13 +493,13 @@ class MarkovChain:
     def save_debug_data(self, word_probabilities, emission_probs, total_probs, step_name):
         with open(os.path.join('Debug_matrix_prob', f"debug_data_{step_name}.txt"), "w") as file:
             file.write("Word Probabilities (non-zero entries):\n")
-            np.savetxt(file, word_probabilities[word_probabilities > 0], fmt="%.6f", delimiter=",")
+            np.savetxt(file, word_probabilities[word_probabilities > 0], fmt="%.16f", delimiter=",")
 
             file.write("\nEmission Probabilities (non-zero entries):\n")
-            np.savetxt(file, emission_probs[emission_probs > 0], fmt="%.6f", delimiter=",")
+            np.savetxt(file, emission_probs[emission_probs > 0], fmt="%.16f", delimiter=",")
 
             file.write("\nTotal Probabilities (non-zero entries):\n")
-            np.savetxt(file, total_probs[total_probs > 0], fmt="%.6f", delimiter=",")
+            np.savetxt(file, total_probs[total_probs > 0], fmt="%.16f", delimiter=",")
 
 #------------------------------------------------MAIN------------------------------------------------
 
