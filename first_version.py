@@ -123,7 +123,7 @@ class CreateVocabulary:                                                         
 
 class PairFrequencyTable():                                                                 #Creates frequency table for pair of words that are n words long. Note: First word is n=1, meaning lowest possible value for a pair is n=2 
     def __init__(self, word_list, n_step = 2):
-        self.table = defaultdict(defaultdict(int).copy)                                     #Key is the first word. Value is another dict where the key is the word pair and value it's frequency. [Word]-[WordPair]:[Frequency]
+        self.table = defaultdict(defaultdict(int).copy)                                    #Key is the first word. Value is another dict where the key is the word pair and value it's frequency. [Word]-[WordPair]:[Frequency]
         #self.n = n_step                                                                    #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
         self.create_pair_frequency_table(word_list, n_step)
 
@@ -158,7 +158,9 @@ def print_frequency_table(wordfreq, vocabulary):
             
 
 
-#Main implementation for text generation 
+
+#-------------------------------Main implementation for text generation-------------------------------# 
+
 class MarkovChain:
     def __init__(self, pairfreq_tables, vocabulary, pos_tags, wordfreq):
         self.pairfreq_tables = pairfreq_tables
@@ -253,18 +255,19 @@ class MarkovChain:
 
         emission_matrix = np.zeros((len(unique_tags), vocab_size))
 
+        #Count frequency for each POS:word pair
         for word, tag in pos_tags:
             word_indx = self.vocabulary.word2indx(word)
             pos_indx = self.pos_to_indx[tag]
             emission_matrix[pos_indx][word_indx] += 1
 
-
-        #Insert small value in 0s. Excluding this introduces filtering for words mismatching current POS tag 
-        emission_matrix[emission_matrix == 0] = 0.0000001
-
-        #Re-normalize rows after previous adjustments 
+        #Apply Laplace Smoothing
+        alpha = 0.00001                                                                              #Laplace smoothing parameter 
         row_sums = emission_matrix.sum(axis=1, keepdims=True)
-        emission_matrix = emission_matrix/row_sums
+        emission_matrix = (emission_matrix + alpha) / (row_sums + alpha * vocab_size)
+
+        #Normalize rows after previous adjustments 
+        #emission_matrix = emission_matrix/row_sums
 
         return emission_matrix
 
@@ -347,7 +350,7 @@ class MarkovChain:
                     new_viterbi_paths[current_tag] = self.viterbi_paths[best_prev_tag] + [current_word]                             #Update the path by appending current_word (value) in the list of words from the previous sequence (best_prev_tag)
                     
                     if len(viterbi_POS_path) < len(sentence):
-                        viterbi_POS_path.append(current_tag)
+                        viterbi_POS_path[i] = current_tag
                     else:
                         viterbi_POS_path[i-1] = current_tag
 
@@ -462,8 +465,6 @@ class MarkovChain:
         total_probs = word_probabilities * emission_probs
 
 
-        """Prints the probabilities into text files"""
-        #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
         
         #Cases when there is no next word to transition to
         if np.sum(total_probs) == 0:
@@ -471,9 +472,9 @@ class MarkovChain:
             self.current_pos_tag = self.indx_to_pos[next_pos_index]
             emission_probs = self.pos2word_matrix[next_pos_index]
             total_probs = word_probabilities * emission_probs
-
+            print("Resorted to fallback word")
             if np.sum(total_probs) == 0:
-                #print("No next word found")                                                      
+                print("No next word found")                                                      
                 return None
         
         #Create probability distribution by normalizing counts 
@@ -481,10 +482,18 @@ class MarkovChain:
         if probabilities_sum != 1:                                                                 #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
             total_probs = total_probs / probabilities_sum
         
+
+        """Prints the probabilities into text files"""
+        self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
+
+
         next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
         #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
+
+#-----Misc Functions-----
+
     def print_sentence(self, sentence):
         sentence_str = ' '.join(sentence[0])
         print(sentence_str.capitalize(), sentence[1], "\n")
@@ -500,6 +509,15 @@ class MarkovChain:
 
             file.write("\nTotal Probabilities (non-zero entries):\n")
             np.savetxt(file, total_probs[total_probs > 0], fmt="%.16f", delimiter=",")
+
+    def save_pos2pos_matrix(self, filename="pos2pos_transition_matrix.txt"):
+        np.savetxt(filename, self.pos2pos_matrix, fmt="%.8f", delimiter=", ")
+
+    def save_pos2word_matrix(self, filename="pos2word_emission_matrix.txt"):
+        np.savetxt(filename, self.pos2word_matrix, fmt="%.16f", delimiter=", ")
+
+
+
 
 #------------------------------------------------MAIN------------------------------------------------
 
@@ -558,7 +576,9 @@ def main():
             pairfreq.print_table(n)
 
         text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
-        
+        text_generator.save_pos2pos_matrix()
+        text_generator.save_pos2word_matrix()
+
         save_variables(pos_tags, pairfreq_tables, wordfreq, vocabulary, word_list, text_generator)
         stop_animation()
         print(len(word_list))
@@ -567,14 +587,14 @@ def main():
     #End program after running with new corpus. To make runtime more manageable 
    
 
-
-
-    #Print the corpus size 
-    #print(len(word_list))
+    #text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
+    #text_generator.save_pos2pos_matrix()
+    #text_generator.save_pos2word_matrix()
+    
     print("Generating text")
 
     #Init the Markov Model
-    num_sentences = 20
+    num_sentences = 30
     generated_sentences = []
     scores = [] 
     
