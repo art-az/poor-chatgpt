@@ -127,10 +127,12 @@ class PairFrequencyTable():                                                     
         #self.n = n_step                                                                    #Variable to identify what kind of table it is. ex: n = 3, Frequency table of 3 steps
         self.create_pair_frequency_table(word_list, n_step)
 
-    def create_pair_frequency_table(self, word_list, n_step):                               #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple as a pair
+    def create_pair_frequency_table(self, word_list, n_step, exclude_self_pairs=True):                               #Initilizes frequency table by generating ngrams and storing the first and last word in each tuple as a pair
         ngram_list = ngrams(word_list, n_step)
         for ngram_tuple in ngram_list:
             first_word, last_word = ngram_tuple[0], ngram_tuple[-1]                         #[-1] will access last element in list
+            if exclude_self_pairs and n_step == 2 and first_word == last_word:              #in 2-grams skip if word is paired with itself
+                continue
             self.table[first_word][last_word] += 1
 
     def print_table(self, iteration = 2):
@@ -484,10 +486,10 @@ class MarkovChain:
         
 
         """Prints the probabilities into text files"""
-        self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
+        #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
 
 
-        next_word_index = np.random.choice(len(total_probs), p = total_probs)                      #Get next word, weighed on the calculated probabilites 
+        next_word_index = np.random.choice(len(total_probs), p = total_probs)                        #Get next word, weighed on the calculated probabilites 
         #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
@@ -553,12 +555,16 @@ def main():
         #all_text = "\n".join(dataset["text"])
         #all_text = ''.join([str(webtext.raw()), str(gutenberg.raw())])
         
-        all_text = "\n".join(["\n".join(dataset["text"]), webtext.raw(), gutenberg.raw()])
+        dataset_text = "\n".join(["\n".join(dataset["text"]), webtext.raw(), gutenberg.raw()])
+        sentences = nltk.sent_tokenize(dataset_text)
+        sentences = [single_sentence + " <EOS>" for single_sentence in sentences]                                                               #Tokenize text to sentences and add EOS token at end of each sentence
+        all_text = "\n".join(sentences)
 
         tokenizer = TreebankWordTokenizer()
         corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                               #Edge case where apostrophes can have different Unicode. This normalize them
         word_list = tokenizer.tokenize(corpus)                                                                                                  #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
-        word_list = [token for token in word_list if re.match(r"^[A-Za-z]+(?:['-][A-Za-z]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
+        #word_list = [token for token in word_list if re.match(r"^[A-Za-z]+(?:['-][A-Za-z]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
+        word_list = [token for token in word_list if re.match(r"^(?:<EOS>|[A-Za-z]+(?:['-][A-Za-z]+)*)$", token) and "_" not in token]
         pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
         
         vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
@@ -593,7 +599,7 @@ def main():
     
     print("Generating text")
 
-    #Init the Markov Model
+    #Generate text with the MarkovChain object 
     num_sentences = 30
     generated_sentences = []
     scores = [] 
@@ -606,7 +612,7 @@ def main():
     #Sort the sentences by viterbi score 
     best_sentences = sorted(generated_sentences, key=lambda x: x[1], reverse=True)
     
-    for i in range(0, 5):
+    for i in range(0, 20):
         text_generator.print_sentence(best_sentences[i])
 
 if __name__ == "__main__":
