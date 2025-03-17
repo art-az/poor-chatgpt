@@ -177,14 +177,16 @@ class MarkovChain:
         self.viterbi_probs = {}
         self.viterbi_paths = {}
 
-###Initialization of Markov Model
+
+###---------------Initialization of Markov Model---------------###
+
 
     def build_wordpair_matrix(self):
         vocab_size = len(self.vocabulary.word2indx_list)                                            #Amount of unique words in the vocabulary
         transition_matrices = []
 
         #Initilize the matrixes and store them in a list 
-        for _ in range(10):
+        for _ in range(15):
             #transition_matrix = np.zeros((vocab_size, vocab_size), dtype=np.float32)                                  #Create a matrix filled with zeros (2D NumPy array) 
             #transition_matrices.append(transition_matrix)
             transition_matrix = lil_matrix((vocab_size, vocab_size), dtype=np.float64)
@@ -193,7 +195,7 @@ class MarkovChain:
         #Loop through each word and it's index, in the vocabulary 
         for word, (index, _) in self.vocabulary.word2indx_list.items():                          
             
-            for n in range(10):
+            for n in range(15):
                 following_words = self.pairfreq_tables[n].table.get(word, None)                     #Get all pair-words for the current word
             
                 if following_words:
@@ -275,7 +277,9 @@ class MarkovChain:
 
 
 
-##### Start of Text Generation
+###--------------------Start of Text Generation--------------------###
+
+
 
     def viterbi_init(self, start_word=None):
 
@@ -378,6 +382,38 @@ class MarkovChain:
 
         return score
 
+#--------------------EOS handling--------------------#
+
+    #Linearly interpolate probability of EOS token based on sentence length (longer sentence = higher probability)
+    def eos_multiplier(self, sentence_length, min_length = 5, max_length = 9, max_multiplier = 3):
+
+        #Repress EOS if sentence is shorter than 5 words
+        if sentence_length < min_length:
+            return 0
+        
+        #Double EOS % if sentence is 9 words or more
+        elif sentence_length >= max_length:
+            return max_multiplier
+        
+        else:
+            return max_multiplier * (sentence_length - min_length) / (max_length - min_length)
+        
+    def adjust_eos_probability(self, probabilities, sentence_length):
+        
+        eos_index = self.vocabulary.word2indx("EOS")
+        multiplier = self.eos_multiplier(sentence_length)
+
+        adjusted_prob = probabilities
+        adjusted_prob[eos_index] *= multiplier
+
+        total = adjusted_prob.sum()
+        if total > 0:
+            adjusted_prob /= total
+        
+        return adjusted_prob
+
+#--------------------Starting Word Calculations--------------------# 
+
     #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general observations of sentence structures, can be adjusted)
     def starting_pos_tag(self):
         start_pos_tags = ['DT', 'PRP', 'NN', 'NNP', 'JJ', 'CC', 'IN', 'RB', 'VB']
@@ -393,7 +429,7 @@ class MarkovChain:
         
         words_with_tag = []
         for word in wordfreq.keys():
-            if self.current_pos_tag in self.vocabulary.word_pos_tag(self.vocabulary.indx2word(word)):
+            if self.current_pos_tag in self.vocabulary.word_pos_tag(self.vocabulary.indx2word(word)) and self.vocabulary.indx2word(word) != "EOS":
                 words_with_tag.append(word)
 
         if not words_with_tag:                                                              #if no words with POS tag found. Fall back on frequency based pick
@@ -404,9 +440,13 @@ class MarkovChain:
         initial_word = random.choices(words_with_tag, weights=freq_weights)[0]
 
         return initial_word
+
+
+#--------------------Text Generation--------------------#
+  
         
     #The start and main function for generating text
-    def generate_sentence(self, start_word=None, length=10):
+    def generate_sentence(self, start_word=None, length=15):
         
         if not start_word:                                                                    #Default start word when no input
             start_word = self.generate_starting_word(self.wordfreq)
@@ -421,7 +461,11 @@ class MarkovChain:
             
             current_word = self.get_next_word(sentence)
             pos_tag_sequence.append(self.current_pos_tag)
-            if current_word:              
+
+            if current_word == "EOS":
+                break
+
+            elif current_word:              
                 sentence.append(current_word)
            
         
@@ -450,7 +494,7 @@ class MarkovChain:
         
         #Loop through all previous words in the sentence
         for n, previous_words in enumerate(reversed(sentence[:-1])):                                #Sentence[:-1] omits the last word since that is already handled in previous line of code
-            if n > 10:                                                                              #Max size for sentence is 10 words. Can be removed, sentence should not extend set length
+            if n > 15:                                                                              #Max size for sentence is 10 words. Can be removed, sentence should not extend set length
                 break                             
             
             #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
@@ -463,12 +507,12 @@ class MarkovChain:
                                                                                                     #Future x2 note: This should be correct. The columns should be close to identical for the previous n-grams. Making i and value be the same word in this context
 
         
-        #Bias words with the correct POS tag
+        #Bias words with the "correct" POS tag
         total_probs = word_probabilities * emission_probs
 
 
         
-        #Cases when there is no next word to transition to
+        #Edge Case: when there is no next word to transition to
         if np.sum(total_probs) == 0:
             next_pos_index = np.random.choice(len(next_pos_probs), p=next_pos_probs)
             self.current_pos_tag = self.indx_to_pos[next_pos_index]
@@ -488,17 +532,21 @@ class MarkovChain:
         """Prints the probabilities into text files"""
         #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
 
+        total_probs = self.adjust_eos_probability(total_probs, len(sentence))
 
         next_word_index = np.random.choice(len(total_probs), p = total_probs)                        #Get next word, weighed on the calculated probabilites 
         #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
 
-#-----Misc Functions-----
+
+#--------------------Misc Functions--------------------#
+
+
 
     def print_sentence(self, sentence):
         sentence_str = ' '.join(sentence[0])
-        print(sentence_str.capitalize(), sentence[1], "\n")
+        print(sentence_str.capitalize(), f"({sentence[1]:.2f})", "\n")
         return
     
     def save_debug_data(self, word_probabilities, emission_probs, total_probs, step_name):
@@ -521,7 +569,7 @@ class MarkovChain:
 
 
 
-#------------------------------------------------MAIN------------------------------------------------
+###------------------------------------------------MAIN------------------------------------------------###
 
 def main():
     if os.path.exists("saved_data.pkl"):
@@ -576,7 +624,7 @@ def main():
 
         #List to store pairfrequency tables to aid in dynamic creation and handling of several tables
         pairfreq_tables = []                                            
-        for n in range(2, 12):  
+        for n in range(2, 17):  
             pairfreq = PairFrequencyTable(word_list, n)
             pairfreq_tables.append(pairfreq)
             pairfreq.print_table(n)
@@ -598,13 +646,14 @@ def main():
     #text_generator.save_pos2word_matrix()
     
     print("Generating text")
-
+    
+    
     #Generate text with the MarkovChain object 
     num_sentences = 30
     generated_sentences = []
     scores = [] 
     
-   
+    
     for _ in range(num_sentences):
         sentence, score = text_generator.generate_sentence()
         generated_sentences.append((sentence, score))
@@ -612,8 +661,10 @@ def main():
     #Sort the sentences by viterbi score 
     best_sentences = sorted(generated_sentences, key=lambda x: x[1], reverse=True)
     
-    for i in range(0, 20):
+    for i in range(0, 10):
         text_generator.print_sentence(best_sentences[i])
+    
+
 
 if __name__ == "__main__":
     download_punkt()
