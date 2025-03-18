@@ -100,6 +100,11 @@ class CreateVocabulary:                                                         
                     existing_tags.append(tag)
                     self.word2indx_list[word] = (existing_index, existing_tags)
 
+        #Insert custom tag SPC for special token
+        if "EOS" in self.word2indx_list:
+            index, _ = self.word2indx_list["EOS"]
+            self.word2indx_list["EOS"] = (index, ["SPC"])
+
     def word2indx(self, word):
         word = self.word2indx_list.get(word, None)
         return word[0] if word else None                                                    #Return only word index. First element in the tuple
@@ -385,13 +390,13 @@ class MarkovChain:
 #--------------------EOS handling--------------------#
 
     #Linearly interpolate probability of EOS token based on sentence length (longer sentence = higher probability)
-    def eos_multiplier(self, sentence_length, min_length = 5, max_length = 9, max_multiplier = 3):
+    def eos_multiplier(self, sentence_length, min_length = 5, max_length = 9, max_multiplier = 4):
 
         #Repress EOS if sentence is shorter than 5 words
         if sentence_length < min_length:
             return 0
         
-        #Double EOS % if sentence is 9 words or more
+        #Boost EOS if sentence is 9 words or more
         elif sentence_length >= max_length:
             return max_multiplier
         
@@ -405,10 +410,6 @@ class MarkovChain:
 
         adjusted_prob = probabilities
         adjusted_prob[eos_index] *= multiplier
-
-        total = adjusted_prob.sum()
-        if total > 0:
-            adjusted_prob /= total
         
         return adjusted_prob
 
@@ -494,7 +495,7 @@ class MarkovChain:
         
         #Loop through all previous words in the sentence
         for n, previous_words in enumerate(reversed(sentence[:-1])):                                #Sentence[:-1] omits the last word since that is already handled in previous line of code
-            if n > 15:                                                                              #Max size for sentence is 10 words. Can be removed, sentence should not extend set length
+            if n + 1 >= len(self.word2word_matrices):                                                                              #Max size for sentence is 10 words. Can be removed, sentence should not extend set length
                 break                             
             
             #Multiply the probabilties of the potential words being n-step back the current word in the sentence 
@@ -510,7 +511,8 @@ class MarkovChain:
         #Bias words with the "correct" POS tag
         total_probs = word_probabilities * emission_probs
 
-
+        #Inflates/deflates the EOS token depending on sentence length 
+        total_probs = self.adjust_eos_probability(total_probs, len(sentence))
         
         #Edge Case: when there is no next word to transition to
         if np.sum(total_probs) == 0:
@@ -526,13 +528,12 @@ class MarkovChain:
         #Create probability distribution by normalizing counts 
         probabilities_sum = np.sum(total_probs)                                                    #Matrix should already have normalized values. However, seems to be edge cases where that is not the case thus this code is necessary
         if probabilities_sum != 1:                                                                 #Note: Finding a way to solve the problem and thus removing this code. Could yield better performance  
-            total_probs = total_probs / probabilities_sum
+            total_probs /= probabilities_sum
         
 
         """Prints the probabilities into text files"""
         #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
 
-        total_probs = self.adjust_eos_probability(total_probs, len(sentence))
 
         next_word_index = np.random.choice(len(total_probs), p = total_probs)                        #Get next word, weighed on the calculated probabilites 
         #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
@@ -579,9 +580,11 @@ def main():
 
     else:
         start_animation()
+
+        '''
         file_names = ["sample.txt", "A_room_with_a_view.txt", "half_first_quart.txt"]
         all_text_list = []
-        '''
+        
         for file_name in file_names:
             try:
                 with open(file_name, 'r') as file:
@@ -605,14 +608,14 @@ def main():
         
         dataset_text = "\n".join(["\n".join(dataset["text"]), webtext.raw(), gutenberg.raw()])
         sentences = nltk.sent_tokenize(dataset_text)
-        sentences = [single_sentence + " <EOS>" for single_sentence in sentences]                                                               #Tokenize text to sentences and add EOS token at end of each sentence
+        sentences = [f"<BOS> {single_sentence} <EOS>" for single_sentence in sentences]                                                               #Tokenize text to sentences and add EOS token at end of each sentence
         all_text = "\n".join(sentences)
 
         tokenizer = TreebankWordTokenizer()
         corpus = re.sub(r"[‘’´`]", "'", all_text)                                                                                               #Edge case where apostrophes can have different Unicode. This normalize them
         word_list = tokenizer.tokenize(corpus)                                                                                                  #Split text into words/tokens with help from nltk built in models. ( Will also tokenize symbols e.g ., [, & )      
         #word_list = [token for token in word_list if re.match(r"^[A-Za-z]+(?:['-][A-Za-z]+)*$", token) and "_" not in token]                           #Clean tokens by removing special characters (edge case for "_" had to be included since it was not considered a character)
-        word_list = [token for token in word_list if re.match(r"^(?:<EOS>|[A-Za-z]+(?:['-][A-Za-z]+)*)$", token) and "_" not in token]
+        word_list = [token for token in word_list if re.match(r"^(?:(?:<EOS>|<BOS>)|[A-Za-z]+(?:['-][A-Za-z]+)*)$", token) and "_" not in token]
         pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
         
         vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
@@ -641,12 +644,8 @@ def main():
     #End program after running with new corpus. To make runtime more manageable 
    
 
-    #text_generator = MarkovChain(pairfreq_tables, vocabulary, pos_tags, wordfreq)
-    #text_generator.save_pos2pos_matrix()
-    #text_generator.save_pos2word_matrix()
     
     print("Generating text")
-    
     
     #Generate text with the MarkovChain object 
     num_sentences = 30
