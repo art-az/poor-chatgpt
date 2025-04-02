@@ -1,5 +1,5 @@
 self.word2indx_list = {
-    'BOS': (0, ['NNP', 'IN', 'VB', 'VBD', 'FW', 'JJ', 'NNS', 'VBN', 'RB', 'VBP', "''", 'PRP']),
+    'BOS': (0, ['SPC_bos']),
     'Valkyria': (1, ['NNP']),
     'Chronicles': (2, ['NNP', 'NNPS']),
     'III': (3, ['NNP']),
@@ -7,7 +7,7 @@ self.word2indx_list = {
     'Unrecorded': (5, ['VBD']),
     'Japanese': (6, ['NNP', 'JJ', 'NNPS']),
     'lit': (7, ['VBD', 'NN', 'JJ', 'VBN', 'VB', 'NNS', 'VBZ', 'VBP']),
-    'EOS': (8, ['SPC']),
+    'EOS': (8, ['SPC_eos']),
     'of': (9, ['IN']),
     'the': (10, ['DT']),
     'Battlefield': (11, ['NNP']),

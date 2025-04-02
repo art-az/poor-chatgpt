@@ -99,11 +99,16 @@ class CreateVocabulary:                                                         
                 if tag not in existing_tags:                                                #Only append if it is a new tag
                     existing_tags.append(tag)
                     self.word2indx_list[word] = (existing_index, existing_tags)
-
+        """
         #Insert custom tag SPC for special token
         if "EOS" in self.word2indx_list:
             index, _ = self.word2indx_list["EOS"]
-            self.word2indx_list["EOS"] = (index, ["SPC"])
+            self.word2indx_list["EOS"] = (index, ["SPC_eos"])
+
+        if "BOS" in self.word2indx_list:
+            index, _ = self.word2indx_list["BOS"]
+            self.word2indx_list["BOS"] = (index, ["SPC_bos"])
+        """
 
     def word2indx(self, word):
         word = self.word2indx_list.get(word, None)
@@ -115,6 +120,7 @@ class CreateVocabulary:                                                         
     def word_pos_tag(self, word):                                                           #Returns a tuple of POS tags corresponding to the word 
         return self.word2indx_list.get(word, (None, None))[1]
     
+
     #DEBUG: prints word2indx (pos tags) to readable file
     def write_word2indx_to_file(self, filename="word2indx_debug.txt"):
         with open(filename, "w") as file:
@@ -141,8 +147,10 @@ class PairFrequencyTable():                                                     
             self.table[first_word][last_word] += 1
 
     def print_table(self, iteration = 2):
-        filename = f"pair_frequensies_{iteration}.txt"
-        with open(filename, 'w') as file:
+        directory = "pair_frequencies"
+        filename = f"pair_frequencies_{iteration}.txt"
+        filepath = os.path.join(directory, filename)
+        with open(filepath, 'w') as file:
             for first_word, following_words in self.table.items():
                 sorted_following_words = dict(sorted(following_words.items(), key=lambda item: item[1], reverse=True))  #Sort the inner dict in terms of value(frequency) with the highest frequency first
                 file.write(f"{first_word}: {dict(sorted_following_words)}\n")
@@ -289,7 +297,7 @@ class MarkovChain:
     def viterbi_init(self, start_word=None):
 
         if not start_word:
-            start_word = self.generate_starting_word(self.wordfreq)
+            start_word = self.generate_starting_word_pos(self.wordfreq)     #CALLS OLD FUNCTION
 
         starting_word_indx = self.vocabulary.word2indx(start_word)
 
@@ -425,7 +433,7 @@ class MarkovChain:
         return start_tag
     
     #Find start word by only including words that match with starting POS tag and pick at random, with higher probability based on frequency 
-    def generate_starting_word(self, wordfreq):
+    def generate_starting_word_pos(self, wordfreq):
         self.current_pos_tag = self.starting_pos_tag()
         
         words_with_tag = []
@@ -442,18 +450,189 @@ class MarkovChain:
 
         return initial_word
 
+    def calculate_first_word_bos(self):
+        
+        #Retrieve BOS index
+        bos_index = self.vocabulary.word2indx("BOS")
+        if bos_index is None:
+            raise ValueError("BOS token not found in vocabulary")
+        
+        #Words following BOS tokens
+        word_probs = self.word2word_matrices[0][bos_index].toarray().flatten()
+
+        #Set EOS probability to 0 since it is not a word 
+        eos_index = self.vocabulary.word2indx("EOS")
+        if eos_index is not None:
+            word_probs[eos_index] = 0
+
+        #Retrieve specific POS-tag for BOS token
+        if "SPC_bos" not in self.pos_to_indx:
+            raise ValueError("BOS POS-tag not found in dictonary lookup")
+        bos_pos_index = self.pos_to_indx["SPC_bos"]
+
+        #Zero array of word2word-matrix size 
+        combined_scores = np.zeros_like(word_probs)
+        vocab_size = len(word_probs)
+        best_pos_tags = [None] * vocab_size                                                 #To store the best tag calculated for each candidate tag
+        
+        #For each candidate word in word_probs. Compute a score 
+        for i in range(vocab_size):
+            p_word = word_probs[i]
+            if p_word == 0:
+                continue                                                                     #Skip 0 probability words
+
+            word = self.vocabulary.indx2word(i)
+            candidate_tags = self.vocabulary.word_pos_tag(word)
+            best_tag_score = 0
+            chosen_tag = None
+
+            for tag in candidate_tags:
+                tag_index = self.pos_to_indx[tag]
+
+                #P(tag|BOS) -POS2POS
+                p_tag_given_bos = self.pos2pos_matrix[bos_pos_index, tag_index]
+
+                #P(word|tag) -POS2Word
+                p_word_given_bos = self.pos2word_matrix[tag_index, i]
+
+                #Score P(tag|BOS) * P(word|tag) and store best score 
+                tag_score = p_tag_given_bos * p_word_given_bos
+
+                if tag_score > best_tag_score:
+                    best_tag_score = tag_score
+                    chosen_tag = tag
+
+            #Store the chosen tag for this word
+            best_pos_tags[i] = chosen_tag
+
+            #Combine best tag score with BOS-to-word transition probability
+            combined_scores[i] = p_word * best_tag_score
+
+
+        #Normalize probabilities 
+        total = np.sum(combined_scores)
+        if total > 0:
+            combined_scores /= total
+        else:
+            raise ValueError("Zero probability when normalizing combined_scores for BOS token")
+
+
+        next_word_index = np.random.choice(len(combined_scores), p = combined_scores)
+        first_word = self.vocabulary.indx2word(next_word_index)
+        self.current_pos_tag = best_pos_tags[next_word_index]
+
+        return first_word
 
 #--------------------Text Generation--------------------#
   
+    def generate_sentence_beam(self, beam_width=5, max_length=15):
+
+        first_word = self.calculate_first_word_bos()
+        first_pos = self.current_pos_tag
+
+        initial_log_score = np.log(1e-12 + 1)                                                 #Dummy value of 1, for now
+
+        #Init beam with first word
+        beam = [([first_word], [first_pos], initial_log_score)]
+
+        #Storage for completed sentences (ending with EOS)
+        completed = []
+
+
+        #Beam expansion
+        for _ in range(max_length - 1):
+            new_beam = []
+
+            for seq, pos_seq, log_score in beam:
+                
+                #If sequence ends with EOS, add to completed and skip current expansion
+                if seq[-1] == "EOS":
+                    completed.append((seq[:-1], pos_seq[:-1], log_score))
+                    continue
+                
+                #Retrive probability distribution for next words based on current word
+                next_word_probs = self.get_next_word(seq, False)
+                if next_word_probs is None:
+                    raise ValueError("get_next_word returned None")
+
+                #Iterate all candidate words from the prob distribution
+                for candidate_word_index in range(len(next_word_probs)):
+
+                    can_word_prob = next_word_probs[candidate_word_index]                                                   #Probability of current word
+                    if can_word_prob == 0:
+                        continue
+
+                    candidate_word = self.vocabulary.indx2word(candidate_word_index)
+                    candidate_tags = self.vocabulary.word_pos_tag(candidate_word)
+                    best_tag_score = 0
+                    chosen_tag = None
+
+                    #Use the last pos tag in the sentence
+                    current_pos = pos_seq[-1]
+                    if current_pos not in self.pos_to_indx:
+                        continue                                                             #Failsafe is POS does not exist in database
+
+                    current_pos_index = self.pos_to_indx[current_pos]
+
+                    #Evaluate each POS for current candidate word
+                    for tag in candidate_tags:
+                        if tag not in self.pos_to_indx:
+                            continue
+
+                        tag_index = self.pos_to_indx[tag]
+
+                        #Probability this tag follows current POS in sentence
+                        p_tag = self.pos2pos_matrix[current_pos_index, tag_index]
+
+                        #Probability of current word given current tag
+                        p_word_with_tag = self.pos2word_matrix[tag_index, candidate_word_index]
+
+                        #Calculate tag score and store highest score
+                        tag_score = p_tag * p_word_with_tag
+                        if tag_score > best_tag_score:
+                            best_tag_score = tag_score
+                            chosen_tag = tag
+
+                    #Combine candidate word and calculated best tag
+                    combined_prob = can_word_prob * best_tag_score
+                    if combined_prob <= 0:
+                        continue
+
+                    #Update score with the new combined probability
+                    new_log_score = log_score + np.log(combined_prob)
+
+                    #Create new candidate sentence
+                    new_seq = seq + [candidate_word]
+                    new_pos_seq = pos_seq + [chosen_tag]
+
+                    #Insert into new beam
+                    new_beam.append((new_seq, new_pos_seq, new_log_score))
+
+            #If no new candidates were generated. Break the loop
+            if not new_beam:
+                break
+            
+            #Sort candidate seq by log score in descending order. Filtering out all but the top 5 
+            beam = sorted(new_beam, key=lambda x: x[2], reverse=True)[:beam_width]
         
+        final_candidates = beam + completed
+        if not final_candidates:
+            raise ValueError("No sentences generated (generate_Sentence_beam)")
+
+        best_candidate = max(final_candidates, key=lambda x :x[2])
+        final_sentence, final_pos_seq, final_log_score = best_candidate 
+
+        return final_sentence, final_log_score
+
     #The start and main function for generating text
     def generate_sentence(self, start_word=None, length=15):
         
         if not start_word:                                                                    #Default start word when no input
-            start_word = self.generate_starting_word(self.wordfreq)
+            start_word = self.calculate_first_word_bos()
 
-        current_word = self.vocabulary.indx2word(start_word)
+        current_word = start_word
         sentence = [current_word]
+        
         pos_tag_sequence = []                                                                 #Debug: print purpose 
         pos_tag_sequence.append(self.current_pos_tag)
         
@@ -478,9 +657,12 @@ class MarkovChain:
         
         return sentence, score                                                                       #Return sentence (currently unused)
 
-    #Called in generate_sentence()
-    def get_next_word(self, sentence):
+    #Called in generate_sentence_beam()
+    def get_next_word(self, sentence, return_word = True):
+        
         last_word_index = self.vocabulary.word2indx(sentence[-1])
+        if last_word_index is None:
+            raise ValueError(f"Token '{sentence[-1]}' not found in vocabulary.")
         word_probabilities = self.word2word_matrices[0][last_word_index].toarray().flatten()                           #Returns the row of probabilites for word pairs corresponding to the last word in the sentence 
 
         #Get next POS tag
@@ -533,10 +715,14 @@ class MarkovChain:
 
         """Prints the probabilities into text files"""
         #self.save_debug_data(word_probabilities, emission_probs, total_probs, step_name=f"{sentence[-1]}")
+        
 
+        #Return the probability distribution for all candidate next words instead of sampling the next word
+        if not return_word:
+            return total_probs
 
-        next_word_index = np.random.choice(len(total_probs), p = total_probs)                        #Get next word, weighed on the calculated probabilites 
-        #next_word_index = np.argmax(total_probs)                                                    #Get next word with highest probability
+        #next_word_index = np.random.choice(len(total_probs), p = total_probs)                        #Get next word, weighed on the calculated probabilites 
+        next_word_index = np.argmax(total_probs)                                                      #Get next word with highest probability
         return self.vocabulary.indx2word(next_word_index)
     
 
@@ -618,6 +804,11 @@ def main():
         word_list = [token for token in word_list if re.match(r"^(?:(?:<EOS>|<BOS>)|[A-Za-z]+(?:['-][A-Za-z]+)*)$", token) and "_" not in token]
         pos_tags = pos_tag(word_list)                                                                                                           #Part-of-speech tagging. NLTK function that tags each word with a grammatical tag (Noun, verb, etc)
         
+        #Input special tags for special tokens
+        pos_tags = [(word, "SPC_eos") if word in ("<EOS>", "EOS") 
+                    else (word, "SPC_bos") if word in ("<BOS>", "BOS")
+                    else (word, tag)    for word, tag in pos_tags]
+
         vocabulary = CreateVocabulary(pos_tags)                                                                                                #pos_tags contain all information that word_list has with the added bonus of grammatical tags
         vocabulary.write_word2indx_to_file()
         
@@ -648,13 +839,13 @@ def main():
     print("Generating text")
     
     #Generate text with the MarkovChain object 
-    num_sentences = 30
+    num_sentences = 10
     generated_sentences = []
     scores = [] 
     
     
     for _ in range(num_sentences):
-        sentence, score = text_generator.generate_sentence()
+        sentence, score = text_generator.generate_sentence_beam()
         generated_sentences.append((sentence, score))
     
     #Sort the sentences by viterbi score 
