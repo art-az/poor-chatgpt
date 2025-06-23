@@ -19,7 +19,7 @@ import time
 import sys
 import threading
 
-#---------------------------------OS and Data/File handling START---------------------------------
+#---------------------------------OS and Data/File handling---------------------------------
 
 def download_punkt():                                                           #Download the nlkt tokenizer data if missing
     try:
@@ -77,8 +77,11 @@ def stop_animation():
     sys.stdout.write("\rProcessing completed.            \n")
     sys.stdout.flush()
 
-#---------------------------------OS and Data/File handling END---------------------------------
 
+
+#-----------------
+#---------------------------------Corpus/Vocabulary handling---------------------------------
+#-----------------
 
 #Incorporate POS-tags in existing word dict or create new dict variable? (New variable storing over 20K entries but easier code management and debugging)
 class CreateVocabulary:                                                                     #Create 2 dictionaries mapping all unique words in the working text. For word and index lookup respectivily   
@@ -173,8 +176,9 @@ def print_frequency_table(wordfreq, vocabulary):
             
 
 
-
+#---------------
 #-------------------------------Main implementation for text generation-------------------------------# 
+#---------------
 
 class MarkovChain:
     def __init__(self, pairfreq_tables, vocabulary, pos_tags, wordfreq):
@@ -293,7 +297,7 @@ class MarkovChain:
 ###--------------------Start of Text Generation--------------------###
 
 
-
+    """Currently unused/outdated"""
     def viterbi_init(self, start_word=None):
 
         if not start_word:
@@ -326,6 +330,7 @@ class MarkovChain:
 
         return 
     
+    """Currently unused/outdated"""
     #Input generated sentence to process optimal POS sequence and score of said sequence
     def viterbi_scoring(self, sentence, pos_sequence):
         
@@ -422,7 +427,8 @@ class MarkovChain:
         return adjusted_prob
 
 #--------------------Starting Word Calculations--------------------# 
-
+    
+    """Currently unused/outdated"""
     #Hard-coded probabilities for the starting POS-tag in a sentence (Based on general observations of sentence structures, can be adjusted)
     def starting_pos_tag(self):
         start_pos_tags = ['DT', 'PRP', 'NN', 'NNP', 'JJ', 'CC', 'IN', 'RB', 'VB']
@@ -432,6 +438,7 @@ class MarkovChain:
 
         return start_tag
     
+    """Currently unused/outdated"""
     #Find start word by only including words that match with starting POS tag and pick at random, with higher probability based on frequency 
     def generate_starting_word_pos(self, wordfreq):
         self.current_pos_tag = self.starting_pos_tag()
@@ -449,6 +456,8 @@ class MarkovChain:
         initial_word = random.choices(words_with_tag, weights=freq_weights)[0]
 
         return initial_word
+
+
 
     def calculate_first_word_bos(self):
         
@@ -525,7 +534,7 @@ class MarkovChain:
 
 #--------------------Text Generation--------------------#
   
-    def generate_sentence_beam(self, beam_width=5, max_length=15):
+    def generate_sentence_beam(self, beam_width=10, max_length=15):
 
         first_word = self.calculate_first_word_bos()
         first_pos = self.current_pos_tag
@@ -598,9 +607,12 @@ class MarkovChain:
                     if combined_prob <= 0:
                         continue
 
-                    #Update score with the new combined probability
-                    new_log_score = log_score + np.log(combined_prob)
+                    #Update score with the new combined probability. With length normalization
+                    new_length = len(seq) + 1
+                    raw_log_score = log_score + np.log(combined_prob)
 
+                    new_log_score = raw_log_score / (new_length ** 0.9)
+                    
                     #Create new candidate sentence
                     new_seq = seq + [candidate_word]
                     new_pos_seq = pos_seq + [chosen_tag]
@@ -624,6 +636,7 @@ class MarkovChain:
 
         return final_sentence, final_log_score
 
+    """Currently unused/outdated"""
     #The start and main function for generating text
     def generate_sentence(self, start_word=None, length=15):
         
@@ -657,6 +670,7 @@ class MarkovChain:
         
         return sentence, score                                                                       #Return sentence (currently unused)
 
+    
     #Called in generate_sentence_beam()
     def get_next_word(self, sentence, return_word = True):
         
