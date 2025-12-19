@@ -1,2 +1,4 @@
 saved_data.pkl
 pair_frequencies/
+pos2word_emission_matrix.txt
+en.txt
